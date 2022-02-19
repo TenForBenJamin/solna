@@ -7,8 +7,7 @@
       		<parameter name="au" value="St. John's"></parameter>
       		<methods>
 	      		
-	      		<include name="stadion_FCA"></include>
-	      		<include name="stadion_FCB"></include>
+	      		
 	        </methods>
       </class>
     </classes>
