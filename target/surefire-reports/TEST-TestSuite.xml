@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="7.555" tests="12" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\git\turf\dejan\rowe\target\test-classes;C:\git\turf\dejan\rowe\target\classes;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-java\7.2.1\cucumber-java-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-core\7.2.1\cucumber-core-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin\7.2.1\cucumber-gherkin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.1\cucumber-gherkin-messages-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\datatable\7.2.1\datatable-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-plugin\7.2.1\cucumber-plugin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\docstring\7.2.1\docstring-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\ss585\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-junit\7.2.1\cucumber-junit-7.2.1.jar;C:\Users\ss585\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\ss585\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ss585\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ss585\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ss585\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ss585\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ss585\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ss585\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ss585\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ss585\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\ss585\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\ss585\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Users\ss585\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ss585\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-excelant\4.1.2\poi-excelant-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Users\ss585\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant\1.8.2\ant-1.8.2.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant-launcher\1.8.2\ant-launcher-1.8.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.0\selenium-java-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.0\selenium-api-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.0\selenium-chrome-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\ss585\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\ss585\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ss585\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ss585\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\ss585\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar;C:\Users\ss585\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.0\selenium-chromium-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.0\selenium-json-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.0\selenium-devtools-v85-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v94\4.1.0\selenium-devtools-v94-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v95\4.1.0\selenium-devtools-v95-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v96\4.1.0\selenium-devtools-v96-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.0\selenium-edge-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.0\selenium-firefox-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.1.0\selenium-firefox-xpi-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.0\selenium-ie-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.0\selenium-opera-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.0\selenium-remote-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\io\netty\netty-buffer\4.1.69.Final\netty-buffer-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-http\4.1.69.Final\netty-codec-http-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec\4.1.69.Final\netty-codec-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler\4.1.69.Final\netty-handler-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-common\4.1.69.Final\netty-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.69.Final\netty-transport-native-epoll-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.69.Final\netty-transport-native-kqueue-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.69.Final\netty-transport-native-unix-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport\4.1.69.Final\netty-transport-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-resolver\4.1.69.Final\netty-resolver-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api\1.9.0\opentelemetry-api-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-context\1.9.0\opentelemetry-context-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.9.0\opentelemetry-exporter-logging-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.9.0-alpha\opentelemetry-sdk-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.9.0-alpha\opentelemetry-sdk-logs-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.9.0\opentelemetry-sdk-common-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.9.0\opentelemetry-sdk-extension-autoconfigure-spi-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.9.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.9.0\opentelemetry-sdk-trace-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.9.0-alpha\opentelemetry-api-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.9.0\opentelemetry-sdk-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.9.0-alpha\opentelemetry-semconv-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\ss585\.m2\repository\net\bytebuddy\byte-buddy\1.12.1\byte-buddy-1.12.1.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\ss585\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ss585\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\ss585\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\ss585\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.0\selenium-http-4.1.0.jar;C:\Users\ss585\.m2\repository\net\jodah\failsafe\2.4.4\failsafe-2.4.4.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.0\selenium-safari-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.0\selenium-support-4.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\ss585\AppData\Local\Temp\surefire10574760928085053880\surefirebooter4060901965821449927.jar C:\Users\ss585\AppData\Local\Temp\surefire10574760928085053880 2022-02-20T00-19-49_553-jvmRun1 surefire4354093527338560105tmp surefire_02578402649880285422tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\git\turf\dejan\rowe\target\test-classes;C:\git\turf\dejan\rowe\target\classes;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-java\7.2.1\cucumber-java-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-core\7.2.1\cucumber-core-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin\7.2.1\cucumber-gherkin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.1\cucumber-gherkin-messages-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\datatable\7.2.1\datatable-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-plugin\7.2.1\cucumber-plugin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\docstring\7.2.1\docstring-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\ss585\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-junit\7.2.1\cucumber-junit-7.2.1.jar;C:\Users\ss585\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\ss585\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ss585\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ss585\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ss585\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ss585\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ss585\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ss585\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ss585\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ss585\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\ss585\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\ss585\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Users\ss585\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ss585\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-excelant\4.1.2\poi-excelant-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Users\ss585\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant\1.8.2\ant-1.8.2.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant-launcher\1.8.2\ant-launcher-1.8.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.0\selenium-java-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.0\selenium-api-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.0\selenium-chrome-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\ss585\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\ss585\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ss585\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ss585\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\ss585\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar;C:\Users\ss585\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.0\selenium-chromium-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.0\selenium-json-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.0\selenium-devtools-v85-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v94\4.1.0\selenium-devtools-v94-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v95\4.1.0\selenium-devtools-v95-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v96\4.1.0\selenium-devtools-v96-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.0\selenium-edge-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.0\selenium-firefox-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.1.0\selenium-firefox-xpi-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.0\selenium-ie-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.0\selenium-opera-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.0\selenium-remote-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\io\netty\netty-buffer\4.1.69.Final\netty-buffer-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-http\4.1.69.Final\netty-codec-http-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec\4.1.69.Final\netty-codec-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler\4.1.69.Final\netty-handler-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-common\4.1.69.Final\netty-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.69.Final\netty-transport-native-epoll-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.69.Final\netty-transport-native-kqueue-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.69.Final\netty-transport-native-unix-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport\4.1.69.Final\netty-transport-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-resolver\4.1.69.Final\netty-resolver-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api\1.9.0\opentelemetry-api-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-context\1.9.0\opentelemetry-context-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.9.0\opentelemetry-exporter-logging-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.9.0-alpha\opentelemetry-sdk-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.9.0-alpha\opentelemetry-sdk-logs-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.9.0\opentelemetry-sdk-common-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.9.0\opentelemetry-sdk-extension-autoconfigure-spi-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.9.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.9.0\opentelemetry-sdk-trace-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.9.0-alpha\opentelemetry-api-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.9.0\opentelemetry-sdk-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.9.0-alpha\opentelemetry-semconv-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\ss585\.m2\repository\net\bytebuddy\byte-buddy\1.12.1\byte-buddy-1.12.1.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\ss585\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ss585\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\ss585\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\ss585\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.0\selenium-http-4.1.0.jar;C:\Users\ss585\.m2\repository\net\jodah\failsafe\2.4.4\failsafe-2.4.4.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.0\selenium-safari-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.0\selenium-support-4.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ss585"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\git\turf\dejan\rowe"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ss585\AppData\Local\Temp\surefire10574760928085053880\surefirebooter4060901965821449927.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
+    <property name="user.name" value="ss585"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ss585\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ss585\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="user.dir" value="C:\git\turf\dejan\rowe"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk-17.0.1\bin;C:\Mava\apache-maven-3.8.4-bin\apache-maven-3.8.4;C:\Mava\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin;C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\ss585\AppData\Local\Android\Sdk\platform-tools;C:\Users\ss585\AppData\Local\Android\Sdk\tools\bin;C:\Users\ss585\AppData\Local\Android\Sdk\tools;C:\Users\ss585\anaconda3;C:\Users\ss585\anaconda3\Library\mingw-w64\bin;C:\Users\ss585\anaconda3\Library\usr\bin;C:\Users\ss585\anaconda3\Library\bin;C:\Users\ss585\anaconda3\Scripts;C:\Users\ss585\AppData\Local\Microsoft\WindowsApps;C:\Users\ss585\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ss585\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Mava\apache-maven-3.8.4-bin\apache-maven-3.8.4;C:\Program Files\Java\jdk-17.0.1;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="stadion_FCA" classname="meri.kiran.stadionWeather" time="2.817">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312268
+ beutified date is  Sun Feb 20 00:11:08 CET 2022
+extracted place for  ZipCode 1645312268 is                  Augsburg
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    48.3291
+
+                               Longitude  is    10.8578
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   2.63	wind speed -   4.63
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_FCB" classname="meri.kiran.stadionWeather" time="0.432">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312792
+ beutified date is  Sun Feb 20 00:19:52 CET 2022
+extracted place for  ZipCode 1645312792 is                  München
+in
+
+
+                      weatherCode n Desc are    802 n scattered clouds
+
+                               Latitude is    48.2054
+
+                               Longitude  is    11.6238
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   2.53	wind speed -   5.3
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_HBC" classname="meri.kiran.stadionWeather" time="0.505">
+    <system-out><![CDATA[  Hertha berlin 
+ inside ReusableBall method 
+Raw date is   1645312270
+ beutified date is  Sun Feb 20 00:11:10 CET 2022
+extracted place for  ZipCode 1645312270 is                  Berlin
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    52.5167
+
+                               Longitude  is    13.4
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   4.81	wind speed -   10.8
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_HOF" classname="meri.kiran.stadionWeather" time="0.55">
+    <system-out><![CDATA[                               weatherCode is    500
+
+ inside ReusableBall method 
+Raw date is   1645312302
+ beutified date is  Sun Feb 20 00:11:42 CET 2022
+extracted place for  ZipCode 1645312302 is                  Sinsheim
+in
+
+
+                      weatherCode n Desc are    500 n light rain
+
+                               Latitude is    49.2455
+
+                               Longitude  is    8.8823
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   6.37	wind speed -   9.88
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_HSV" classname="meri.kiran.stadionWeather" time="0.312">
+    <system-out><![CDATA[                               weatherCode is    803
+
+ inside ReusableBall method 
+Raw date is   1645312295
+ beutified date is  Sun Feb 20 00:11:35 CET 2022
+extracted place for  ZipCode 1645312295 is                  Hamburg Sankt Georg
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    53.5564
+
+                               Longitude  is    10.0144
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   3.3	wind speed -   4.12
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_KAI" classname="meri.kiran.stadionWeather" time="0.289">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312303
+ beutified date is  Sun Feb 20 00:11:43 CET 2022
+extracted place for  ZipCode 1645312303 is                  Kaiserslautern
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    49.436
+
+                               Longitude  is    7.7503
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   5.63	wind speed -   7.72
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_ROS" classname="meri.kiran.stadionWeather" time="0.398">
+    <system-out><![CDATA[                               weatherCode is    804
+
+ inside ReusableBall method 
+Raw date is   1645312303
+ beutified date is  Sun Feb 20 00:11:43 CET 2022
+extracted place for  ZipCode 1645312303 is                  Rostock
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    54.0872
+
+                               Longitude  is    12.1062
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   4.2	wind speed -   7.06
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_S04" classname="meri.kiran.stadionWeather" time="0.264">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312304
+ beutified date is  Sun Feb 20 00:11:44 CET 2022
+extracted place for  ZipCode 1645312304 is                  Gelsenkirchen
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    51.5213
+
+                               Longitude  is    7.0747
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   5.99	wind speed -   4.47
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_UNI" classname="meri.kiran.stadionWeather" time="0.451">
+    <system-out><![CDATA[  UNION BERLIN
+ inside ReusableBall method 
+Raw date is   1645312149
+ beutified date is  Sun Feb 20 00:09:09 CET 2022
+extracted place for  ZipCode 1645312149 is                  Berlin
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    52.5167
+
+                               Longitude  is    13.4
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   4.81	wind speed -   10.8
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_b04" classname="meri.kiran.stadionWeather" time="0.316">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312305
+ beutified date is  Sun Feb 20 00:11:45 CET 2022
+extracted place for  ZipCode 1645312305 is                  Leverkusen
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    51.0645
+
+                               Longitude  is    6.9592
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   7.14	wind speed -   9.4
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_bvb" classname="meri.kiran.stadionWeather" time="0.487">
+    <system-out><![CDATA[                               weatherCode is    804
+
+ inside ReusableBall method 
+Raw date is   1645312306
+ beutified date is  Sun Feb 20 00:11:46 CET 2022
+extracted place for  ZipCode 1645312306 is                  Dortmund
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    51.4996
+
+                               Longitude  is    7.5495
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   5.31	wind speed -   10.8
+
+]]></system-out>
+  </testcase>
+  <testcase name="stadion_f95" classname="meri.kiran.stadionWeather" time="0.282">
+    <system-out><![CDATA[ inside ReusableBall method 
+Raw date is   1645312307
+ beutified date is  Sun Feb 20 00:11:47 CET 2022
+extracted place for  ZipCode 1645312307 is                  Düsseldorf
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    51.2696
+
+                               Longitude  is    6.748
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   7.15	wind speed -   11.32
+
+]]></system-out>
+  </testcase>
+</testsuite>
