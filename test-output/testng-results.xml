@@ -1,60 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="10" total="12" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-20T00:11:38 CET" name="Suite" finished-at="2022-02-20T00:11:48 CET" duration-ms="9266">
+  <suite started-at="2022-02-20T00:26:18 CET" name="Suite" finished-at="2022-02-20T00:26:22 CET" duration-ms="3381">
     <groups>
     </groups>
-    <test started-at="2022-02-20T00:11:38 CET" name="Test" finished-at="2022-02-20T00:11:48 CET" duration-ms="9266">
+    <test started-at="2022-02-20T00:26:18 CET" name="Test" finished-at="2022-02-20T00:26:22 CET" duration-ms="3381">
       <class name="meri.kiran.stadionWeather">
-        <test-method signature="stadion_FCA()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:38 CET" name="stadion_FCA" finished-at="2022-02-20T00:11:41 CET" duration-ms="2810" status="PASS">
+        <test-method signature="stadion_FCA()[pri:0, instance:meri.kiran.stadionWeather@2ed2d9cb]" started-at="2022-02-20T00:26:18 CET" name="stadion_FCA" finished-at="2022-02-20T00:26:21 CET" duration-ms="2733" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stadion_FCA -->
-        <test-method signature="stadion_FCB()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:41 CET" name="stadion_FCB" finished-at="2022-02-20T00:11:42 CET" duration-ms="583" status="PASS">
+        <test-method signature="stadion_FCB()[pri:0, instance:meri.kiran.stadionWeather@2ed2d9cb]" started-at="2022-02-20T00:26:21 CET" name="stadion_FCB" finished-at="2022-02-20T00:26:22 CET" duration-ms="614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stadion_FCB -->
-        <test-method signature="stadion_HBC()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:42 CET" name="stadion_HBC" finished-at="2022-02-20T00:11:42 CET" duration-ms="604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_HBC -->
-        <test-method signature="stadion_HOF()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:42 CET" name="stadion_HOF" finished-at="2022-02-20T00:11:43 CET" duration-ms="562" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_HOF -->
-        <test-method signature="stadion_HSV()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:43 CET" name="stadion_HSV" finished-at="2022-02-20T00:11:43 CET" duration-ms="442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_HSV -->
-        <test-method signature="stadion_KAI()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:43 CET" name="stadion_KAI" finished-at="2022-02-20T00:11:44 CET" duration-ms="646" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_KAI -->
-        <test-method signature="stadion_ROS()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:44 CET" name="stadion_ROS" finished-at="2022-02-20T00:11:45 CET" duration-ms="776" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_ROS -->
-        <test-method signature="stadion_S04()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:45 CET" name="stadion_S04" finished-at="2022-02-20T00:11:45 CET" duration-ms="465" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_S04 -->
-        <test-method signature="stadion_UNI()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:45 CET" name="stadion_UNI" finished-at="2022-02-20T00:11:46 CET" duration-ms="546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_UNI -->
-        <test-method signature="stadion_b04()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:46 CET" name="stadion_b04" finished-at="2022-02-20T00:11:46 CET" duration-ms="603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_b04 -->
-        <test-method signature="stadion_bvb()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:46 CET" name="stadion_bvb" finished-at="2022-02-20T00:11:47 CET" duration-ms="625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_bvb -->
-        <test-method signature="stadion_f95()[pri:0, instance:meri.kiran.stadionWeather@6fd83fc1]" started-at="2022-02-20T00:11:47 CET" name="stadion_f95" finished-at="2022-02-20T00:11:48 CET" duration-ms="559" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stadion_f95 -->
       </class> <!-- meri.kiran.stadionWeather -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
