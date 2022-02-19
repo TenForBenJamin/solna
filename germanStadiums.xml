@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="meri.kiran.stadionWeather">
+      		<parameter name="au" value="St. John's"></parameter>
+      		<methods>
+	      		
+	      		
+	        </methods>
+      </class>
+    </classes>
+  </test> <!-- Te
+  class name="meri.kiran.stadionWeather"/>
+  
+  st -->
+</suite> <!-- Sui<class name="afcon.cameroon">
+      		<parameter name="au" value="St. John's"></parameter>
+      		<methods>
+	      		<include name="MozsamecityAU"></include>
+	      		<include name="stadion_FCA"></include>
+	        </methods>
+      </class>
+    </classes>te -->
