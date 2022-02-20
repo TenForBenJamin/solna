@@ -39,5 +39,6 @@ public class parama
 	
 	public static String LEI ="LE2 7FL , GB";
 
-
+	// �����������FKerala HOme���������������  FCB
+	public static String KL56 ="673522,IN";
 }
