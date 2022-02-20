@@ -81,7 +81,7 @@ public class reUsableMethods
 				String windSpeed =js.getString("wind.speed");
 				String weatherDesc =js.getString("weather[0].description");
 				String weatherCode = js.getString("weather[0].id");
-				System.out.println("                      weatherCode -   " +weatherCode + "  weather description -  " + weatherDesc + " temperature is " + mainTemp   );
+				System.out.println("                      weatherCode -   " +weatherCode + " |  weather description -  " + weatherDesc + "  | temperature is " + mainTemp   );
 			}
 			catch(Exception e) {
 				System.out.println("non pinCode found for "+ z);

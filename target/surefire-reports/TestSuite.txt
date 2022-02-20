@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 10.848 s <<< FAILURE! - in TestSuite
-meri.kiran.stadionWeather.stadion_HOF  Time elapsed: 0.407 s  <<< FAILURE!
-java.lang.AssertionError: expected [above Limit set at - 10 degree] but found [10.11]
-	at meri.kiran.stadionWeather.stadion_HOF(stadionWeather.java:150)
-
-meri.kiran.stadionWeather.stadion_S04  Time elapsed: 0.214 s  <<< FAILURE!
-java.lang.AssertionError: expected [above Limit set at - 10 degree] but found [10.08]
-	at meri.kiran.stadionWeather.stadion_S04(stadionWeather.java:236)
-
-meri.kiran.stadionWeather.stadion_b04  Time elapsed: 0.457 s  <<< FAILURE!
-java.lang.AssertionError: expected [above Limit set at - 10 degree] but found [11.01]
-	at meri.kiran.stadionWeather.stadion_b04(stadionWeather.java:253)
-
-meri.kiran.stadionWeather.stadion_bvb  Time elapsed: 0.966 s  <<< FAILURE!
-java.lang.AssertionError: expected [above Limit set at - 10 degree] but found [10.02]
-	at meri.kiran.stadionWeather.stadion_bvb(stadionWeather.java:107)
-
-meri.kiran.stadionWeather.stadion_f95  Time elapsed: 0.346 s  <<< FAILURE!
-java.lang.AssertionError: expected [above Limit set at - 10 degree] but found [10.26]
-	at meri.kiran.stadionWeather.stadion_f95(stadionWeather.java:188)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.664 s - in TestSuite
