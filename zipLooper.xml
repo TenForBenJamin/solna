@@ -3,10 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="meri.kiran.germanZipCoder"/>
+      <class name="meri.kiran.indianZipCoder"/>
       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Su
 <class name="meri.kiran.indianZipCoder"/>
+<class name="meri.kiran.germanZipCoder"/>
 ite -->
