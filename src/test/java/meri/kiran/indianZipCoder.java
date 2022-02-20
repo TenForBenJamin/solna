@@ -24,18 +24,35 @@ public class indianZipCoder extends parama  {
 		System.out.println("  Zip - India ");
 		
 		RestAssured.baseURI =baseUrlopenWeather;
-		String getReqRes =
-		given().
-		queryParam("zip", KL56).
-		queryParam("appid", apiKey).
-		queryParam("lang", OpCo).queryParam("units", "metric").
-		when().get("data/2.5/weather").
-		then().assertThat().statusCode(200).extract().response().asString();
-		JsonPath js = new JsonPath(getReqRes);
-		reUsableMethods sd = new reUsableMethods();
-		sd.coordsExtractor(getReqRes);
-		//sd.coordsExtractor(getReqRes);
-		String  mainTemp = js.getString("main.temp");
+		int startZip=673522;
+		int endZip=startZip+10;
+		for(int i=startZip;i<endZip;i++)
+		{
+			
+			String zipLoop=i+",IN";
+			String getReqRes =
+					given().
+					queryParam("zip", zipLoop).
+					queryParam("appid", apiKey).
+					queryParam("lang", OpCo).queryParam("units", "metric").
+					when().get("data/2.5/weather").
+					then().assertThat().statusCode(200).extract().response().asString();
+					JsonPath js = new JsonPath(getReqRes);
+					reUsableMethods sd = new reUsableMethods();
+					sd.simblePrint(getReqRes,zipLoop);
+		}
+//		String getReqRes =
+//		given().
+//		queryParam("zip", KL56).
+//		queryParam("appid", apiKey).
+//		queryParam("lang", OpCo).queryParam("units", "metric").
+//		when().get("data/2.5/weather").
+//		then().assertThat().statusCode(200).extract().response().asString();
+//		JsonPath js = new JsonPath(getReqRes);
+//		reUsableMethods sd = new reUsableMethods();
+//		sd.simblePrint(getReqRes);
+//		//sd.coordsExtractor(getReqRes);
+//		String  mainTemp = js.getString("main.temp");
 	}
 
 }

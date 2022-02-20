@@ -2,25 +2,59 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-20T10:44:28 CET" name="Default suite" finished-at="2022-02-20T10:44:30 CET" duration-ms="2274">
+  <suite started-at="2022-02-20T11:21:37 CET" name="Default suite" finished-at="2022-02-20T11:21:42 CET" duration-ms="4988">
     <groups>
     </groups>
-    <test started-at="2022-02-20T10:44:28 CET" name="Default test" finished-at="2022-02-20T10:44:30 CET" duration-ms="2274">
+    <test started-at="2022-02-20T11:21:37 CET" name="Default test" finished-at="2022-02-20T11:21:42 CET" duration-ms="4988">
       <class name="meri.kiran.indianZipCoder">
-        <test-method signature="zipSeries_Kerala()[pri:0, instance:meri.kiran.indianZipCoder@1af2d44a]" started-at="2022-02-20T10:44:28 CET" name="zipSeries_Kerala" finished-at="2022-02-20T10:44:30 CET" duration-ms="2233" status="FAIL">
+        <test-method signature="zipSeries_Kerala()[pri:0, instance:meri.kiran.indianZipCoder@1af2d44a]" started-at="2022-02-20T11:21:37 CET" name="zipSeries_Kerala" finished-at="2022-02-20T11:21:42 CET" duration-ms="4953" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [above Limit set at - 8 degree] but found [33.63]]]>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <404>.
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [above Limit set at - 8 degree] but found [33.63]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:617)
-at objectRepo.reUsableMethods.coordsExtractor(reUsableMethods.java:45)
-at meri.kiran.indianZipCoder.zipSeries_Kerala(indianZipCoder.java:36)
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+at meri.kiran.indianZipCoder.zipSeries_Kerala(indianZipCoder.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
