@@ -6,6 +6,7 @@ import static org.testng.Assert.assertEquals;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -24,22 +25,28 @@ public class indianZipCoder extends parama  {
 		System.out.println("  Zip - India ");
 		
 		RestAssured.baseURI =baseUrlopenWeather;
-		int startZip=673522;
-		int endZip=startZip+10;
+		int startZip=673500;
+		int endZip=startZip+140;
 		for(int i=startZip;i<endZip;i++)
 		{
 			
-			String zipLoop=i+",IN";
-			String getReqRes =
-					given().
-					queryParam("zip", zipLoop).
-					queryParam("appid", apiKey).
-					queryParam("lang", OpCo).queryParam("units", "metric").
-					when().get("data/2.5/weather").
-					then().assertThat().statusCode(200).extract().response().asString();
-					JsonPath js = new JsonPath(getReqRes);
-					reUsableMethods sd = new reUsableMethods();
-					sd.simblePrint(getReqRes,zipLoop);
+			try {
+				String zipLoop=i+",IN";
+				String getReqRes =
+						given().
+						queryParam("zip", zipLoop).
+						queryParam("appid", apiKey).
+						queryParam("lang", OpCo).queryParam("units", "metric").
+						when().get("data/2.5/weather").
+						then().extract().response().asString();
+						JsonPath js = new JsonPath(getReqRes);
+						reUsableMethods sd = new reUsableMethods();
+						sd.simblePrint(getReqRes,zipLoop);
+			}
+			catch(Exception e) 
+			{
+				System.out.println(" no postal code found ");
+			}
 		}
 //		String getReqRes =
 //		given().
