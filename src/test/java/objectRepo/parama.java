@@ -29,7 +29,7 @@ public class parama
 	public static String FCBs="80939,DE";
 	public static String S04="45881,DE";
 	public static String Hamburg="20097,DE";
-	public static String de="80939,DE";
+	public static String sgf="90765,DE";
 	public static String d="86199,DE";
 	public static String w="74889,DE";
 	public static String e="80939,DE";

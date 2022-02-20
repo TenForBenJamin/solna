@@ -38,7 +38,7 @@ public class reUsableMethods
 			System.out.println("\n");
 			System.out.println("                                currentTemp   "+count +"	wind speed -   "+windSpeed + "\r\n");
 			double weatherCodeD = Double.parseDouble(mainTemp);
-			int aarm =7;
+			int aarm =8;
 			if (weatherCodeD>aarm)
 			{
 				System.out.println("     test case failed ");

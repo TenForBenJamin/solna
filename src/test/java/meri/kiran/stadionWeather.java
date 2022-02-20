@@ -109,6 +109,28 @@ public class stadionWeather extends parama  {
 			}
 		
 		@Test
+		public void stadion_sgf() {
+				
+				RestAssured.baseURI =baseUrlopenWeather;
+				String getReqRes =
+				given().
+				queryParam("zip", sgf).
+				queryParam("appid", apiKey).
+				queryParam("lang", OpCo).queryParam("units", "metric").
+				when().get("data/2.5/weather").
+				then().assertThat().statusCode(200).extract().response().asString();
+				JsonPath js = new JsonPath(getReqRes);
+				reUsableMethods sd = new reUsableMethods();
+				//sd.coordsExtractor(getReqRes);
+				String weatherCode = js.getString("weather[0].id");
+				System.out.println("                               weatherCode is    " +weatherCode + "\r\n");
+				int weatherCodeInt = Integer.parseInt(weatherCode);
+				sd.coordsExtractor(getReqRes);
+				String  mainTemp = js.getString("main.temp");
+			}
+		
+		
+		@Test
 		public void stadion_HOF() {
 				
 				RestAssured.baseURI =baseUrlopenWeather;
