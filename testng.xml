@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    	<class name="meri.kiran.indianZipCoder">
+      	<methods>
+      	
+	      		
+	      		<include name="zipSeries_StateLevel"></include>
+	        </methods>
+      </class>
+      
+    </classes>
+  </test> <!-- Test
+  <class name="meri.kiran.indianZipCoder"/>
+      <class name="meri.kiran.germanZipCoder"/>
+      <class name="meri.kiran.stadionWeather"/>
+  
+   -->
+</suite> <!-- Su
+ <classes>
+      
+      <class name="biya.acharya">
+      	<methods>
+      	<parameter name="lines" value="-2"></parameter>
+      <parameter name="ilat" value="51"></parameter>
+      			
+	      		
+	      		<include name="tenerLat"></include>
+	        </methods>
+      </class>
+    </classes>
+
+ite -->

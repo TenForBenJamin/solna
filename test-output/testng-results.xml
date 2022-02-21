@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-21T22:19:54 CET" name="Default suite" finished-at="2022-02-21T22:27:12 CET" duration-ms="437898">
+  <suite started-at="2022-02-21T23:05:38 CET" name="Suite" finished-at="2022-02-21T23:05:41 CET" duration-ms="2251">
     <groups>
     </groups>
-    <test started-at="2022-02-21T22:19:54 CET" name="Default test" finished-at="2022-02-21T22:27:12 CET" duration-ms="437898">
+    <test started-at="2022-02-21T23:05:38 CET" name="Test" finished-at="2022-02-21T23:05:41 CET" duration-ms="2251">
       <class name="meri.kiran.indianZipCoder">
-        <test-method signature="zipSeries_Kerala()[pri:0, instance:meri.kiran.indianZipCoder@1af2d44a]" started-at="2022-02-21T22:19:54 CET" name="zipSeries_Kerala" finished-at="2022-02-21T22:27:12 CET" duration-ms="437859" status="PASS">
+        <test-method signature="zipSeries_StateLevel()[pri:0, instance:meri.kiran.indianZipCoder@25fb8912]" started-at="2022-02-21T23:05:38 CET" name="zipSeries_StateLevel" finished-at="2022-02-21T23:05:41 CET" duration-ms="2210" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- zipSeries_Kerala -->
+        </test-method> <!-- zipSeries_StateLevel -->
       </class> <!-- meri.kiran.indianZipCoder -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
