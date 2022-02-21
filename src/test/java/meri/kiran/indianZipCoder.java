@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
 
@@ -49,18 +51,45 @@ public class indianZipCoder extends parama  {
 				System.out.println(" no postal code found ");
 			}
 		}
-//		String getReqRes =
-//		given().
-//		queryParam("zip", KL56).
-//		queryParam("appid", apiKey).
-//		queryParam("lang", OpCo).queryParam("units", "metric").
-//		when().get("data/2.5/weather").
-//		then().assertThat().statusCode(200).extract().response().asString();
-//		JsonPath js = new JsonPath(getReqRes);
-//		reUsableMethods sd = new reUsableMethods();
-//		sd.simblePrint(getReqRes);
-//		//sd.coordsExtractor(getReqRes);
-//		String  mainTemp = js.getString("main.temp");
+//		
+	}
+	@Test
+	public void zipSeries_StateLevel()
+	{
+		System.out.println("  Zip - India ");
+		
+		RestAssured.baseURI =baseUrlopenWeather;
+		String varan=marwahi;
+		int startZip=495100;
+		int endZip=startZip+1;
+		for(int i=startZip;i<endZip;i++)
+		{
+			
+			try {
+				String zipLoop=i+",IN";
+				// Get the RequestSpecification of the request that you want to sent
+				// to the server. The server is specified by the BaseURI that we have
+				// specified in the above step.
+				RequestSpecification httpRequest = RestAssured.given();
+
+				// Make a GET request call directly by using RequestSpecification.get() method.
+				// Make sure you specify the resource name.
+				Response response = httpRequest
+						.queryParam("zip", zipLoop).
+						queryParam("appid", apiKey).
+						queryParam("lang", OpCo).queryParam("units", "metric").
+						when().get("data/2.5/weather");
+
+				// Response.asString method will directly return the content of the body
+				// as String.
+				System.out.println("Response Body is =>  " + response.asString());
+			}
+			catch(Exception e) 
+			{
+				System.out.println(" no postal code found ");
+			}
+		}
+//		
 	}
 
 }

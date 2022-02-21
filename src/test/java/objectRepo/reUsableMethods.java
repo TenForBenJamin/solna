@@ -84,7 +84,7 @@ public class reUsableMethods
 				System.out.println("                      weatherCode -   " +weatherCode + " |  weather description -  " + weatherDesc + "  | temperature is " + mainTemp   );
 			}
 			catch(Exception e) {
-				System.out.println("non pinCode found for "+ z);
+				System.out.println("no pinCode found for "+ z);
 			}
 		 
 		 return null;
