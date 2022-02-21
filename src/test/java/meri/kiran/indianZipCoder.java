@@ -60,8 +60,8 @@ public class indianZipCoder extends parama  {
 		
 		RestAssured.baseURI =baseUrlopenWeather;
 		String varan=marwahi;
-		int startZip=495119;
-		int endZip=startZip+1;
+		int startZip=673500;
+		int endZip=startZip+100;
 		for(int i=startZip;i<endZip;i++)
 		{
 			
@@ -82,7 +82,11 @@ public class indianZipCoder extends parama  {
 
 				// Response.asString method will directly return the content of the body
 				// as String.
-				System.out.println("Response Body is =>  " + response.asString());
+				//system.out.println("Response Body is =>  " + response.asString());
+				String getReqRes =response.asString();
+				reUsableMethods sd = new reUsableMethods();
+				//sd.simblePrint(getReqRes,zipLoop);
+				sd.complexPrint(getReqRes,zipLoop,404);
 			}
 			catch(Exception e) 
 			{

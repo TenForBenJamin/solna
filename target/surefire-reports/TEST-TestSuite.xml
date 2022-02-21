@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="2.992" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="42.685" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\ss585\AppData\Local\Temp\surefire17243558178970126049\surefirebooter10144140233244724376.jar C:\Users\ss585\AppData\Local\Temp\surefire17243558178970126049 2022-02-21T23-08-16_531-jvmRun1 surefire12470799041476468423tmp surefire_03451972694877031527tmp"/>
+    <property name="sun.java.command" value="C:\Users\ss585\AppData\Local\Temp\surefire2019142385920034622\surefirebooter15612874231538897853.jar C:\Users\ss585\AppData\Local\Temp\surefire2019142385920034622 2022-02-21T23-24-59_643-jvmRun1 surefire10511055621477208745tmp surefire_03134011737621296198tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\git\turf\dejan\rowe\target\test-classes;C:\git\turf\dejan\rowe\target\classes;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-java\7.2.1\cucumber-java-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-core\7.2.1\cucumber-core-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin\7.2.1\cucumber-gherkin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.1\cucumber-gherkin-messages-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\datatable\7.2.1\datatable-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-plugin\7.2.1\cucumber-plugin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\docstring\7.2.1\docstring-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\ss585\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-junit\7.2.1\cucumber-junit-7.2.1.jar;C:\Users\ss585\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\ss585\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ss585\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ss585\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ss585\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ss585\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ss585\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ss585\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ss585\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ss585\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\ss585\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\ss585\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Users\ss585\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ss585\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-excelant\4.1.2\poi-excelant-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Users\ss585\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant\1.8.2\ant-1.8.2.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant-launcher\1.8.2\ant-launcher-1.8.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.0\selenium-java-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.0\selenium-api-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.0\selenium-chrome-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\ss585\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\ss585\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ss585\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ss585\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\ss585\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar;C:\Users\ss585\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.0\selenium-chromium-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.0\selenium-json-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.0\selenium-devtools-v85-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v94\4.1.0\selenium-devtools-v94-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v95\4.1.0\selenium-devtools-v95-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v96\4.1.0\selenium-devtools-v96-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.0\selenium-edge-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.0\selenium-firefox-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.1.0\selenium-firefox-xpi-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.0\selenium-ie-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.0\selenium-opera-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.0\selenium-remote-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\io\netty\netty-buffer\4.1.69.Final\netty-buffer-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-http\4.1.69.Final\netty-codec-http-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec\4.1.69.Final\netty-codec-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler\4.1.69.Final\netty-handler-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-common\4.1.69.Final\netty-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.69.Final\netty-transport-native-epoll-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.69.Final\netty-transport-native-kqueue-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.69.Final\netty-transport-native-unix-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport\4.1.69.Final\netty-transport-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-resolver\4.1.69.Final\netty-resolver-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api\1.9.0\opentelemetry-api-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-context\1.9.0\opentelemetry-context-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.9.0\opentelemetry-exporter-logging-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.9.0-alpha\opentelemetry-sdk-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.9.0-alpha\opentelemetry-sdk-logs-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.9.0\opentelemetry-sdk-common-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.9.0\opentelemetry-sdk-extension-autoconfigure-spi-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.9.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.9.0\opentelemetry-sdk-trace-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.9.0-alpha\opentelemetry-api-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.9.0\opentelemetry-sdk-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.9.0-alpha\opentelemetry-semconv-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\ss585\.m2\repository\net\bytebuddy\byte-buddy\1.12.1\byte-buddy-1.12.1.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\ss585\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ss585\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\ss585\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\ss585\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.0\selenium-http-4.1.0.jar;C:\Users\ss585\.m2\repository\net\jodah\failsafe\2.4.4\failsafe-2.4.4.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.0\selenium-safari-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.0\selenium-support-4.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ss585\AppData\Local\Temp\surefire17243558178970126049\surefirebooter10144140233244724376.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ss585\AppData\Local\Temp\surefire2019142385920034622\surefirebooter15612874231538897853.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
@@ -56,9 +56,149 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="zipSeries_StateLevel" classname="meri.kiran.indianZipCoder" time="2.557">
+  <testcase name="zipSeries_StateLevel" classname="meri.kiran.indianZipCoder" time="42.379">
     <system-out><![CDATA[  zipSeries_StateLevel 
-Response Body is =>  {"coord":{"lon":81.9738,"lat":22.8906},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":13.21,"feels_like":11.16,"temp_min":13.21,"temp_max":13.21,"pressure":1012,"humidity":22,"sea_level":1012,"grnd_level":943},"visibility":10000,"wind":{"speed":0.88,"deg":356,"gust":0.99},"clouds":{"all":0},"dt":1645481300,"sys":{"country":"IN","sunrise":1645491584,"sunset":1645533114},"timezone":19800,"id":0,"name":"Dhobhar","cod":200}
+no pinCode found for 673500,IN    and error code is 404
+Extracted place for  ZipCode 673501,IN is          Orkatteri is at                           11.6508 , 75.5958
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.54
+Extracted place for  ZipCode 673502,IN is          Edacheri is at                           11.7571 , 75.9947
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 20.82
+Extracted place for  ZipCode 673503,IN is          Purameri is at                           11.6471 , 75.6346
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.53
+Extracted place for  ZipCode 673504,IN is          Nadapuram is at                           11.6846 , 75.6549
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.51
+Extracted place for  ZipCode 673505,IN is          Iringannur is at                           11.7081 , 75.6032
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 22.21
+Extracted place for  ZipCode 673506,IN is          Chelakkad is at                           11.6743 , 75.7004
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.45
+Extracted place for  ZipCode 673507,IN is          Poolakkul is at                           11.6484 , 75.7074
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.06
+Extracted place for  ZipCode 673508,IN is          Kuttiadi is at                           11.6541 , 75.754
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.53
+Extracted place for  ZipCode 673509,IN is          Parakkadavu is at                           11.7352 , 75.6542
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 21.94
+no pinCode found for 673510,IN    and error code is 404
+no pinCode found for 673511,IN    and error code is 404
+no pinCode found for 673512,IN    and error code is 404
+Extracted place for  ZipCode 673513,IN is          Kavilampara is at                           11.6722 , 75.771
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.51
+no pinCode found for 673514,IN    and error code is 404
+no pinCode found for 673515,IN    and error code is 404
+no pinCode found for 673516,IN    and error code is 404
+Extracted place for  ZipCode 673517,IN is          Abhayagiri is at                           11.7256 , 75.6492
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 21.98
+no pinCode found for 673518,IN    and error code is 404
+no pinCode found for 673519,IN    and error code is 404
+no pinCode found for 673520,IN    and error code is 404
+Extracted place for  ZipCode 673521,IN is          Iringal is at                           11.5593 , 75.6166
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.49
+Extracted place for  ZipCode 673522,IN is          Kilur Meladi is at                           11.5121 , 75.6529
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.63
+Extracted place for  ZipCode 673523,IN is          Maniyur is at                           11.5522 , 75.6503
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.46
+Extracted place for  ZipCode 673524,IN is          Cheruvannur Meladi is at                           11.5886 , 75.7007
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.6
+Extracted place for  ZipCode 673525,IN is          Kadiyangad is at                           11.6028 , 75.7622
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.47
+Extracted place for  ZipCode 673526,IN is          Kayanna is at                           11.5379 , 75.7975
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.47
+Extracted place for  ZipCode 673527,IN is          Cherukad is at                           11.5476 , 75.6979
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.47
+Extracted place for  ZipCode 673528,IN is          Chengaroth is at                           11.5476 , 75.6979
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.47
+Extracted place for  ZipCode 673529,IN is          Tikkoti is at                           11.4909 , 75.6474
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.51
+no pinCode found for 673530,IN    and error code is 404
+no pinCode found for 673531,IN    and error code is 404
+no pinCode found for 673532,IN    and error code is 404
+no pinCode found for 673533,IN    and error code is 404
+no pinCode found for 673534,IN    and error code is 404
+no pinCode found for 673535,IN    and error code is 404
+no pinCode found for 673536,IN    and error code is 404
+no pinCode found for 673537,IN    and error code is 404
+no pinCode found for 673538,IN    and error code is 404
+no pinCode found for 673539,IN    and error code is 404
+no pinCode found for 673540,IN    and error code is 404
+Extracted place for  ZipCode 673541,IN is          Chaniyankadavu is at                           11.6261 , 75.6743
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.53
+Extracted place for  ZipCode 673542,IN is          Ponmeri Parambil is at                           11.6147 , 75.61
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.54
+no pinCode found for 673543,IN    and error code is 404
+no pinCode found for 673544,IN    and error code is 404
+no pinCode found for 673545,IN    and error code is 404
+no pinCode found for 673546,IN    and error code is 404
+no pinCode found for 673547,IN    and error code is 404
+no pinCode found for 673548,IN    and error code is 404
+no pinCode found for 673549,IN    and error code is 404
+no pinCode found for 673550,IN    and error code is 404
+no pinCode found for 673551,IN    and error code is 404
+no pinCode found for 673552,IN    and error code is 404
+no pinCode found for 673553,IN    and error code is 404
+no pinCode found for 673554,IN    and error code is 404
+no pinCode found for 673555,IN    and error code is 404
+no pinCode found for 673556,IN    and error code is 404
+no pinCode found for 673557,IN    and error code is 404
+no pinCode found for 673558,IN    and error code is 404
+no pinCode found for 673559,IN    and error code is 404
+no pinCode found for 673560,IN    and error code is 404
+no pinCode found for 673561,IN    and error code is 404
+no pinCode found for 673562,IN    and error code is 404
+no pinCode found for 673563,IN    and error code is 404
+no pinCode found for 673564,IN    and error code is 404
+no pinCode found for 673565,IN    and error code is 404
+no pinCode found for 673566,IN    and error code is 404
+no pinCode found for 673567,IN    and error code is 404
+no pinCode found for 673568,IN    and error code is 404
+no pinCode found for 673569,IN    and error code is 404
+Extracted place for  ZipCode 673570,IN is          Iim Kozhikode Campus is at                           11.3737 , 75.8674
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.33
+Extracted place for  ZipCode 673571,IN is          Chelavur is at                           11.2892 , 75.8451
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.43
+Extracted place for  ZipCode 673572,IN is          Karuvampoyil is at                           11.3475 , 75.932
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.49
+Extracted place for  ZipCode 673573,IN is          Tamaracheri is at                           11.3737 , 75.8674
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.33
+Extracted place for  ZipCode 673574,IN is          Mangad is at                           11.4119 , 75.7098
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.5
+Extracted place for  ZipCode 673575,IN is          Thariote North is at                           11.3737 , 75.8674
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.33
+Extracted place for  ZipCode 673576,IN is          Sugandhagiri is at                           11.5365 , 76.0318
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 20.48
+Extracted place for  ZipCode 673577,IN is          Chembra is at                           11.731 , 75.5256
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 22.03
+no pinCode found for 673578,IN    and error code is 404
+Extracted place for  ZipCode 673579,IN is          Seetha Mount is at                           11.3737 , 75.8674
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.33
+Extracted place for  ZipCode 673580,IN is          Kuppayakode is at                           11.8509 , 75.9891
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 17.59
+Extracted place for  ZipCode 673581,IN is          Vatuvanchal is at                           11.4622 , 75.9116
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 24.8
+Extracted place for  ZipCode 673582,IN is          Velimanna is at                           11.3782 , 75.9427
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.46
+no pinCode found for 673583,IN    and error code is 404
+no pinCode found for 673584,IN    and error code is 404
+Extracted place for  ZipCode 673585,IN is          Parannur is at                           11.3564 , 75.859
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.19
+Extracted place for  ZipCode 673586,IN is          Puduppadi is at                           11.5 , 75.9667
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 25.06
+no pinCode found for 673587,IN    and error code is 404
+no pinCode found for 673588,IN    and error code is 404
+no pinCode found for 673589,IN    and error code is 404
+no pinCode found for 673590,IN    and error code is 404
+Extracted place for  ZipCode 673591,IN is          Mylambadi is at                           11.6563 , 76.1696
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 20.59
+Extracted place for  ZipCode 673592,IN is          Muthanga is at                           11.6688 , 76.3694
+                      weatherCode -   801 |  weather description -  few clouds  | temperature is 18.17
+Extracted place for  ZipCode 673593,IN is          Cheengeri is at                           11.619 , 76.2102
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 19.64
+no pinCode found for 673594,IN    and error code is 404
+Extracted place for  ZipCode 673595,IN is          Mookuthi Kunnu is at                           11.6639 , 76.2345
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 19.81
+Extracted place for  ZipCode 673596,IN is          Thazha Munda is at                           11.7137 , 76.1639
+                      weatherCode -   800 |  weather description -  clear sky  | temperature is 20.51
+no pinCode found for 673597,IN    and error code is 404
+no pinCode found for 673598,IN    and error code is 404
+no pinCode found for 673599,IN    and error code is 404
 ]]></system-out>
   </testcase>
 </testsuite>
