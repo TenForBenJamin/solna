@@ -41,4 +41,8 @@ public class parama
 
 	// �����������FKerala HOme���������������  FCB
 	public static String KL56 ="673522,IN";
+	//685612 munnar
+	//495118 marwahi
+	public static String marwahi ="495118,IN";
+	
 }

@@ -25,8 +25,9 @@ public class indianZipCoder extends parama  {
 		System.out.println("  Zip - India ");
 		
 		RestAssured.baseURI =baseUrlopenWeather;
-		int startZip=673000;
-		int endZip=startZip+1400;
+		String varan=marwahi;
+		int startZip=495100;
+		int endZip=startZip+1000;
 		for(int i=startZip;i<endZip;i++)
 		{
 			
