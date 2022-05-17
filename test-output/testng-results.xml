@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-21T23:05:38 CET" name="Suite" finished-at="2022-02-21T23:05:41 CET" duration-ms="2251">
+  <suite started-at="2022-05-17T16:52:07 CEST" name="Suite" finished-at="2022-05-17T16:52:40 CEST" duration-ms="33882">
     <groups>
     </groups>
-    <test started-at="2022-02-21T23:05:38 CET" name="Test" finished-at="2022-02-21T23:05:41 CET" duration-ms="2251">
+    <test started-at="2022-05-17T16:52:07 CEST" name="Test" finished-at="2022-05-17T16:52:40 CEST" duration-ms="33882">
       <class name="meri.kiran.indianZipCoder">
-        <test-method signature="zipSeries_StateLevel()[pri:0, instance:meri.kiran.indianZipCoder@25fb8912]" started-at="2022-02-21T23:05:38 CET" name="zipSeries_StateLevel" finished-at="2022-02-21T23:05:41 CET" duration-ms="2210" status="PASS">
+        <test-method signature="zipSeries_Berlin(int)[pri:0, instance:meri.kiran.indianZipCoder@306e95ec]" started-at="2022-05-17T16:52:07 CEST" name="zipSeries_Berlin" finished-at="2022-05-17T16:52:40 CEST" duration-ms="33844" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- zipSeries_StateLevel -->
+        </test-method> <!-- zipSeries_Berlin -->
       </class> <!-- meri.kiran.indianZipCoder -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

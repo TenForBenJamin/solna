@@ -3,16 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="meri.kiran.stadionWeather">
-        <parameter name="au" value="St. John&#039;s"/>
+      <class name="meri.kiran.indianZipCoder">
+        <parameter name="counter" value="1000"/>
         <methods>
-          <include name="stadion_S04"/>
-          <include name="stadion_bvb"/>
-          <include name="stadion_f95"/>
-          <include name="stadion_HOF"/>
-          <include name="stadion_b04"/>
+          <include name="zipSeries_Chennai"/>
         </methods>
-      </class> <!-- meri.kiran.stadionWeather -->
+      </class> <!-- meri.kiran.indianZipCoder -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

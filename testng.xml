@@ -6,8 +6,8 @@
     	<class name="meri.kiran.indianZipCoder">
       	<methods>
       	
-	      		
-	      		<include name="zipSeries_StateLevel"></include>
+	      		<parameter name="siu" value="100"></parameter>
+	      		<include name="zipSeries_Berlin"></include>
 	        </methods>
       </class>
       
@@ -16,7 +16,8 @@
   <class name="meri.kiran.indianZipCoder"/>
       <class name="meri.kiran.germanZipCoder"/>
       <class name="meri.kiran.stadionWeather"/>
-  
+  	<include name="zipSeries_Chennai"></include>
+  	<include name="zipSeries_Kerala"></include>
    -->
 </suite> <!-- Su
  <classes>
