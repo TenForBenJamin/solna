@@ -7,7 +7,8 @@
       	<methods>
       	
 	      		<parameter name="siu" value="500"></parameter>
-	      		<include name="zipSeries_Berlin"></include>
+	      		
+	      		<include name="SeBasicWeatherApp"></include>
 	        </methods>
       </class>
       
@@ -21,7 +22,10 @@
    -->
 </suite> <!-- Su
  <classes>
-      
+      <methods>
+	      		
+	      		<include name="SeBasicWeatherApp"></include>
+	        </methods>
       <class name="biya.acharya">
       	<methods>
       	<parameter name="lines" value="-2"></parameter>

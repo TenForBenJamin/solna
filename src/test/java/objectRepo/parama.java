@@ -35,7 +35,7 @@ public class parama
 	public static String e="80939,DE";
 	public static String q="45881,DE";
 	// �����������FCB���������������������������  FCB
-	
+	public static String glascow="glasgow";
 	
 	public static String LEI ="LE2 7FL , GB";
 
