@@ -6,7 +6,7 @@
     	<class name="meri.kiran.indianZipCoder">
       	<methods>
       	
-	      		<parameter name="siu" value="100"></parameter>
+	      		<parameter name="siu" value="500"></parameter>
 	      		<include name="zipSeries_Berlin"></include>
 	        </methods>
       </class>

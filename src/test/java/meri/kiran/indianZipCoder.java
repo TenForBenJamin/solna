@@ -107,7 +107,7 @@ public class indianZipCoder extends parama  {
 		
 		RestAssured.baseURI =baseUrlopenWeather;
 		String varan=marwahi;
-		int startZip=10700;
+		int startZip=10710;
 		int endZip=startZip+siu;
 		for(int i=startZip;i<endZip;i++)
 		{
