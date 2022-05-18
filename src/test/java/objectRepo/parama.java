@@ -45,6 +45,24 @@ public class parama
 	//495118 marwahi
 	public static String marwahi ="495118,IN";
 	
+	// UEL destinations
+	// Graz , vienna 
+	// rennes , nantes , marseille
+	// rangers , hearts
+	// eindhoven , Feyenoord
+	// USG , brugge , gent
+	//Zurich
+	// midyalland , FCK
+	//Poznan
+	// Plizen
+	
+	
+	
+	
+	
+	
+	
+	//
 	
 	//barrow Ak 99723
 	
