@@ -36,7 +36,8 @@ public class parama
 	public static String q="45881,DE";
 	// �����������FCB���������������������������  FCB
 	public static String glascow="glasgow";
-	
+	public static String Graz="Graz";
+	public static String vienna="vienna";
 	public static String LEI ="LE2 7FL , GB";
 
 	// �����������FKerala HOme���������������  FCB
