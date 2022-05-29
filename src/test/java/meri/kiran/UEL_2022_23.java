@@ -66,7 +66,7 @@ public class UEL_2022_23 extends parama  {
 			String  mainTemp = js.getString("main.temp");
 		}
 	
-		@Test
+		
 		public void AustrianGraz() throws InterruptedException 
 		{
 			System.out.println("-------------Test1-----------------------------------------------");
@@ -123,5 +123,67 @@ public class UEL_2022_23 extends parama  {
 			
 		}
 		
+		@Test
+		public void E2E() throws InterruptedException 
+		{
+			System.out.println("-------------Test1-----------------------------------------------");
+			//frameworktest fwt = new frameworktest();
+//			System.setProperty("webdriver.chrome.driver","C:\\Mava\\chromedriver.exe"); // declaring the chrome driver locatoion
+//			WebDriver driver= new ChromeDriver();// initializing chrome driver
+			//driver.manage().deleteAllCookies(); // deleting all cookies
+			System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
+			WebDriver driver= new FirefoxDriver();
+			driver.manage().window().maximize();		// maximizing the window
+//			String place = "potsdam";
+			String place = Graz;
+			//     xpath for WeatherAPI button        //*[@id="MoviesB"]
+			String uri= "https://tenforben.github.io";
+			System.out.println("URL formed -" +uri);
+			driver.get(uri);
+			String brooks =place;
+			String WAbuttonXpth ="//*[@id=\"Ramo\"]/a[2]";
+			String MetricbuttonXpth ="//*[@id=\"MoviesB\"]";
+			String searchReq =brooks;
+			System.out.println("Place is  " + brooks);
+			WebElement WAbutton = driver.findElement(By.xpath(WAbuttonXpth));
+			WAbutton.click();
+			WebElement MetricButton = driver.findElement(By.xpath(MetricbuttonXpth));
+			MetricButton.click();
+			WebElement searchBarr=driver.findElement(By.id("searchUser"));
+			searchBarr.sendKeys(searchReq);		
+			WebElement sambi = driver.findElement(By.id("submit"));
+			 sambi.click();
+			 Thread.sleep(2000);
+			 
+			 
+			 try {
+				 WebElement  coords= driver.findElement(By.id("xPat"));
+				 //document.getElementById("cuwt").innerText
+				 WebElement  searchResonse= driver.findElement(By.id("cuwt"));
+				 WebElement  CountryC= driver.findElement(By.id("landen"));
+				 String string_CC = CountryC.getText(); 
+				 String searchRes = searchResonse.getText(); 		
+				 String loc = coords.getText(); 	
+				String searchResult= searchRes +" " + loc +" " + string_CC;
+				System.out.println("CUrrent temperature  updated in excel  ");		
+				String receivedValue=searchResult;
+
+				String[] result = receivedValue.split(" ");
+				String SR =result[0];
+				System.out.println("weather "+" is " + SR +" degrees ");
+				String Coords =result[1];//location
+				String nation =result[2]; // country codeq
+				System.out.println("location is " + Coords +" Lat/Longitude ");
+				//fwt.quitbrowser(driver);
+				driver.quit();
+				 
+			 }
+			 catch(Exception e)
+			 {
+				 System.out.println("exceptions are available");
+			 }
+			//String searchR= driver.findElement(By.xpath("/html/body/div[3]/div/div/p[1]")).getText() ;
+			
+		}	
 		
 }
