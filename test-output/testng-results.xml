@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-29T14:13:08 CEST" name="Default suite" finished-at="2022-05-29T14:13:18 CEST" duration-ms="9694">
+  <suite started-at="2022-05-29T15:19:14 CEST" name="Suite" finished-at="2022-05-29T15:19:22 CEST" duration-ms="7843">
     <groups>
     </groups>
-    <test started-at="2022-05-29T14:13:08 CEST" name="Default test" finished-at="2022-05-29T14:13:18 CEST" duration-ms="9694">
-      <class name="meri.kiran.UEL_2022_23">
-        <test-method signature="E2E()[pri:0, instance:meri.kiran.UEL_2022_23@58d75e99]" started-at="2022-05-29T14:13:08 CEST" name="E2E" finished-at="2022-05-29T14:13:18 CEST" duration-ms="9649" status="PASS">
+    <test started-at="2022-05-29T15:19:14 CEST" name="Test" finished-at="2022-05-29T15:19:22 CEST" duration-ms="7843">
+      <class name="meri.kiran.vini">
+        <test-method signature="e2e()[pri:0, instance:meri.kiran.vini@4fb3ee4e]" started-at="2022-05-29T15:19:14 CEST" name="e2e" finished-at="2022-05-29T15:19:22 CEST" duration-ms="7786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- E2E -->
-      </class> <!-- meri.kiran.UEL_2022_23 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- e2e -->
+      </class> <!-- meri.kiran.vini -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
