@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
@@ -15,17 +16,37 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.PageObjectFactory;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
-public class vini {
+public class vini 
+{
+	@DataProvider
+	
+	public Object[][] getData()
+	{
+		Object[][] data = new Object[3][2];
+		
+		data[0][0]="Fribourg";
+		data[0][1]="EuropaLeague";
+		
+		data[1][0]="Eindhoven";
+		data[1][1]="EuropaLeague";
+		
+		data[2][0]="Warsaw";
+		data[2][1]="EuropaLeague";
+		
+		return data;
+		
+		
+	}
 
-	@Test
-	public void e2e() throws InterruptedException 
+	@Test(dataProvider="getData")
+	public void e2e(String ort , String comp) throws InterruptedException 
 	{
 		System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
 		WebDriver driver= new FirefoxDriver();
 		driver.manage().window().maximize();		// maximizing the window
 		driver.get("https://tenforben.github.io");
 //		String place = "potsdam";
-		String place = "dusseldorf";
+		String place = ort;
 		PageObjectFactory po = new PageObjectFactory(driver);
 		po.NavigationToWeatherAPI().click();
 		Thread.sleep(2000);

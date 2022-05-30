@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-29T15:23:15 CEST" name="Suite" finished-at="2022-05-29T15:23:38 CEST" duration-ms="22520">
+  <suite started-at="2022-05-30T23:03:37 CEST" name="Suite" finished-at="2022-05-30T23:04:38 CEST" duration-ms="60579">
     <groups>
     </groups>
-    <test started-at="2022-05-29T15:23:15 CEST" name="Test" finished-at="2022-05-29T15:23:38 CEST" duration-ms="22520">
+    <test started-at="2022-05-30T23:03:37 CEST" name="Test" finished-at="2022-05-30T23:04:38 CEST" duration-ms="60579">
       <class name="meri.kiran.vini">
-        <test-method signature="e2e()[pri:0, instance:meri.kiran.vini@bef2d72]" started-at="2022-05-29T15:23:15 CEST" name="e2e" finished-at="2022-05-29T15:23:38 CEST" duration-ms="22484" status="PASS">
+        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:03:37 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:03:58 CEST" duration-ms="21317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fribourg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- e2e -->
+        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:03:58 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:04:19 CEST" duration-ms="20113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Eindhoven]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- e2e -->
+        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:04:19 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:04:38 CEST" duration-ms="19112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Warsaw]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- e2e -->
