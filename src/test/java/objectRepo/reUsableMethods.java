@@ -41,7 +41,7 @@ public class reUsableMethods
 			int aarm =25;
 			if (weatherCodeD>aarm)
 			{
-				System.out.println("     test case failed ");
+				System.out.println("     test case failed  for "+asliJagah);
 				Assert.assertEquals(weatherCodeD,"above Limit set at - "+aarm +" degree");
 			}
 		 

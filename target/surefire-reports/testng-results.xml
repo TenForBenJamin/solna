@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-30T23:03:37 CEST" name="Suite" finished-at="2022-05-30T23:04:38 CEST" duration-ms="60579">
+  <suite started-at="2022-06-06T17:16:12 CEST" name="Suite" finished-at="2022-06-06T17:16:21 CEST" duration-ms="8781">
     <groups>
     </groups>
-    <test started-at="2022-05-30T23:03:37 CEST" name="Test" finished-at="2022-05-30T23:04:38 CEST" duration-ms="60579">
+    <test started-at="2022-06-06T17:16:12 CEST" name="Test" finished-at="2022-06-06T17:16:21 CEST" duration-ms="8781">
       <class name="meri.kiran.vini">
-        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:03:37 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:03:58 CEST" duration-ms="21317" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:12 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:14 CEST" duration-ms="2499" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Fribourg]]>
+                <![CDATA[Kiel]]>
               </value>
             </param>
             <param index="1">
@@ -22,12 +22,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- e2e -->
-        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:03:58 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:04:19 CEST" duration-ms="20113" status="PASS">
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:14 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:15 CEST" duration-ms="424" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Eindhoven]]>
+                <![CDATA[Rostock]]>
               </value>
             </param>
             <param index="1">
@@ -38,12 +38,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- e2e -->
-        <test-method signature="e2e(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3d680b5a]" started-at="2022-05-30T23:04:19 CEST" name="e2e" data-provider="getData" finished-at="2022-05-30T23:04:38 CEST" duration-ms="19112" status="PASS">
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:15 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:15 CEST" duration-ms="433" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Warsaw]]>
+                <![CDATA[Hamburg]]>
               </value>
             </param>
             <param index="1">
@@ -54,7 +54,247 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- e2e -->
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:15 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:16 CEST" duration-ms="380" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[St. Pauli]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:16 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:16 CEST" duration-ms="357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Magdeburg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:16 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:16 CEST" duration-ms="380" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Furth]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:16 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:17 CEST" duration-ms="329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nuremberg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:17 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:17 CEST" duration-ms="382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Regensburg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:17 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:17 CEST" duration-ms="385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Heidenheim]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:17 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:18 CEST" duration-ms="348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sandhausen]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:18 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:18 CEST" duration-ms="388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Karlsruhe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:18 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:19 CEST" duration-ms="395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kaiserslautern]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:19 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:19 CEST" duration-ms="313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Darmstadt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:19 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:19 CEST" duration-ms="372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dusseldorf]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:19 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:20 CEST" duration-ms="379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Paderborn]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:20 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:20 CEST" duration-ms="332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bielefeld]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:20 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:20 CEST" duration-ms="334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hannover]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EuropaLeague]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@3c419631]" started-at="2022-06-06T17:16:20 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:16:21 CEST" duration-ms="314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Braunschweig]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UCL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataProbhiderAPI -->
       </class> <!-- meri.kiran.vini -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

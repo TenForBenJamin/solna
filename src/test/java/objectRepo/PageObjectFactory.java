@@ -24,12 +24,18 @@ public class PageObjectFactory {
 	
 	String WAbuttonXpth ="//*[@id=\"Ramo\"]/a[2]";
 	String MetricbuttonXpth ="//*[@id=\"MoviesB\"]";
-	
+	String tempXpth ="//*[@id=\"cuwt\"]";
 	
 	By HomePageWeatherAPIbutton = By.xpath(WAbuttonXpth);
 	By SubmitButton = By.id("submit");
 	By MetricPageButton = By.xpath(MetricbuttonXpth);
 	By SearchBar = By.id("searchUser");
+	
+	
+	By chrles = By.xpath(tempXpth);
+	
+	
+	
 	
 	public WebElement NavigationToWeatherAPI()
 	{
@@ -52,5 +58,11 @@ public class PageObjectFactory {
 	{
 		return driver.findElement(SubmitButton);
 	}
+	
+	public WebElement temperatureElement()
+	{
+		return driver.findElement(chrles);
+	}
+
 
 }

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="meri.kiran.indianZipCoder">
+      <class name="meri.kiran.vini">
         <methods>
-          <include name="zipSeries_Chennai"/>
+          <include name="dataProbhiderAPI" invocation-numbers="0 1 2 3 4 5"/>
         </methods>
-      </class> <!-- meri.kiran.indianZipCoder -->
+      </class> <!-- meri.kiran.vini -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
