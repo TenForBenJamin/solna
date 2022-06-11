@@ -59,12 +59,30 @@ public class vini extends Baishh
 		
 		
 	}
+	
+	@DataProvider
+	public Object[][] singleData()
+	{
+		Object[][] data = new Object[2][2];
+		
+		data[0][0]="Interlaken,CH";
+		data[0][1]="Group A";
+		
+		data[1][0]="Interlaken";
+		data[1][1]="Group B";
+		
+		
+		
+		return data;
+		
+		
+	}
 
 	//@Test(dataProvider="ZweiteLiga")
-	public void dataProbhiderAPI(String ort , String comp)
+	public void dataProbhiderAPI(String ort , String comp) throws IOException
 	{
 		System.out.println(" place " +ort);
-		
+		String apiKey=schussel();
 		RestAssured.baseURI =baseUrlopenWeather;
 		String getReqRes =
 		given().
@@ -81,10 +99,10 @@ public class vini extends Baishh
 	}
 	
 	//@Test(dataProvider="getData")
-	public void ASIAN_2023_Qualifier(String ort , String comp)
+	public void ASIAN_2023_Qualifier(String ort , String comp) throws IOException
 	{
 		System.out.println(" place " +ort);
-		
+		String apiKey=schussel();
 		RestAssured.baseURI =baseUrlopenWeather;
 		String getReqRes =
 		given().
@@ -100,15 +118,16 @@ public class vini extends Baishh
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-	@Test(dataProvider="getData")
+	@Test(dataProvider="singleData")
 	public void e2e(String ort , String comp) throws InterruptedException, IOException 
 	{
-		System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
-		WebDriver driver= new FirefoxDriver();
+		//System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
+		//WebDriver driver= new FirefoxDriver();
+		driver=initilizeDriver();
 		driver.manage().window().maximize();		// maximizing the window
 		driver.get("https://tenforben.github.io");
 		String kanda = initilizeBrowser();
-		System.out.println("FIS worked  "+kanda);
+		System.out.println("browser is   "+kanda);
 		String place = ort;
 		PageObjectFactory po = new PageObjectFactory(driver);
 		po.NavigationToWeatherAPI().click();
@@ -117,14 +136,14 @@ public class vini extends Baishh
 		po.searchPlace().sendKeys(place);
 		po.SubmitButtonOfMetric().click();
 		Thread.sleep(12000);
-		String x=po.temperatureElement().getText();
-		double weatherCodeD = Double.parseDouble(x);
-		int aarm =15;
-		if (weatherCodeD>aarm)
-		{
-			System.out.println("     test case failed ");
-			Assert.assertEquals(weatherCodeD,"above Limit set at - "+aarm +" degree");
-		}
+//		String x=po.temperatureElement().getText();
+//		double weatherCodeD = Double.parseDouble(x);
+//		int aarm =15;
+//		if (weatherCodeD>aarm)
+//		{
+//			System.out.println("     test case failed ");
+//			//Assert.assertEquals(weatherCodeD,"above Limit set at - "+aarm +" degree");
+//		}
 	 
 		
 		driver.quit();

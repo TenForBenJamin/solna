@@ -5,7 +5,7 @@
     <classes>
       <class name="meri.kiran.vini">
         <methods>
-          <include name="e2e" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="e2e" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- meri.kiran.vini -->
     </classes>

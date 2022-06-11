@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,46 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 6 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Kuwait City, Group A)">e2e(Kuwait City, Group A)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Interlaken,CA, Group B)">e2e(Interlaken,CA, Group B)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Namangan, Group C)">e2e(Namangan, Group C)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Interlaken,CH, Group A)">e2e(Interlaken,CH, Group A)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Kolkata, Group D)">e2e(Kolkata, Group D)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(kuala lumpur, Group E)">e2e(kuala lumpur, Group E)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Ulaanbaatar, Group B)">e2e(Ulaanbaatar, Group B)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="meri.kiran.vini" class="method navigator-link" hash-for-method="e2e(Bishkek, Group F)">e2e(Bishkek, Group F)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -144,125 +124,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">meri.kiran.vini</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="e2e(Kuwait City, Group A)">
-                  </a> <!-- e2e(Kuwait City, Group A) -->
+                  <a name="e2e(Interlaken,CA, Group B)">
+                  </a> <!-- e2e(Interlaken,CA, Group B) -->
                   <span class="method-name">e2e</span>
-                  <span class="parameters">(Kuwait City, Group A)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at meri.kiran.vini.e2e(vini.java:121)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(Interlaken,CA, Group B)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="e2e(Namangan, Group C)">
-                  </a> <!-- e2e(Namangan, Group C) -->
+                  <a name="e2e(Interlaken,CH, Group A)">
+                  </a> <!-- e2e(Interlaken,CH, Group A) -->
                   <span class="method-name">e2e</span>
-                  <span class="parameters">(Namangan, Group C)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at meri.kiran.vini.e2e(vini.java:121)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="e2e(Kolkata, Group D)">
-                  </a> <!-- e2e(Kolkata, Group D) -->
-                  <span class="method-name">e2e</span>
-                  <span class="parameters">(Kolkata, Group D)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at meri.kiran.vini.e2e(vini.java:121)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="e2e(kuala lumpur, Group E)">
-                  </a> <!-- e2e(kuala lumpur, Group E) -->
-                  <span class="method-name">e2e</span>
-                  <span class="parameters">(kuala lumpur, Group E)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at meri.kiran.vini.e2e(vini.java:121)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="e2e(Ulaanbaatar, Group B)">
-                  </a> <!-- e2e(Ulaanbaatar, Group B) -->
-                  <span class="method-name">e2e</span>
-                  <span class="parameters">(Ulaanbaatar, Group B)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at meri.kiran.vini.e2e(vini.java:121)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="e2e(Bishkek, Group F)">
-                  </a> <!-- e2e(Bishkek, Group F) -->
-                  <span class="method-name">e2e</span>
-                  <span class="parameters">(Bishkek, Group F)</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: &apos;4.1.0&apos;, revision: &apos;87802e897b&apos;
-System info: host: &apos;DESKTOP-4T26L2U&apos;, ip: &apos;192.168.1.45&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [73e9ae56-29dc-46cc-b3ac-31d37b4a1259, findElement {using=xpath, value=//*[@id=&quot;cuwt&quot;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:debuggerAddress: localhost:57101, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 1852, moz:profile: C:\Users\ss585\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:57101/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 73e9ae56-29dc-46cc-b3ac-31d37b4a1259
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at objectRepo.PageObjectFactory.temperatureElement(PageObjectFactory.java:64)
-	at meri.kiran.vini.e2e(vini.java:120)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(Interlaken,CH, Group A)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -315,36 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'e2e')
 data.setCell(0, 2, 'meri.kiran.vini')
-data.setCell(0, 3, 23668);
+data.setCell(0, 3, 19873);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'e2e')
 data.setCell(1, 2, 'meri.kiran.vini')
-data.setCell(1, 3, 21022);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'e2e')
-data.setCell(2, 2, 'meri.kiran.vini')
-data.setCell(2, 3, 20461);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'e2e')
-data.setCell(3, 2, 'meri.kiran.vini')
-data.setCell(3, 3, 20453);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'e2e')
-data.setCell(4, 2, 'meri.kiran.vini')
-data.setCell(4, 3, 20190);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'e2e')
-data.setCell(5, 2, 'meri.kiran.vini')
-data.setCell(5, 3, 19696);
+data.setCell(1, 3, 19706);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -372,40 +241,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">meri.kiran.vini</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(Kuwait City, Group A)</span>
+                <span class="method-name">e2e(Interlaken,CH, Group A)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(Ulaanbaatar, Group B)</span>
-                <span class="method-start">23680 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(Namangan, Group C)</span>
-                <span class="method-start">44135 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(Kolkata, Group D)</span>
-                <span class="method-start">64327 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(kuala lumpur, Group E)</span>
-                <span class="method-start">84025 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">e2e(Bishkek, Group F)</span>
-                <span class="method-start">104487 ms</span>
+                <span class="method-name">e2e(Interlaken,CA, Group B)</span>
+                <span class="method-start">19875 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
