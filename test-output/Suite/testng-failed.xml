@@ -5,7 +5,7 @@
     <classes>
       <class name="meri.kiran.vini">
         <methods>
-          <include name="dataProbhiderAPI" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="ASIAN_2023_Qualifier" invocation-numbers="0 1 2 3 4 5"/>
         </methods>
       </class> <!-- meri.kiran.vini -->
     </classes>

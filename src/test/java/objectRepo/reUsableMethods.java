@@ -90,7 +90,7 @@ public class reUsableMethods
 			if (weatherCodeD>aarm)
 			{
 				System.out.println("     test case failed  for "+asliJagah);
-				Assert.assertEquals(weatherCodeD,"above Limit set for " +asliJagah +"    at    -  "+aarm +" degree");
+				Assert.assertEquals(weatherCodeD,"above Limit set for " +asliJagah +"," +coundry    +" at  "+aarm +" degree");
 			}
 		 
 		 return null;

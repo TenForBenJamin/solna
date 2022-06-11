@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Properties;
@@ -22,7 +23,8 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.PageObjectFactory;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
-public class vini extends parama
+import smith.rowe.Baishh;
+public class vini extends Baishh
 {
 	
 	
@@ -58,7 +60,7 @@ public class vini extends parama
 		
 	}
 
-	@Test(dataProvider="ZweiteLiga")
+	//@Test(dataProvider="ZweiteLiga")
 	public void dataProbhiderAPI(String ort , String comp)
 	{
 		System.out.println(" place " +ort);
@@ -78,7 +80,7 @@ public class vini extends parama
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-	@Test(dataProvider="getData")
+	//@Test(dataProvider="getData")
 	public void ASIAN_2023_Qualifier(String ort , String comp)
 	{
 		System.out.println(" place " +ort);
@@ -98,14 +100,15 @@ public class vini extends parama
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-
-	public void e2e(String ort , String comp) throws InterruptedException 
+	@Test(dataProvider="getData")
+	public void e2e(String ort , String comp) throws InterruptedException, IOException 
 	{
 		System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
 		WebDriver driver= new FirefoxDriver();
 		driver.manage().window().maximize();		// maximizing the window
 		driver.get("https://tenforben.github.io");
-//		String place = "potsdam";
+		String kanda = initilizeBrowser();
+		System.out.println("FIS worked  "+kanda);
 		String place = ort;
 		PageObjectFactory po = new PageObjectFactory(driver);
 		po.NavigationToWeatherAPI().click();

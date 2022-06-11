@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 
 import org.testng.annotations.Test;
+
+import smith.rowe.Baishh;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +16,7 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Properties;
 
-public class parama
+public class parama extends Baishh
 {
 	public static String OpCo="en";
 	protected String apiKey="2b1fd2d7f77ccf1b7de9b441571b39b8";
@@ -57,6 +60,7 @@ public class parama
 	//495118 marwahi
 	public static String marwahi ="495118,IN";
 	
+	//public String Soldier=initilizeBrowser();
 	// UEL destinations
 	// Graz , vienna 
 	// rennes , nantes , marseille
@@ -69,7 +73,7 @@ public class parama
 	// Plizen
 	public void FISch() 
 	{
-		
+		Properties prop = new Properties();
 		File file = new File("C:/home/datafile.properties");
 		  
 		FileInputStream fileInput = null;
@@ -79,7 +83,7 @@ public class parama
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		Properties prop = new Properties();
+		
 		
 		//load properties file
 		try {
