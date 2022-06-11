@@ -2,8 +2,12 @@ package meri.kiran;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,31 +24,34 @@ import objectRepo.parama;
 import objectRepo.reUsableMethods;
 public class vini extends parama
 {
-	@DataProvider
 	
+	
+	
+	
+	@DataProvider
 	public Object[][] getData()
 	{
 		Object[][] data = new Object[6][2];
 		
-		data[0][0]="Fribourg";
-		data[0][1]="EuropaLeague";
+		data[0][0]="Kuwait City";
+		data[0][1]="Group A";
 		
-		data[1][0]="Eindhoven";
-		data[1][1]="EuropaLeague";
+		data[1][0]="Ulaanbaatar";
+		data[1][1]="Group B";
 		
-		data[2][0]="Warsaw";
-		data[2][1]="EuropaLeague";
+		data[2][0]="Namangan";
+		data[2][1]="Group C";
 		
 		
 
-		data[3][0]="seville";
-		data[3][1]="UCL";
+		data[3][0]="Kolkata";
+		data[3][1]="Group D";
 		
-		data[4][0]="Porto";
-		data[4][1]="UCL";
+		data[4][0]="kuala lumpur";
+		data[4][1]="Group E";
 		
-		data[5][0]="LeipZig";
-		data[5][1]="UCL";
+		data[5][0]="Bishkek";
+		data[5][1]="Group F";
 		
 		return data;
 		
@@ -66,12 +73,32 @@ public class vini extends parama
 		then().assertThat().statusCode(200).extract().response().asString();
 		JsonPath js = new JsonPath(getReqRes);
 		reUsableMethods sd = new reUsableMethods();
-		sd.coordsExtractor(getReqRes);
+		sd.chur(getReqRes,22);
 		//sd.coordsExtractor(getReqRes);
 		String  mainTemp = js.getString("main.temp");
 	}
 	
+	@Test(dataProvider="getData")
+	public void ASIAN_2023_Qualifier(String ort , String comp)
+	{
+		System.out.println(" place " +ort);
+		
+		RestAssured.baseURI =baseUrlopenWeather;
+		String getReqRes =
+		given().
+		queryParam("q", ort).
+		queryParam("appid", apiKey).
+		queryParam("lang", OpCo).queryParam("units", "metric").
+		when().get("data/2.5/weather").
+		then().assertThat().statusCode(200).extract().response().asString();
+		JsonPath js = new JsonPath(getReqRes);
+		reUsableMethods sd = new reUsableMethods();
+		sd.chur(getReqRes,10);
+		//sd.coordsExtractor(getReqRes);
+		String  mainTemp = js.getString("main.temp");
+	}
 	
+
 	public void e2e(String ort , String comp) throws InterruptedException 
 	{
 		System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");

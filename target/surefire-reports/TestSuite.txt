@@ -1,4 +1,88 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.105 s - in TestSuite
+Tests run: 24, Failures: 21, Errors: 0, Skipped: 0, Time elapsed: 13.036 s <<< FAILURE! - in TestSuite
+meri.kiran.vini.ASIAN_2023_Qualifier[Kuwait City, Group A](1)  Time elapsed: 2.415 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Kuwait City    at    -  10 degree] but found [44.18]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.ASIAN_2023_Qualifier[Ulaanbaatar, Group B](2)  Time elapsed: 0.648 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Ulaanbaatar    at    -  10 degree] but found [12.07]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.ASIAN_2023_Qualifier[Namangan, Group C](3)  Time elapsed: 0.524 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Namangan    at    -  10 degree] but found [36.25]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.ASIAN_2023_Qualifier[Kolkata, Group D](4)  Time elapsed: 0.388 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Kolkata    at    -  10 degree] but found [31.97]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.ASIAN_2023_Qualifier[kuala lumpur, Group E](5)  Time elapsed: 0.39 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Kuala Lumpur    at    -  10 degree] but found [24.14]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.ASIAN_2023_Qualifier[Bishkek, Group F](6)  Time elapsed: 0.62 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Bishkek    at    -  10 degree] but found [30.11]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:96)
+
+meri.kiran.vini.dataProbhiderAPI[Rostock, EuropaLeague](2)  Time elapsed: 0.533 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Rostock    at    -  22 degree] but found [22.23]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Hamburg, EuropaLeague](3)  Time elapsed: 0.27 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Hamburg    at    -  22 degree] but found [22.72]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[St. Pauli, UCL](4)  Time elapsed: 0.475 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for St. Pauli    at    -  22 degree] but found [22.69]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Magdeburg, UCL](5)  Time elapsed: 0.319 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Magdeburg    at    -  22 degree] but found [26.07]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Furth, UCL](6)  Time elapsed: 0.331 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Fürth    at    -  22 degree] but found [24.96]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Nuremberg, EuropaLeague](7)  Time elapsed: 0.518 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Nuremberg    at    -  22 degree] but found [24.8]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Regensburg, EuropaLeague](8)  Time elapsed: 0.511 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Regensburg    at    -  22 degree] but found [24.76]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Heidenheim, EuropaLeague](9)  Time elapsed: 0.345 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Heidenheim    at    -  22 degree] but found [22.43]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Sandhausen, UCL](10)  Time elapsed: 0.512 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Sandhausen    at    -  22 degree] but found [25.83]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Karlsruhe, UCL](11)  Time elapsed: 0.444 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Karlsruhe    at    -  22 degree] but found [26.95]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[kaiserslautern, UCL](12)  Time elapsed: 0.562 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Kaiserslautern    at    -  22 degree] but found [25.03]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Darmstadt, UCL](13)  Time elapsed: 0.604 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Regierungsbezirk Darmstadt    at    -  22 degree] but found [25.84]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Bielefeld, EuropaLeague](16)  Time elapsed: 0.358 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Bielefeld    at    -  22 degree] but found [22.89]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Hannover, EuropaLeague](17)  Time elapsed: 0.368 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Hanover    at    -  22 degree] but found [24.39]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+
+meri.kiran.vini.dataProbhiderAPI[Braunschweig, UCL](18)  Time elapsed: 0.378 s  <<< FAILURE!
+java.lang.AssertionError: expected [above Limit set for Braunschweig    at    -  22 degree] but found [24.6]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:76)
+

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-06T17:28:45 CEST" name="Default suite" finished-at="2022-06-06T17:28:55 CEST" duration-ms="9344">
+  <suite started-at="2022-06-07T00:25:38 CEST" name="Suite" finished-at="2022-06-07T00:25:50 CEST" duration-ms="12242">
     <groups>
     </groups>
-    <test started-at="2022-06-06T17:28:45 CEST" name="Default test" finished-at="2022-06-06T17:28:55 CEST" duration-ms="9344">
+    <test started-at="2022-06-07T00:25:38 CEST" name="Test" finished-at="2022-06-07T00:25:50 CEST" duration-ms="12242">
       <class name="meri.kiran.vini">
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:45 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:47 CEST" duration-ms="2271" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:38 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:41 CEST" duration-ms="2689" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:47 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:48 CEST" duration-ms="543" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:41 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:44 CEST" duration-ms="2633" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:48 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:48 CEST" duration-ms="446" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:44 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:44 CEST" duration-ms="484" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:48 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:49 CEST" duration-ms="414" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:44 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:45 CEST" duration-ms="477" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:49 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:49 CEST" duration-ms="456" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:45 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:45 CEST" duration-ms="396" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,7 +87,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:49 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:50 CEST" duration-ms="480" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:45 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:45 CEST" duration-ms="521" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:50 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:50 CEST" duration-ms="408" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:45 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:46 CEST" duration-ms="411" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,7 +119,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:50 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:51 CEST" duration-ms="454" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:46 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:46 CEST" duration-ms="433" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,7 +135,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:51 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:51 CEST" duration-ms="368" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:46 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:47 CEST" duration-ms="490" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -151,7 +151,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:51 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:51 CEST" duration-ms="376" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:47 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:47 CEST" duration-ms="465" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,7 +167,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:51 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:52 CEST" duration-ms="375" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:47 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:48 CEST" duration-ms="377" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -183,7 +183,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:52 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:52 CEST" duration-ms="301" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:48 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:48 CEST" duration-ms="474" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -199,7 +199,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:52 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:52 CEST" duration-ms="347" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:48 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:49 CEST" duration-ms="366" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,7 +215,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:52 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:53 CEST" duration-ms="420" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:49 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:49 CEST" duration-ms="517" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -231,7 +231,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:53 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:53 CEST" duration-ms="402" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:49 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:49 CEST" duration-ms="357" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -247,7 +247,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:53 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:54 CEST" duration-ms="420" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:49 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:50 CEST" duration-ms="328" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -263,7 +263,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:54 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:54 CEST" duration-ms="400" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:50 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:50 CEST" duration-ms="366" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -279,7 +279,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
-        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-06T17:28:54 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-06T17:28:55 CEST" duration-ms="421" status="PASS">
+        <test-method signature="dataProbhiderAPI(java.lang.String,java.lang.String)[pri:0, instance:meri.kiran.vini@485966cc]" started-at="2022-06-07T00:25:50 CEST" name="dataProbhiderAPI" data-provider="ZweiteLiga" finished-at="2022-06-07T00:25:50 CEST" duration-ms="392" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -296,6 +296,6 @@
           </reporter-output>
         </test-method> <!-- dataProbhiderAPI -->
       </class> <!-- meri.kiran.vini -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,6 +1,17 @@
 package objectRepo;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
 import org.testng.annotations.Test;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
 
 public class parama
 {
@@ -32,7 +43,7 @@ public class parama
 	public static String sgf="90765,DE";
 	public static String d="86199,DE";
 	public static String w="74889,DE";
-	public static String e="80939,DE";
+	//public static String e="80939,DE";
 	public static String q="45881,DE";
 	// �����������FCB���������������������������  FCB
 	public static String glascow="glasgow";
@@ -56,12 +67,34 @@ public class parama
 	// midyalland , FCK
 	//Poznan
 	// Plizen
-	
-	
-	
-	
-	
-	
+	public void FISch() 
+	{
+		
+		File file = new File("C:/home/datafile.properties");
+		  
+		FileInputStream fileInput = null;
+		
+		try {
+			fileInput = new FileInputStream(file);
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		Properties prop = new Properties();
+		
+		//load properties file
+		try {
+			prop.load(fileInput);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		//public static String ten4ben=prop.getProperty("URL");
+		
+		
+		
+		//System.out.println("URL ::" + prop.getProperty("URL"));
+	}
 	
 	//
 	
