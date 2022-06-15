@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="39.937" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="16.481" tests="42" errors="0" skipped="0" failures="42">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\ss585\AppData\Local\Temp\surefire2837655714166580177\surefirebooter14330362511275635444.jar C:\Users\ss585\AppData\Local\Temp\surefire2837655714166580177 2022-06-12T00-46-06_999-jvmRun1 surefire810220476049563071tmp surefire_08336626601928768295tmp"/>
+    <property name="sun.java.command" value="C:\Users\ss585\AppData\Local\Temp\surefire6099884667813721291\surefirebooter14763888634315900398.jar C:\Users\ss585\AppData\Local\Temp\surefire6099884667813721291 2022-06-12T17-43-48_695-jvmRun1 surefire17016522701052580904tmp surefire_06034983354740310473tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\git\turf\dejan\rowe\target\test-classes;C:\git\turf\dejan\rowe\target\classes;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-java\7.2.1\cucumber-java-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-core\7.2.1\cucumber-core-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin\7.2.1\cucumber-gherkin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.1\cucumber-gherkin-messages-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\datatable\7.2.1\datatable-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-plugin\7.2.1\cucumber-plugin-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\docstring\7.2.1\docstring-7.2.1.jar;C:\Users\ss585\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\ss585\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\ss585\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ss585\.m2\repository\io\cucumber\cucumber-junit\7.2.1\cucumber-junit-7.2.1.jar;C:\Users\ss585\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\ss585\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\ss585\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ss585\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ss585\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ss585\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\ss585\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\ss585\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ss585\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\ss585\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\ss585\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\ss585\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\ss585\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\ss585\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\ss585\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Users\ss585\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ss585\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-excelant\4.1.2\poi-excelant-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Users\ss585\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Users\ss585\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant\1.8.2\ant-1.8.2.jar;C:\Users\ss585\.m2\repository\org\apache\ant\ant-launcher\1.8.2\ant-launcher-1.8.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.0\selenium-java-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.0\selenium-api-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.0\selenium-chrome-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\ss585\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\ss585\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ss585\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ss585\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ss585\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\ss585\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar;C:\Users\ss585\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.0\selenium-chromium-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.0\selenium-json-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.0\selenium-devtools-v85-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v94\4.1.0\selenium-devtools-v94-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v95\4.1.0\selenium-devtools-v95-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v96\4.1.0\selenium-devtools-v96-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.0\selenium-edge-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.0\selenium-firefox-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.1.0\selenium-firefox-xpi-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.0\selenium-ie-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.0\selenium-opera-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.0\selenium-remote-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\io\netty\netty-buffer\4.1.69.Final\netty-buffer-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-http\4.1.69.Final\netty-codec-http-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec\4.1.69.Final\netty-codec-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler\4.1.69.Final\netty-handler-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-common\4.1.69.Final\netty-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.69.Final\netty-transport-native-epoll-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.69.Final\netty-transport-native-kqueue-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.69.Final\netty-transport-native-unix-common-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport\4.1.69.Final\netty-transport-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-resolver\4.1.69.Final\netty-resolver-4.1.69.Final.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api\1.9.0\opentelemetry-api-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-context\1.9.0\opentelemetry-context-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.9.0\opentelemetry-exporter-logging-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.9.0-alpha\opentelemetry-sdk-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.9.0-alpha\opentelemetry-sdk-logs-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\ss585\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.9.0\opentelemetry-sdk-common-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.9.0\opentelemetry-sdk-extension-autoconfigure-spi-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.9.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.9.0\opentelemetry-sdk-trace-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.9.0-alpha\opentelemetry-api-metrics-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.9.0\opentelemetry-sdk-1.9.0.jar;C:\Users\ss585\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.9.0-alpha\opentelemetry-semconv-1.9.0-alpha.jar;C:\Users\ss585\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\ss585\.m2\repository\net\bytebuddy\byte-buddy\1.12.1\byte-buddy-1.12.1.jar;C:\Users\ss585\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\ss585\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\ss585\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\ss585\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\ss585\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ss585\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\ss585\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\ss585\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.0\selenium-http-4.1.0.jar;C:\Users\ss585\.m2\repository\net\jodah\failsafe\2.4.4\failsafe-2.4.4.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.0\selenium-safari-driver-4.1.0.jar;C:\Users\ss585\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.0\selenium-support-4.1.0.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ss585\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ss585\AppData\Local\Temp\surefire2837655714166580177\surefirebooter14330362511275635444.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ss585\AppData\Local\Temp\surefire6099884667813721291\surefirebooter14763888634315900398.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
@@ -39,7 +39,6 @@
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="sun.nio.ch.bugLevel" value=""/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\ss585\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -47,7 +46,6 @@
     <property name="java.version" value="17.0.1"/>
     <property name="user.dir" value="C:\git\turf\dejan\rowe"/>
     <property name="os.arch" value="amd64"/>
-    <property name="webdriver.gecko.driver" value="C:\Mava\geckodriver.exe"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
@@ -58,53 +56,1138 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="e2e[Interlaken,CH, Group A](1)" classname="meri.kiran.vini" time="19.879">
-    <system-out><![CDATA[browser is   firefox
+  <testcase name="ASIAN_2023_Qualifier[Kuwait City, Group A](1)" classname="meri.kiran.vini" time="2.12">
+    <failure message="expected [above Limit set for Kuwait City,KW at  0 degree] but found [40.01]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Kuwait City,KW at  0 degree] but found [40.01]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place Kuwait City
+ inside ReusableBall method 
+Raw date is   1655048342
+ beutified date is  Sun Jun 12 17:39:02 CEST 2022
+extracted place for  ZipCode 1655048342 is                  Kuwait City
+in
+
+
+                      weatherCode n Desc are    761 n dust
+
+                               Latitude is    29.3697
+
+                               Longitude  is    47.9783
+
+                                the  Nation of    KW
+
+
+
+                                currentTemp   40.01	wind speed -   8.75
+
+     test case failed  for Kuwait City
 ]]></system-out>
-    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1654987568558	geckodriver	INFO	Listening on 127.0.0.1:52734
-1654987568801	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57789" "-no-remote" "-profile" "C:\\Users\\ss585\\AppData\\Local\\Temp\\rust_mozprofilexIBcXQ"
-1654987569113	Marionette	INFO	Marionette enabled
-WebDriver BiDi listening on ws://localhost:57789
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ss585\\AppData\\Local\\Temp\\rust_mozprofilexIBcXQ\\search.json.mozlz4", (void 0)))
-1654987570523	Marionette	INFO	Listening on port 54522
-DevTools listening on ws://localhost:57789/devtools/browser/287d0138-4581-4075-8cab-54438178741c
-1654987570867	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Jun 12, 2022 12:46:10 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-JavaScript error: https://tenforben.github.io/js/louder.js, line 253: TypeError: document.body is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tenforben.github.io"
-JavaScript error: https://tenforben.github.io/FPL/vannilaWeatherApp/home.html, line 1: ReferenceError: vaishakh is not defined
-JavaScript error: https://tenforben.github.io/FPL/vannilaWeatherApp/ui.js, line 13: TypeError: data is null
-1654987587015	Marionette	INFO	Stopped listening on port 54522
-]]></system-err>
   </testcase>
-  <testcase name="e2e[Interlaken,CA, Group B](2)" classname="meri.kiran.vini" time="19.724">
-    <system-out><![CDATA[browser is   firefox
+  <testcase name="ASIAN_2023_Qualifier[Ulaanbaatar, Group B](2)" classname="meri.kiran.vini" time="0.355">
+    <failure message="expected [above Limit set for Ulaanbaatar,MN at  0 degree] but found [9.07]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Ulaanbaatar,MN at  0 degree] but found [9.07]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place Ulaanbaatar
+ inside ReusableBall method 
+Raw date is   1655048576
+ beutified date is  Sun Jun 12 17:42:56 CEST 2022
+extracted place for  ZipCode 1655048576 is                  Ulaanbaatar
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    47.9077
+
+                               Longitude  is    106.8832
+
+                                the  Nation of    MN
+
+
+
+                                currentTemp   9.07	wind speed -   2
+
+     test case failed  for Ulaanbaatar
 ]]></system-out>
-    <system-err><![CDATA[1654987587758	geckodriver	INFO	Listening on 127.0.0.1:56258
-1654987587799	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52401" "-no-remote" "-profile" "C:\\Users\\ss585\\AppData\\Local\\Temp\\rust_mozprofileAlpCih"
-1654987588083	Marionette	INFO	Marionette enabled
-WebDriver BiDi listening on ws://localhost:52401
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ss585\\AppData\\Local\\Temp\\rust_mozprofileAlpCih\\search.json.mozlz4", (void 0)))
-1654987589338	Marionette	INFO	Listening on port 54594
-DevTools listening on ws://localhost:52401/devtools/browser/375f0261-a71b-45a1-aea4-206eeceffc8c
-1654987589855	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-Jun 12, 2022 12:46:29 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-JavaScript error: https://tenforben.github.io/js/louder.js, line 253: TypeError: document.body is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tenforben.github.io"
-JavaScript error: https://tenforben.github.io/FPL/vannilaWeatherApp/home.html, line 1: ReferenceError: vaishakh is not defined
-JavaScript error: https://tenforben.github.io/FPL/vannilaWeatherApp/ui.js, line 13: TypeError: data is null
-JavaScript error: https://tenforben.github.io/FPL/vannilaWeatherApp/ui.js, line 13: TypeError: data.sys is undefined
-1654987594540	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1654987606764	Marionette	INFO	Stopped listening on port 54594
-]]></system-err>
+  </testcase>
+  <testcase name="ASIAN_2023_Qualifier[Namangan, Group C](3)" classname="meri.kiran.vini" time="0.411">
+    <failure message="expected [above Limit set for Namangan,UZ at  0 degree] but found [27.25]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Namangan,UZ at  0 degree] but found [27.25]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place Namangan
+ inside ReusableBall method 
+Raw date is   1655048576
+ beutified date is  Sun Jun 12 17:42:56 CEST 2022
+extracted place for  ZipCode 1655048576 is                  Namangan
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    40.9983
+
+                               Longitude  is    71.6726
+
+                                the  Nation of    UZ
+
+
+
+                                currentTemp   27.25	wind speed -   2.06
+
+     test case failed  for Namangan
+]]></system-out>
+  </testcase>
+  <testcase name="ASIAN_2023_Qualifier[Kolkata, Group D](4)" classname="meri.kiran.vini" time="0.358">
+    <failure message="expected [above Limit set for Kolkata,IN at  0 degree] but found [30.97]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Kolkata,IN at  0 degree] but found [30.97]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place Kolkata
+ inside ReusableBall method 
+Raw date is   1655048378
+ beutified date is  Sun Jun 12 17:39:38 CEST 2022
+extracted place for  ZipCode 1655048378 is                  Kolkata
+in
+
+
+                      weatherCode n Desc are    721 n haze
+
+                               Latitude is    22.5697
+
+                               Longitude  is    88.3697
+
+                                the  Nation of    IN
+
+
+
+                                currentTemp   30.97	wind speed -   5.14
+
+     test case failed  for Kolkata
+]]></system-out>
+  </testcase>
+  <testcase name="ASIAN_2023_Qualifier[kuala lumpur, Group E](5)" classname="meri.kiran.vini" time="0.322">
+    <failure message="expected [above Limit set for Kuala Lumpur,MY at  0 degree] but found [27.49]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Kuala Lumpur,MY at  0 degree] but found [27.49]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place kuala lumpur
+ inside ReusableBall method 
+Raw date is   1655048577
+ beutified date is  Sun Jun 12 17:42:57 CEST 2022
+extracted place for  ZipCode 1655048577 is                  Kuala Lumpur
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    3.1431
+
+                               Longitude  is    101.6865
+
+                                the  Nation of    MY
+
+
+
+                                currentTemp   27.49	wind speed -   0.51
+
+     test case failed  for Kuala Lumpur
+]]></system-out>
+  </testcase>
+  <testcase name="ASIAN_2023_Qualifier[Bishkek, Group F](6)" classname="meri.kiran.vini" time="0.351">
+    <failure message="expected [above Limit set for Bishkek,KG at  0 degree] but found [23.11]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Bishkek,KG at  0 degree] but found [23.11]
+	at meri.kiran.vini.ASIAN_2023_Qualifier(vini.java:116)
+]]></failure>
+    <system-out><![CDATA[ place Bishkek
+ inside ReusableBall method 
+Raw date is   1655048459
+ beutified date is  Sun Jun 12 17:40:59 CEST 2022
+extracted place for  ZipCode 1655048459 is                  Bishkek
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    42.87
+
+                               Longitude  is    74.59
+
+                                the  Nation of    KG
+
+
+
+                                currentTemp   23.11	wind speed -   3.26
+
+     test case failed  for Bishkek
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Spandau, Berlin](1)" classname="meri.kiran.vini" time="0.367">
+    <failure message="expected [above Limit set for Spandau,DE at  0 degree] but found [26.47]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Spandau,DE at  0 degree] but found [26.47]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Spandau
+ inside ReusableBall method 
+Raw date is   1655048135
+ beutified date is  Sun Jun 12 17:35:35 CEST 2022
+extracted place for  ZipCode 1655048135 is                  Spandau
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    52.5511
+
+                               Longitude  is    13.1992
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   26.47	wind speed -   5.29
+
+     test case failed  for Spandau
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[treptow, Berlin](2)" classname="meri.kiran.vini" time="0.316">
+    <failure message="expected [above Limit set for Berlin Treptow,DE at  0 degree] but found [26.14]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Berlin Treptow,DE at  0 degree] but found [26.14]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place treptow
+ inside ReusableBall method 
+Raw date is   1655048315
+ beutified date is  Sun Jun 12 17:38:35 CEST 2022
+extracted place for  ZipCode 1655048315 is                  Berlin Treptow
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    52.4938
+
+                               Longitude  is    13.4447
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   26.14	wind speed -   5.81
+
+     test case failed  for Berlin Treptow
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Bremen, Nord](3)" classname="meri.kiran.vini" time="0.292">
+    <failure message="expected [above Limit set for Bremen,DE at  0 degree] but found [22.05]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Bremen,DE at  0 degree] but found [22.05]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Bremen
+ inside ReusableBall method 
+Raw date is   1655048114
+ beutified date is  Sun Jun 12 17:35:14 CEST 2022
+extracted place for  ZipCode 1655048114 is                  Bremen
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    53.0752
+
+                               Longitude  is    8.8078
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   22.05	wind speed -   6.17
+
+     test case failed  for Bremen
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Wolfsburg, NordZentral](4)" classname="meri.kiran.vini" time="0.34">
+    <failure message="expected [above Limit set for Wolfsburg,DE at  0 degree] but found [24.93]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Wolfsburg,DE at  0 degree] but found [24.93]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Wolfsburg
+ inside ReusableBall method 
+Raw date is   1655048185
+ beutified date is  Sun Jun 12 17:36:25 CEST 2022
+extracted place for  ZipCode 1655048185 is                  Wolfsburg
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    52.4333
+
+                               Longitude  is    10.8
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   24.93	wind speed -   4.65
+
+     test case failed  for Wolfsburg
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Leipzig, East](5)" classname="meri.kiran.vini" time="0.359">
+    <failure message="expected [above Limit set for Leipzig,DE at  0 degree] but found [27.55]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Leipzig,DE at  0 degree] but found [27.55]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Leipzig
+ inside ReusableBall method 
+Raw date is   1655048241
+ beutified date is  Sun Jun 12 17:37:21 CEST 2022
+extracted place for  ZipCode 1655048241 is                  Leipzig
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    51.342
+
+                               Longitude  is    12.375
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   27.55	wind speed -   5.81
+
+     test case failed  for Leipzig
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Munich, bayern](6)" classname="meri.kiran.vini" time="0.366">
+    <failure message="expected [above Limit set for Munich,DE at  0 degree] but found [27.65]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Munich,DE at  0 degree] but found [27.65]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Munich
+ inside ReusableBall method 
+Raw date is   1655048234
+ beutified date is  Sun Jun 12 17:37:14 CEST 2022
+extracted place for  ZipCode 1655048234 is                  Munich
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    48.1374
+
+                               Longitude  is    11.5755
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   27.65	wind speed -   0.45
+
+     test case failed  for Munich
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Augsburg, bayern](7)" classname="meri.kiran.vini" time="0.352">
+    <failure message="expected [above Limit set for Augsburg,DE at  0 degree] but found [27.83]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Augsburg,DE at  0 degree] but found [27.83]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Augsburg
+ inside ReusableBall method 
+Raw date is   1655048163
+ beutified date is  Sun Jun 12 17:36:03 CEST 2022
+extracted place for  ZipCode 1655048163 is                  Augsburg
+in
+
+
+                      weatherCode n Desc are    500 n light rain
+
+                               Latitude is    48.3667
+
+                               Longitude  is    10.8833
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   27.83	wind speed -   1.54
+
+     test case failed  for Augsburg
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[stuttgart, SouthWest](8)" classname="meri.kiran.vini" time="0.328">
+    <failure message="expected [above Limit set for Stuttgart,DE at  0 degree] but found [28.26]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Stuttgart,DE at  0 degree] but found [28.26]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place stuttgart
+ inside ReusableBall method 
+Raw date is   1655048174
+ beutified date is  Sun Jun 12 17:36:14 CEST 2022
+extracted place for  ZipCode 1655048174 is                  Stuttgart
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    48.7823
+
+                               Longitude  is    9.177
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.26	wind speed -   3.6
+
+     test case failed  for Stuttgart
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Freiburg im Breisgau, EuropaLeague](9)" classname="meri.kiran.vini" time="0.331">
+    <failure message="expected [above Limit set for Freiburg,DE at  0 degree] but found [29.79]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Freiburg,DE at  0 degree] but found [29.79]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Freiburg im Breisgau
+ inside ReusableBall method 
+Raw date is   1655048393
+ beutified date is  Sun Jun 12 17:39:53 CEST 2022
+extracted place for  ZipCode 1655048393 is                  Freiburg
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    47.9959
+
+                               Longitude  is    7.8522
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   29.79	wind speed -   3.26
+
+     test case failed  for Freiburg
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Hoffenheim, Sinsheim](10)" classname="meri.kiran.vini" time="0.341">
+    <failure message="expected [above Limit set for Hoffenheim,DE at  0 degree] but found [27.58]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Hoffenheim,DE at  0 degree] but found [27.58]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Hoffenheim
+ inside ReusableBall method 
+Raw date is   1655048390
+ beutified date is  Sun Jun 12 17:39:50 CEST 2022
+extracted place for  ZipCode 1655048390 is                  Hoffenheim
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    49.2726
+
+                               Longitude  is    8.8426
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   27.58	wind speed -   1.95
+
+     test case failed  for Hoffenheim
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[cologne, UCL](11)" classname="meri.kiran.vini" time="0.316">
+    <failure message="expected [above Limit set for Cologne,DE at  0 degree] but found [24.2]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Cologne,DE at  0 degree] but found [24.2]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place cologne
+ inside ReusableBall method 
+Raw date is   1655048286
+ beutified date is  Sun Jun 12 17:38:06 CEST 2022
+extracted place for  ZipCode 1655048286 is                  Cologne
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    50.9333
+
+                               Longitude  is    6.95
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   24.2	wind speed -   4.63
+
+     test case failed  for Cologne
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[dortmund, UCL](12)" classname="meri.kiran.vini" time="0.318">
+    <failure message="expected [above Limit set for Dortmund,DE at  0 degree] but found [23.01]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Dortmund,DE at  0 degree] but found [23.01]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place dortmund
+ inside ReusableBall method 
+Raw date is   1655048103
+ beutified date is  Sun Jun 12 17:35:03 CEST 2022
+extracted place for  ZipCode 1655048103 is                  Dortmund
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    51.5167
+
+                               Longitude  is    7.45
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.01	wind speed -   1.34
+
+     test case failed  for Dortmund
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Frankfurt, UCL](13)" classname="meri.kiran.vini" time="0.312">
+    <failure message="expected [above Limit set for Frankfurt am Main,DE at  0 degree] but found [28.57]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Frankfurt am Main,DE at  0 degree] but found [28.57]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Frankfurt
+ inside ReusableBall method 
+Raw date is   1655048138
+ beutified date is  Sun Jun 12 17:35:38 CEST 2022
+extracted place for  ZipCode 1655048138 is                  Frankfurt am Main
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    50.1167
+
+                               Longitude  is    8.6833
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.57	wind speed -   4.63
+
+     test case failed  for Frankfurt am Main
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Mainz, UCL](14)" classname="meri.kiran.vini" time="0.395">
+    <failure message="expected [above Limit set for Mainz,DE at  0 degree] but found [28.53]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Mainz,DE at  0 degree] but found [28.53]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Mainz
+ inside ReusableBall method 
+Raw date is   1655048305
+ beutified date is  Sun Jun 12 17:38:25 CEST 2022
+extracted place for  ZipCode 1655048305 is                  Mainz
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    50
+
+                               Longitude  is    8.2711
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.53	wind speed -   5.14
+
+     test case failed  for Mainz
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Gelsenkirchen, NRW](15)" classname="meri.kiran.vini" time="0.345">
+    <failure message="expected [above Limit set for Gelsenkirchen,DE at  0 degree] but found [23.64]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Gelsenkirchen,DE at  0 degree] but found [23.64]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Gelsenkirchen
+ inside ReusableBall method 
+Raw date is   1655048262
+ beutified date is  Sun Jun 12 17:37:42 CEST 2022
+extracted place for  ZipCode 1655048262 is                  Gelsenkirchen
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    51.5167
+
+                               Longitude  is    7.05
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.64	wind speed -   1.79
+
+     test case failed  for Gelsenkirchen
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Monchengladbach, NRW](16)" classname="meri.kiran.vini" time="0.289">
+    <failure message="expected [above Limit set for Mönchengladbach,DE at  0 degree] but found [23.17]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Mönchengladbach,DE at  0 degree] but found [23.17]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Monchengladbach
+ inside ReusableBall method 
+Raw date is   1655048162
+ beutified date is  Sun Jun 12 17:36:02 CEST 2022
+extracted place for  ZipCode 1655048162 is                  Mönchengladbach
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    51.2
+
+                               Longitude  is    6.4333
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.17	wind speed -   2.57
+
+     test case failed  for Mönchengladbach
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[bochum, NRW](17)" classname="meri.kiran.vini" time="0.358">
+    <failure message="expected [above Limit set for Bochum,DE at  0 degree] but found [23.24]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Bochum,DE at  0 degree] but found [23.24]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place bochum
+ inside ReusableBall method 
+Raw date is   1655048229
+ beutified date is  Sun Jun 12 17:37:09 CEST 2022
+extracted place for  ZipCode 1655048229 is                  Bochum
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    51.4833
+
+                               Longitude  is    7.2167
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.24	wind speed -   1.79
+
+     test case failed  for Bochum
+]]></system-out>
+  </testcase>
+  <testcase name="Bundesliga[Leverkusen, NRW](18)" classname="meri.kiran.vini" time="0.331">
+    <failure message="expected [above Limit set for Leverkusen,DE at  0 degree] but found [23.66]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Leverkusen,DE at  0 degree] but found [23.66]
+	at meri.kiran.vini.Bundesliga(vini.java:136)
+]]></failure>
+    <system-out><![CDATA[ place Leverkusen
+ inside ReusableBall method 
+Raw date is   1655048286
+ beutified date is  Sun Jun 12 17:38:06 CEST 2022
+extracted place for  ZipCode 1655048286 is                  Leverkusen
+in
+
+
+                      weatherCode n Desc are    802 n scattered clouds
+
+                               Latitude is    51.0333
+
+                               Longitude  is    7
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.66	wind speed -   4.04
+
+     test case failed  for Leverkusen
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Kiel, EuropaLeague](1)" classname="meri.kiran.vini" time="0.323">
+    <failure message="expected [above Limit set for Kiel,DE at  0 degree] but found [19.17]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Kiel,DE at  0 degree] but found [19.17]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Kiel
+ inside ReusableBall method 
+Raw date is   1655048107
+ beutified date is  Sun Jun 12 17:35:07 CEST 2022
+extracted place for  ZipCode 1655048107 is                  Kiel
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    54.3213
+
+                               Longitude  is    10.1349
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   19.17	wind speed -   6.17
+
+     test case failed  for Kiel
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Rostock, EuropaLeague](2)" classname="meri.kiran.vini" time="0.407">
+    <failure message="expected [above Limit set for Rostock,DE at  0 degree] but found [19.58]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Rostock,DE at  0 degree] but found [19.58]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Rostock
+ inside ReusableBall method 
+Raw date is   1655048393
+ beutified date is  Sun Jun 12 17:39:53 CEST 2022
+extracted place for  ZipCode 1655048393 is                  Rostock
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    54.0887
+
+                               Longitude  is    12.1405
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   19.58	wind speed -   5.26
+
+     test case failed  for Rostock
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Hamburg, EuropaLeague](3)" classname="meri.kiran.vini" time="0.323">
+    <failure message="expected [above Limit set for Hamburg,DE at  0 degree] but found [20.05]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Hamburg,DE at  0 degree] but found [20.05]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Hamburg
+ inside ReusableBall method 
+Raw date is   1655048330
+ beutified date is  Sun Jun 12 17:38:50 CEST 2022
+extracted place for  ZipCode 1655048330 is                  Hamburg
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    53.55
+
+                               Longitude  is    10
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   20.05	wind speed -   6.69
+
+     test case failed  for Hamburg
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[St. Pauli, UCL](4)" classname="meri.kiran.vini" time="0.303">
+    <failure message="expected [above Limit set for St. Pauli,DE at  0 degree] but found [20.03]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for St. Pauli,DE at  0 degree] but found [20.03]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place St. Pauli
+ inside ReusableBall method 
+Raw date is   1655048394
+ beutified date is  Sun Jun 12 17:39:54 CEST 2022
+extracted place for  ZipCode 1655048394 is                  St. Pauli
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    53.557
+
+                               Longitude  is    9.964
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   20.03	wind speed -   6.69
+
+     test case failed  for St. Pauli
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Magdeburg, UCL](5)" classname="meri.kiran.vini" time="0.308">
+    <failure message="expected [above Limit set for Magdeburg,DE at  0 degree] but found [25.57]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Magdeburg,DE at  0 degree] but found [25.57]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Magdeburg
+ inside ReusableBall method 
+Raw date is   1655048262
+ beutified date is  Sun Jun 12 17:37:42 CEST 2022
+extracted place for  ZipCode 1655048262 is                  Magdeburg
+in
+
+
+                      weatherCode n Desc are    803 n broken clouds
+
+                               Latitude is    52.1667
+
+                               Longitude  is    11.6667
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   25.57	wind speed -   1.34
+
+     test case failed  for Magdeburg
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Furth, UCL](6)" classname="meri.kiran.vini" time="0.339">
+    <failure message="expected [above Limit set for Fürth,DE at  0 degree] but found [28.95]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Fürth,DE at  0 degree] but found [28.95]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Furth
+ inside ReusableBall method 
+Raw date is   1655048394
+ beutified date is  Sun Jun 12 17:39:54 CEST 2022
+extracted place for  ZipCode 1655048394 is                  Fürth
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    49.4759
+
+                               Longitude  is    10.9886
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.95	wind speed -   4.12
+
+     test case failed  for Fürth
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Nuremberg, EuropaLeague](7)" classname="meri.kiran.vini" time="0.319">
+    <failure message="expected [above Limit set for Nuremberg,DE at  0 degree] but found [28.91]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Nuremberg,DE at  0 degree] but found [28.91]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Nuremberg
+ inside ReusableBall method 
+Raw date is   1655048163
+ beutified date is  Sun Jun 12 17:36:03 CEST 2022
+extracted place for  ZipCode 1655048163 is                  Nuremberg
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    49.4478
+
+                               Longitude  is    11.0683
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.91	wind speed -   4.12
+
+     test case failed  for Nuremberg
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Regensburg, EuropaLeague](8)" classname="meri.kiran.vini" time="0.32">
+    <failure message="expected [above Limit set for Regensburg,DE at  0 degree] but found [28.81]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Regensburg,DE at  0 degree] but found [28.81]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Regensburg
+ inside ReusableBall method 
+Raw date is   1655048265
+ beutified date is  Sun Jun 12 17:37:45 CEST 2022
+extracted place for  ZipCode 1655048265 is                  Regensburg
+in
+
+
+                      weatherCode n Desc are    802 n scattered clouds
+
+                               Latitude is    49.015
+
+                               Longitude  is    12.0956
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   28.81	wind speed -   0.45
+
+     test case failed  for Regensburg
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Heidenheim, EuropaLeague](9)" classname="meri.kiran.vini" time="0.314">
+    <failure message="expected [above Limit set for Heidenheim,DE at  0 degree] but found [23.71]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Heidenheim,DE at  0 degree] but found [23.71]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Heidenheim
+ inside ReusableBall method 
+Raw date is   1655048396
+ beutified date is  Sun Jun 12 17:39:56 CEST 2022
+extracted place for  ZipCode 1655048396 is                  Heidenheim
+in
+
+
+                      weatherCode n Desc are    500 n light rain
+
+                               Latitude is    48.678
+
+                               Longitude  is    10.1516
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.71	wind speed -   1.78
+
+     test case failed  for Heidenheim
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Sandhausen, UCL](10)" classname="meri.kiran.vini" time="0.352">
+    <failure message="expected [above Limit set for Sandhausen,DE at  0 degree] but found [29.01]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Sandhausen,DE at  0 degree] but found [29.01]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Sandhausen
+ inside ReusableBall method 
+Raw date is   1655048396
+ beutified date is  Sun Jun 12 17:39:56 CEST 2022
+extracted place for  ZipCode 1655048396 is                  Sandhausen
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    49.3428
+
+                               Longitude  is    8.6592
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   29.01	wind speed -   2.57
+
+     test case failed  for Sandhausen
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Karlsruhe, UCL](11)" classname="meri.kiran.vini" time="0.335">
+    <failure message="expected [above Limit set for Karlsruhe,DE at  0 degree] but found [29.99]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Karlsruhe,DE at  0 degree] but found [29.99]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Karlsruhe
+ inside ReusableBall method 
+Raw date is   1655048390
+ beutified date is  Sun Jun 12 17:39:50 CEST 2022
+extracted place for  ZipCode 1655048390 is                  Karlsruhe
+in
+
+
+                      weatherCode n Desc are    802 n scattered clouds
+
+                               Latitude is    49.0047
+
+                               Longitude  is    8.3858
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   29.99	wind speed -   1.76
+
+     test case failed  for Karlsruhe
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[kaiserslautern, UCL](12)" classname="meri.kiran.vini" time="0.348">
+    <failure message="expected [above Limit set for Kaiserslautern,DE at  0 degree] but found [26.88]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Kaiserslautern,DE at  0 degree] but found [26.88]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place kaiserslautern
+ inside ReusableBall method 
+Raw date is   1655048365
+ beutified date is  Sun Jun 12 17:39:25 CEST 2022
+extracted place for  ZipCode 1655048365 is                  Kaiserslautern
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    49.45
+
+                               Longitude  is    7.75
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   26.88	wind speed -   5.66
+
+     test case failed  for Kaiserslautern
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Darmstadt, UCL](13)" classname="meri.kiran.vini" time="0.361">
+    <failure message="expected [above Limit set for Regierungsbezirk Darmstadt,DE at  0 degree] but found [27.74]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Regierungsbezirk Darmstadt,DE at  0 degree] but found [27.74]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Darmstadt
+ inside ReusableBall method 
+Raw date is   1655048197
+ beutified date is  Sun Jun 12 17:36:37 CEST 2022
+extracted place for  ZipCode 1655048197 is                  Regierungsbezirk Darmstadt
+in
+
+
+                      weatherCode n Desc are    801 n few clouds
+
+                               Latitude is    49.8333
+
+                               Longitude  is    8.6667
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   27.74	wind speed -   4.56
+
+     test case failed  for Regierungsbezirk Darmstadt
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Dusseldorf, UCL](14)" classname="meri.kiran.vini" time="0.321">
+    <failure message="expected [above Limit set for Düsseldorf,DE at  0 degree] but found [23.47]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Düsseldorf,DE at  0 degree] but found [23.47]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Dusseldorf
+ inside ReusableBall method 
+Raw date is   1655048262
+ beutified date is  Sun Jun 12 17:37:42 CEST 2022
+extracted place for  ZipCode 1655048262 is                  Düsseldorf
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    51.2217
+
+                               Longitude  is    6.7762
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.47	wind speed -   3.6
+
+     test case failed  for Düsseldorf
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Paderborn, EuropaLeague](15)" classname="meri.kiran.vini" time="0.321">
+    <failure message="expected [above Limit set for Paderborn,DE at  0 degree] but found [23.92]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Paderborn,DE at  0 degree] but found [23.92]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Paderborn
+ inside ReusableBall method 
+Raw date is   1655048281
+ beutified date is  Sun Jun 12 17:38:01 CEST 2022
+extracted place for  ZipCode 1655048281 is                  Paderborn
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    51.7191
+
+                               Longitude  is    8.7544
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.92	wind speed -   4.12
+
+     test case failed  for Paderborn
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Bielefeld, EuropaLeague](16)" classname="meri.kiran.vini" time="0.349">
+    <failure message="expected [above Limit set for Bielefeld,DE at  0 degree] but found [22.1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Bielefeld,DE at  0 degree] but found [22.1]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Bielefeld
+ inside ReusableBall method 
+Raw date is   1655048124
+ beutified date is  Sun Jun 12 17:35:24 CEST 2022
+extracted place for  ZipCode 1655048124 is                  Bielefeld
+in
+
+
+                      weatherCode n Desc are    804 n overcast clouds
+
+                               Latitude is    52.0333
+
+                               Longitude  is    8.5333
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   22.1	wind speed -   5.15
+
+     test case failed  for Bielefeld
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Hannover, EuropaLeague](17)" classname="meri.kiran.vini" time="0.347">
+    <failure message="expected [above Limit set for Hanover,DE at  0 degree] but found [23.17]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Hanover,DE at  0 degree] but found [23.17]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Hannover
+ inside ReusableBall method 
+Raw date is   1655048220
+ beutified date is  Sun Jun 12 17:37:00 CEST 2022
+extracted place for  ZipCode 1655048220 is                  Hanover
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    52.3705
+
+                               Longitude  is    9.7332
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   23.17	wind speed -   4.12
+
+     test case failed  for Hanover
+]]></system-out>
+  </testcase>
+  <testcase name="dataProbhiderAPI[Braunschweig, UCL](18)" classname="meri.kiran.vini" time="0.31">
+    <failure message="expected [above Limit set for Braunschweig,DE at  0 degree] but found [24.37]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [above Limit set for Braunschweig,DE at  0 degree] but found [24.37]
+	at meri.kiran.vini.dataProbhiderAPI(vini.java:96)
+]]></failure>
+    <system-out><![CDATA[ place Braunschweig
+ inside ReusableBall method 
+Raw date is   1655048161
+ beutified date is  Sun Jun 12 17:36:01 CEST 2022
+extracted place for  ZipCode 1655048161 is                  Braunschweig
+in
+
+
+                      weatherCode n Desc are    800 n clear sky
+
+                               Latitude is    52.2667
+
+                               Longitude  is    10.5333
+
+                                the  Nation of    DE
+
+
+
+                                currentTemp   24.37	wind speed -   4.63
+
+     test case failed  for Braunschweig
+]]></system-out>
   </testcase>
 </testsuite>

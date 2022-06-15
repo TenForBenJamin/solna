@@ -93,7 +93,7 @@ public class vini extends Baishh
 		then().assertThat().statusCode(200).extract().response().asString();
 		JsonPath js = new JsonPath(getReqRes);
 		reUsableMethods sd = new reUsableMethods();
-		sd.chur(getReqRes,22);
+		sd.chur(getReqRes,0);
 		//sd.coordsExtractor(getReqRes);
 		String  mainTemp = js.getString("main.temp");
 	}
@@ -113,12 +113,32 @@ public class vini extends Baishh
 		then().assertThat().statusCode(200).extract().response().asString();
 		JsonPath js = new JsonPath(getReqRes);
 		reUsableMethods sd = new reUsableMethods();
-		sd.chur(getReqRes,10);
+		sd.chur(getReqRes,0);
 		//sd.coordsExtractor(getReqRes);
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-	@Test(dataProvider="singleData")
+	//@Test(dataProvider="ErsteLiga")
+	public void Bundesliga(String ort , String comp) throws IOException
+	{
+		System.out.println(" place " +ort);
+		String apiKey=schussel();
+		RestAssured.baseURI =baseUrlopenWeather;
+		String getReqRes =
+		given().
+		queryParam("q", ort).
+		queryParam("appid", apiKey).
+		queryParam("lang", OpCo).queryParam("units", "metric").
+		when().get("data/2.5/weather").
+		then().assertThat().statusCode(200).extract().response().asString();
+		JsonPath js = new JsonPath(getReqRes);
+		reUsableMethods sd = new reUsableMethods();
+		sd.chur(getReqRes,0);
+		//sd.coordsExtractor(getReqRes);
+		String  mainTemp = js.getString("main.temp");
+	}
+	
+	@Test(dataProvider="daley")
 	public void e2e(String ort , String comp) throws InterruptedException, IOException 
 	{
 		//System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
@@ -145,7 +165,7 @@ public class vini extends Baishh
 //			//Assert.assertEquals(weatherCodeD,"above Limit set at - "+aarm +" degree");
 //		}
 	 
-		
+		driver.close();
 		driver.quit();
 	}
 	
@@ -221,5 +241,151 @@ public class vini extends Baishh
 		
 		
 	}
+
+@DataProvider
+
+public Object[][] ErsteLiga()
+{
+	Object[][] data = new Object[18][2];
+	
+	data[0][0]="Spandau";
+	data[0][1]="Berlin";
+	
+	data[1][0]="treptow";
+	data[1][1]="Berlin";
+	
+	data[2][0]="Bremen";
+	data[2][1]="Nord";
+	
+	
+
+	data[3][0]="Wolfsburg";
+	data[3][1]="NordZentral";
+	
+	data[4][0]="Leipzig";
+	data[4][1]="East";
+	
+	data[5][0]="Munich";
+	data[5][1]="bayern";
+	
+	data[6][0]="Augsburg";
+	data[6][1]="bayern";
+	
+	data[7][0]="stuttgart";
+	data[7][1]="SouthWest";
+	
+	data[8][0]="Freiburg im Breisgau";
+	data[8][1]="EuropaLeague";
+	
+	
+
+	data[9][0]="Hoffenheim";
+	data[9][1]="Sinsheim";
+	
+	data[10][0]="cologne";
+	data[10][1]="UCL";
+	
+	data[11][0]="dortmund";
+	data[11][1]="UCL";
+	
+	data[12][0]="Frankfurt";
+	data[12][1]="UCL";
+	
+	data[13][0]="Mainz";
+	data[13][1]="UCL";
+	
+	data[14][0]="Gelsenkirchen";
+	data[14][1]="NRW";
+	
+	data[15][0]="Monchengladbach";
+	data[15][1]="NRW";
+	
+	data[16][0]="bochum";
+	data[16][1]="NRW";
+	
+	
+
+	data[17][0]="Leverkusen";
+	data[17][1]="NRW";
+	
+	
+	
+	return data;
+	
+	
+}
+
+@DataProvider
+
+public Object[][] daley()
+{
+	Object[][] data = new Object[18][2];
+	
+	data[0][0]="Webb City";
+	data[0][1]="Berlin";
+	
+	data[1][0]="belton";
+	data[1][1]="Berlin";
+	
+	data[2][0]="kansas city";
+	data[2][1]="Nord";
+	
+	
+
+	data[3][0]="Guadalcanal";
+	data[3][1]="NordZentral";
+	
+	data[4][0]="paterson";
+	data[4][1]="East";
+	
+	data[5][0]="tuscon";
+	data[5][1]="bayern";
+	
+	data[6][0]="twin valley";
+	data[6][1]="bayern";
+	
+	data[7][0]="Sioux falls";
+	data[7][1]="SouthsiouWest";
+	
+	data[8][0]="Mount Airy";
+	data[8][1]="EuropaLeague";
+	
+	
+
+	data[9][0]="Chicago";
+	data[9][1]="Sinsheim";
+	
+	data[10][0]="cologne";
+	data[10][1]="UCL";
+	
+	data[11][0]="mojave desert";
+	data[11][1]="UCL";
+	
+	data[12][0]="Rattlesnake";
+	data[12][1]="UCL";
+	
+	data[13][0]="seattle";
+	data[13][1]="UCL";
+	
+	data[14][0]="atlanta";
+	data[14][1]="NRW";
+	
+	data[15][0]="newYork";
+	data[15][1]="NRW";
+	
+	data[16][0]="scranton";
+	data[16][1]="NRW";
+	
+	
+
+	data[17][0]="stamford";
+	data[17][1]="NRW";
+	
+	
+	
+	return data;
+	
+	
+}
 	
 }
