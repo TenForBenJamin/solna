@@ -17,7 +17,9 @@ public class Baishh
 	//prop.load(fis);
 	//String browserName=prop.getProperty("apiSchussel");
 	//return browserName;
-	
+	protected String Stimac = "1128405471960997889";
+	protected String khatri = "28515858";
+	protected String randomGuy1 ="1034698008993124352";
 	public  String initilizeBrowser() throws IOException 
 	{
 		Properties prop = new Properties();
@@ -63,6 +65,16 @@ public class Baishh
 
 		prop.load(fis);
 		String browserName=prop.getProperty("apiSchussel");
+		return browserName;
+		
+	}
+	public  String tokenBearer() throws IOException 
+	{
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("C:/home/datafile.properties");
+
+		prop.load(fis);
+		String browserName=prop.getProperty("token");
 		return browserName;
 		
 	}

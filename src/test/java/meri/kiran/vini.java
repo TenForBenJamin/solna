@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Properties;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,8 +28,24 @@ import objectRepo.reUsableMethods;
 import smith.rowe.Baishh;
 public class vini extends Baishh
 {
+	//@Test
+	public void twitterPost() {
+        
+
+    }
 	
-	
+	@Test
+	public void LikedTweetsByUserId() throws IOException {
+		String token=tokenBearer();
+	    Response resp = given().header("Authorization", "Bearer "+token).
+	            get("https://api.twitter.com/2/users/"+ randomGuy1 +"/liked_tweets");
+	    //System.out.println(resp.asString());
+	    String getReqRes=resp.asString();
+	    JsonPath js = new JsonPath(getReqRes);
+		reUsableMethods sd = new reUsableMethods();
+		sd.TwitterParsing(getReqRes,10);
+	}
+
 	
 	
 	@DataProvider
@@ -77,6 +95,8 @@ public class vini extends Baishh
 		
 		
 	}
+	
+	
 
 	//@Test(dataProvider="ZweiteLiga")
 	public void dataProbhiderAPI(String ort , String comp) throws IOException
@@ -138,7 +158,7 @@ public class vini extends Baishh
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-	@Test(dataProvider="daley")
+	//@Test(dataProvider="daley")
 	public void e2e(String ort , String comp) throws InterruptedException, IOException 
 	{
 		//System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
