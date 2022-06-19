@@ -20,6 +20,19 @@ public class Baishh
 	protected String Stimac = "1128405471960997889";
 	protected String khatri = "28515858";
 	protected String randomGuy1 ="1034698008993124352";
+	protected String fabrizioRomano ="330262748";
+	protected String ten4Ben="1421777718736297986";
+	protected String randomTweet="1536872025515380737";
+	
+	protected String puchtualityFreak = "RoshniKuhuChak1";
+	/*
+	protected String khatri = "28515858";
+	protected String randomGuy1 ="1034698008993124352";
+	protected String fabrizioRomano ="330262748";
+	protected String ten4Ben="1421777718736297986";
+	protected String randomTweet="1534784959579561984";
+	*/
+	
 	public  String initilizeBrowser() throws IOException 
 	{
 		Properties prop = new Properties();

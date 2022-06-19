@@ -38,7 +38,7 @@ public class vini extends Baishh
 	public void LikedTweetsByUserId() throws IOException {
 		String token=tokenBearer();
 	    Response resp = given().header("Authorization", "Bearer "+token).
-	            get("https://api.twitter.com/2/users/"+ randomGuy1 +"/liked_tweets");
+	            get("https://api.twitter.com/2/users/"+ fabrizioRomano +"/liked_tweets");
 	    //System.out.println(resp.asString());
 	    String getReqRes=resp.asString();
 	    JsonPath js = new JsonPath(getReqRes);
