@@ -1,8 +1,11 @@
 package objectRepo;
 
+import static io.restassured.RestAssured.given;
+
 import org.testng.Assert;
 
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 public class reUsableMethods 
 {
@@ -138,7 +141,7 @@ public class reUsableMethods
 		 
 		 System.out.println(" inside twitterLikesParsing adv method ");
 		 JsonPath js = new JsonPath(s);
-		 int schrute = 5;
+		 int schrute = 70;
 			//String dt = js.getString("dt");
 			int ddt=js.getInt("data.size()");
 			if (ddt<schrute)
@@ -152,7 +155,9 @@ public class reUsableMethods
 				//String 
 				//System.out.println("Liked User " + (i+1) +" is \n" +js.get("data[ " + i + "].name") +" and userName is " +js.get("data[ " + i + "].username"));
 				String uN=js.get("data[ " + i + "].username");
-				userDetails(uN,tk);
+				System.out.println(uN +" and is created on " +userDetails(uN,tk));
+				//System.out.println(userDetails(uN,tk));
+				//userDetails(uN,tk);
 				
 			}
 		 return null;
@@ -160,7 +165,15 @@ public class reUsableMethods
 	
 	public static String userDetails(String s , String tk) 
 	 {
-		return s;
+		Response rtpcr = given().header("Authorization", "Bearer "+tk).queryParam("user.fields", "created_at").
+	            get("https://api.twitter.com/2/users/by/username/"+ s );
+	    //https://api.twitter.com/2/users/by/username/stimac_igor
+	    String getReqRes=rtpcr.asString();
+	   // String getReqRes=resp.asString();
+	    JsonPath js = new JsonPath(getReqRes);
+	    String extracted=js.get("data.created_at");
+	   // System.out.println(extracted);
+		return extracted;
 	 }
 	
 	

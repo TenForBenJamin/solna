@@ -22,12 +22,12 @@ public class Baishh
 	protected String randomGuy1 ="1034698008993124352";
 	protected String fabrizioRomano ="330262748";
 	protected String ten4Ben="1421777718736297986";
-	protected String randomTweet="1536872025515380737";
+	protected String randomTweet="1390266553686323203";
 	
 	protected String puchtualityFreak = "RoshniKuhuChak1";
-	/*
-	protected String khatri = "28515858";
-	protected String randomGuy1 ="1034698008993124352";
+	
+	protected String randomTweet2 = "1538523689146232833";
+	protected String randomTweet3 ="13538054841830109184";/*
 	protected String fabrizioRomano ="330262748";
 	protected String ten4Ben="1421777718736297986";
 	protected String randomTweet="1534784959579561984";
