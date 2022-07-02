@@ -1,14 +1,22 @@
 package smith.rowe;
 
+import static io.restassured.RestAssured.given;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Properties;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import objectRepo.reUsableMethods;
 
 public class Baishh
 {
@@ -97,5 +105,49 @@ public class Baishh
 	public static String baseUrlopenWeather="https://api.openweathermap.org";
 	public String geicoDriver="50676ABCD";
 	public static String OpCo="en";
+	
+	
+	public String getDayLength(String ort) throws IOException
+	{
+		String dl;
+		
+		//System.out.println(" inside getDayLength for  " +ort);
+		String apiKey=schussel();
+		RestAssured.baseURI =baseUrlopenWeather;
+		String getReqRes =
+		given().
+		queryParam("q", ort).
+		queryParam("appid", apiKey).
+		queryParam("lang", OpCo).queryParam("units", "metric").
+		when().get("data/2.5/weather").
+		then().assertThat().statusCode(200).extract().response().asString();
+		JsonPath js = new JsonPath(getReqRes);
+		//reUsableMethods sd = new reUsableMethods();
+		//sd.chur(getReqRes,0);
+		//sd.coordsExtractor(getReqRes);
+		String  epTimeSR = js.getString("sys.sunrise");
+		  
+		int iSR=Integer.parseInt(epTimeSR); 
+//		System.out.println(iSR);  
+//		Durasion(iSR);
+		String  epTimeSS = js.getString("sys.sunset");
+		int iSS=Integer.parseInt(epTimeSS);  
+		int daylength = iSS-iSR;
+		dl=Duracion(daylength);
+		
+		return dl;
+	}
+	public String Duracion(int dl) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(dl * 1000L);
+		cal.setTimeZone(TimeZone.getTimeZone("UTC+1"));
+		int daylengthHours = cal.get(Calendar.HOUR_OF_DAY);
+		daylengthHours = daylengthHours + 1;
+		// System.out.println(cal.get(Calendar.HOUR_OF_DAY));//12 hour clock
+		String miren="daylength is " + daylengthHours + " H " + cal.get(Calendar.MINUTE) + " M  ";// 24 hour
+																											// clock
+		// return dl;
+		return miren;
+	}
 	
 }
