@@ -14,10 +14,14 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
+import smith.rowe.App;
+
 
 
 public class UEL_2022_23 extends parama  {
@@ -135,7 +139,8 @@ public class UEL_2022_23 extends parama  {
 			WebDriver driver= new FirefoxDriver();
 			driver.manage().window().maximize();		// maximizing the window
 //			String place = "potsdam";
-			String place = Graz;
+			String place = genRandomStadt();
+			
 			//     xpath for WeatherAPI button        //*[@id="MoviesB"]
 			String uri= "https://tenforben.github.io";
 			System.out.println("URL formed -" +uri);
@@ -185,5 +190,11 @@ public class UEL_2022_23 extends parama  {
 			//String searchR= driver.findElement(By.xpath("/html/body/div[3]/div/div/p[1]")).getText() ;
 			
 		}	
+		
+		public static String genRandomStadt() {
+	    	Faker faker = new Faker();
+	    	return faker.address().country();
+	    	
+	    }
 		
 }
