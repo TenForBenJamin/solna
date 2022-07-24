@@ -57,9 +57,8 @@ public class berlijn extends parama
 
         RestAssured.baseURI =baseUrlopenWeather;
         String varan=marwahi;
-        int siu=15;
+        int siu=50;
         int startlat=8;
-        // kadalundi 673302
         int endZip=startlat+siu;
         for(int i=startlat;i<endZip;i++)
         {
@@ -77,7 +76,7 @@ public class berlijn extends parama
                 JsonPath js = new JsonPath(getReqRes);
                 reUsableMethods sd = new reUsableMethods();
                 //sd.coordsExtractor(getReqRes);
-                sd.simblePrint(getReqRes," 77th Longitude ");
+                sd.simbleDaylengthPrint(getReqRes,i +" lat and  77 lon  ");
             }
             catch(Exception e)
             {
