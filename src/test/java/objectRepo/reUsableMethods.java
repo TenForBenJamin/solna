@@ -126,13 +126,13 @@ public class reUsableMethods
 		 System.out.println(" inside twitterLikesParsing  method ");
 		 JsonPath js = new JsonPath(s);
 			//String dt = js.getString("dt");
-			int ddt=js.getInt("data.size()");
-			if (ddt<schrute)
+		// int ddt=js.getInt("data.size()");
+			/*if (ddt<schrute)
 			{
 				schrute=ddt;
-			}
+			}*/
 				
-			System.out.println("data size is    " + ddt);
+			//System.out.println("data size is    " + ddt);
 			for( int i=0;i<schrute;i++)
 			{
 				//String 
@@ -140,7 +140,32 @@ public class reUsableMethods
 			}
 		 return null;
 	 }
-	public static String twitterLikesParsing_adv(String s , String tk) 
+
+	public static void twitterFollowingByUserId(String s , int schrute)
+	{
+
+		System.out.println(" inside twitterLikesParsing  method ");
+		JsonPath js = new JsonPath(s);
+		//String dt = js.getString("dt");
+		 int ddt=js.getInt("meta.result_count");
+			if (ddt<schrute)
+			{
+				schrute=ddt;
+			}
+
+		System.out.println("data size is    " + ddt);
+		for( int i=0;i<ddt;i++)
+		{
+			//String
+			System.out.println("following  User " + (i+1) +" is \n"
+					+js.get("data[ " + i + "].name") +" and userName is "
+					+js.get("data[ " + i + "].username")
+					+ " Verificiation flag is   "
+					+js.get("data[ " + i + "].verified"));
+		}
+	}
+
+	public static String twitterLikesParsing_adv(String s , String tk)
 	 {
 		 
 		 System.out.println(" inside twitterLikesParsing adv method ");
@@ -179,6 +204,19 @@ public class reUsableMethods
 	   // System.out.println(extracted);
 		return extracted;
 	 }
+
+	public static String getTwitterIdFromURLname(String uralName , String tk)
+	{
+		Response rtpcr = given().header("Authorization", "Bearer "+tk).queryParam("user.fields", "created_at").
+				get("https://api.twitter.com/2/users/by/username/"+ uralName );
+		//https://api.twitter.com/2/users/by/username/stimac_igor
+		String getReqRes=rtpcr.asString();
+		// String getReqRes=resp.asString();
+		JsonPath js = new JsonPath(getReqRes);
+		String extracted=js.get("data.id");
+		// System.out.println(extracted);
+		return extracted;
+	}
 	
 	
 	public static String simblePrint(String s , String z) 
