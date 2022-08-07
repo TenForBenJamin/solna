@@ -280,7 +280,8 @@ public class reUsableMethods
 			int iSS=Integer.parseInt(epTimeSS);
 			int daylength = iSS-iSR;
 			String dl=Duracion(daylength);
-			System.out.println("                      DayLength -   " +dl + " |  weather description -  " + weatherDesc + "  | temperature is " + mainTemp   );
+			System.out.println("      DayLength -   " +dl + " |  weather description -  " + weatherDesc + "  | temperature is " + mainTemp   );
+			System.out.println("      Coords -   |  Latitude  -  " + rlat + " N°  | Longitude  " + rlon +" E° "  );
 		}
 		catch(Exception e) {
 			System.out.println("no pinCode found for "+ z);
