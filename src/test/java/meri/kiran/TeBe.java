@@ -37,11 +37,11 @@ public class TeBe extends Baishh {
 
 	}
 
-	// @Test
+	 @Test
 	public void LikedTweetsByUserId() throws IOException {
 		String token = tokenBearer();
 		Response resp = given().header("Authorization", "Bearer " + token)
-				.get("https://api.twitter.com/2/users/" + ten4Ben + "/liked_tweets");
+				.get("https://api.twitter.com/2/users/" + khatri + "/liked_tweets");
 		// System.out.println(resp.asString());
 		String getReqRes = resp.asString();
 		JsonPath js = new JsonPath(getReqRes);
@@ -61,11 +61,11 @@ public class TeBe extends Baishh {
 		sd.twitterLikesParsing(getReqRes, 10);
 	}
 
-	// @Test
+	 @Test
 	public void likedUsersDetails() throws IOException {
 		String token = tokenBearer();
 		Response resp = given().header("Authorization", "Bearer " + token)
-				.get("https://api.twitter.com/2/tweets/" + randomTweet + "/liking_users");
+				.get("https://api.twitter.com/2/tweets/" + "1552318089282330624" + "/liking_users");
 		// System.out.println(resp.asString());
 		// .queryParam("q", ort)
 		String getReqRes = resp.asString();
