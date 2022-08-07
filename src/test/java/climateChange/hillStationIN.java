@@ -16,6 +16,8 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
+import smith.rowe.climateClouds;
+
 public class hillStationIN  extends parama {
 
     @DataProvider
@@ -103,9 +105,10 @@ public class hillStationIN  extends parama {
                         when().get("data/2.5/weather").
                         then().assertThat().statusCode(200).extract().response().asString();
         JsonPath js = new JsonPath(getReqRes);
-        reUsableMethods sd = new reUsableMethods();
+        climateClouds sd = new climateClouds();
         // sd.coordsExtractor(getReqRes);
-        sd.simbleDaylengthPrint(getReqRes," Hill Station details ");
-        String  mainTemp = js.getString("main.temp");
+        sd.simbleDaylengthPrintAssert(getReqRes," Hill Station details ");
+        //sd.simbleDaylengthPrint(getReqRes," Hill Station details ");
+
     }
 }
