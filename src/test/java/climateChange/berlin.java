@@ -14,7 +14,7 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
 
-public class berlijn extends parama
+public class berlin extends parama
 {
     @Test
     public void randomCapitalWeatherCheck()
