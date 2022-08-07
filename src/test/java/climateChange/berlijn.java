@@ -2,34 +2,24 @@ package climateChange;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
+import static smith.rowe.randomData.genRandomCapitalName;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 import io.restassured.response.Response;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.github.javafaker.Faker;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
-import smith.rowe.App;
 
 public class berlijn extends parama
 {
-    //@Test
+    @Test
     public void randomCapitalWeatherCheck()
     {
-        String aarari =genRandomMaageHithe();
+        String aarari = genRandomCapitalName();
         System.out.println(" Testing Faker item   " + aarari);
         RestAssured.baseURI =baseUrlopenWeather;
         String getReqRes =
@@ -46,13 +36,8 @@ public class berlijn extends parama
         String  mainTemp = js.getString("main.temp");
     }
 
-    public static String genRandomMaageHithe() {
-        Faker faker = new Faker();
-        String soorarai=faker.country().capital();
-        return soorarai;
 
-    }
-    //@Test
+  @Test
     public void lon77change()
     {
         System.out.println("  longitude 77 line ");
@@ -87,7 +72,7 @@ public class berlijn extends parama
         }
     }
 
-    @Test
+   // @Test
     public void followersByUserId() throws IOException {
         String token = tokenBearer();
         String ruksarD="67611162";
@@ -105,7 +90,7 @@ public class berlijn extends parama
     }
 
 
-   @Test
+  // @Test
    public void userIDwithName() throws IOException {
         String token = tokenBearer();
         String ruksarD="67611162";
