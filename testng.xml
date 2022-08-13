@@ -3,12 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    	<class name="meri.kiran.indianZipCoder">
+    	<class name="climateChange.berlin">
       	<methods>
-      	
-	      		<parameter name="siu" value="500"></parameter>
-	      		
-	      		<include name="SeBasicWeatherApp"></include>
+            <include name="randomCapitalWeatherCheck"></include>
+
 	        </methods>
       </class>
       
@@ -17,7 +15,7 @@
   <class name="meri.kiran.indianZipCoder"/>
       <class name="meri.kiran.germanZipCoder"/>
       <class name="meri.kiran.stadionWeather"/>
-  	<include name="zipSeries_Chennai"></include>
+  	<include name="randomCapitalWeatherCheck"></include>
   	<include name="zipSeries_Kerala"></include>
    -->
 </suite> <!-- Su

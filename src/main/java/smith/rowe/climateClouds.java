@@ -6,6 +6,8 @@ import org.testng.Assert;
 import java.util.Calendar;
 import java.util.TimeZone;
 
+import static smith.rowe.randomData.generateName;
+
 public class climateClouds {
 
     public static String simbleDaylengthPrintAssert(String s , String z)
@@ -16,7 +18,7 @@ public class climateClouds {
         java.util.Date time=new java.util.Date((long)ddt*1000);
         String asliJagah=js.getString("name");
         String coundry = js.getString("sys.country");
-        System.out.println("Place for the coordinate at  "+ z +" is                  " + asliJagah + " , " + coundry);
+        System.out.println("  "+ z +" is  " + asliJagah + " , " + coundry +" requested by user " +generateName());
         double count = js.getDouble("main.temp");
         String mainTemp = js.getString("main.temp");
         String rlat = js.getString("coord.lat");
@@ -58,8 +60,6 @@ public class climateClouds {
 
     public static String simbleDaylengthPrint(String s , String z)
     {
-
-
         try
         {
             JsonPath js = new JsonPath(s);
