@@ -15,4 +15,18 @@ public class randomData {
         return soorarai;
 
     }
+    public static String genRandomHIMYM() {
+        Faker faker = new Faker();
+        String soorarai=faker.howIMetYourMother().catchPhrase();
+        return soorarai;
+
+    }
+
+    public static int genRandomMgrId() {
+        Faker faker = new Faker();
+        String soorarai=faker.howIMetYourMother().catchPhrase();
+        Integer ttest=faker.number().numberBetween(0,1000000);
+        return ttest;
+
+    }
 }

@@ -6,7 +6,6 @@ import org.testng.Assert;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import smith.rowe.Baishh;
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -256,8 +255,6 @@ public class reUsableMethods
 
 	public static String simbleDaylengthPrint(String s , String z)
 	{
-
-
 		try
 		{
 			JsonPath js = new JsonPath(s);
@@ -288,6 +285,15 @@ public class reUsableMethods
 		}
 
 		return null;
+	}
+
+	public void fplPasthistoryFirstSeason(String s ) {
+
+		JsonPath js = new JsonPath(s);
+		String pastSeasons=js.getString("past[0].season_name");
+		//String coundry = js.getString("sys.country");
+		System.out.println("First Season - " +  pastSeasons);
+
 	}
 	public static String Duracion(int dl) {
 		Calendar cal = Calendar.getInstance();
