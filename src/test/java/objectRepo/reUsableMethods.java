@@ -291,7 +291,17 @@ public class reUsableMethods
 
 		JsonPath js = new JsonPath(s);
 		String pastSeasons=js.getString("past[0].season_name");
+		System.out.println("First Season - " +  pastSeasons);
+
+	}
+	public void fplPastSeasonsCount(String s ) {
+
+		JsonPath js = new JsonPath(s);
+		//String pastSeasons=js.getString("past.length");
+		int count=js.getInt("past.size()");
 		//String coundry = js.getString("sys.country");
+		System.out.println("total FPL seasons - " +  count);
+		String pastSeasons=js.getString("past[0].season_name");
 		System.out.println("First Season - " +  pastSeasons);
 
 	}

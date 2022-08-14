@@ -5,17 +5,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
-import static smith.rowe.randomData.genRandomCapitalName;
 
 import java.io.IOException;
-
-import io.restassured.response.Response;
-import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
-import objectRepo.reUsableMethods;
 import smith.rowe.climateClouds;
 
 public class hillStationIN  extends parama {
@@ -92,7 +87,7 @@ public class hillStationIN  extends parama {
     }
 
     @Test(dataProvider="getData")
-    public void indischBerghauf(String ort , String comp) throws IOException
+    public void random2oHillstationIN(String ort , String comp) throws IOException
     {
         System.out.println(" place " +ort);
         String apiKey=schussel();

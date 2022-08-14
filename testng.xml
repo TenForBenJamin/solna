@@ -3,20 +3,22 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    	<class name="climateChange.berlin">
+    	<class name="climateChange.hillStationIN">
       	<methods>
-            <include name="randomCapitalWeatherCheck"></include>
+
 
 	        </methods>
       </class>
       
     </classes>
   </test> <!-- Test
+  <include name="randomCapitalWeatherCheck"></include>
   <class name="meri.kiran.indianZipCoder"/>
       <class name="meri.kiran.germanZipCoder"/>
       <class name="meri.kiran.stadionWeather"/>
   	<include name="randomCapitalWeatherCheck"></include>
   	<include name="zipSeries_Kerala"></include>
+  	 <include name="fplPastHistory"></include>
    -->
 </suite> <!-- Su
  <classes>
