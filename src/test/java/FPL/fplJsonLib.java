@@ -1,5 +1,5 @@
 package FPL;
-
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
@@ -10,13 +10,13 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
 
-public class fplHistory extends parama {
+import java.io.FileWriter;
+import java.io.IOException;
 
-    // here we need to pass the managerId and get the history , input is String
+public class fplJsonLib extends  parama{
+
    @Test
-    public void fplPastHistory() {
-
-       //https://fantasy.premierleague.com/api/entry/3283365/history/
+    public void differdange() throws IOException {
        int randomManagerId= genRandomMgrId();
 
        System.out.println(" Testing FPL  - " +randomManagerId );
@@ -28,12 +28,21 @@ public class fplHistory extends parama {
        JsonPath js = new JsonPath(getReqRes);
        reUsableMethods sd = new reUsableMethods();
        // sd.coordsExtractor(getReqRes);
-       sd.fplPasthistoryFirstSeason(getReqRes);
+       sd.fplJsonExtraction(getReqRes);
+   }
+
+   @Test
+   public void jsonMan() throws IOException {
+
+      JSONObject obj=new JSONObject();
+      obj.put("managerId","232124");
+      obj.put("firstSeason","232124");
+      obj.put("Seasons","232124");
+      obj.put("Remark","232124");
+
+      FileWriter file = new FileWriter("jason\\test.json",false);
+      file.write(obj.toJSONString());
+      file.close();
 
    }
-    @Test
-    public void fplrandomGen() {
-        System.out.println(" random  : " + genRandomMgrId());
-    }
-
 }

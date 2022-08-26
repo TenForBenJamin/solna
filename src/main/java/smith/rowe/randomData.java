@@ -24,7 +24,6 @@ public class randomData {
 
     public static int genRandomMgrId() {
         Faker faker = new Faker();
-        String soorarai=faker.howIMetYourMother().catchPhrase();
         Integer ttest=faker.number().numberBetween(0,1000000);
         return ttest;
 
