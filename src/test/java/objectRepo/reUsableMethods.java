@@ -2,11 +2,14 @@ package objectRepo;
 
 import static io.restassured.RestAssured.given;
 
+import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -296,14 +299,59 @@ public class reUsableMethods
 	}
 	public void fplPastSeasonsCount(String s ) {
 
-		JsonPath js = new JsonPath(s);
-		//String pastSeasons=js.getString("past.length");
-		int count=js.getInt("past.size()");
-		//String coundry = js.getString("sys.country");
-		System.out.println("total FPL seasons - " +  count);
-		String pastSeasons=js.getString("past[0].season_name");
-		System.out.println("First Season - " +  pastSeasons);
+	JsonPath js = new JsonPath(s);
+	//String pastSeasons=js.getString("past.length");
+	int count=js.getInt("past.size()");
+	//String coundry = js.getString("sys.country");
+	System.out.println("total FPL seasons - " +  count);
+	String pastSeasons=js.getString("past[0].season_name");
+	System.out.println("First Season - " +  pastSeasons);
 
+}
+
+	public void fplPastSeasonsDetails(String s ) {
+
+		JsonPath js = new JsonPath(s);
+		int count=js.getInt("past.size()");
+		String seasonName,rank,total_points;
+		System.out.println("total FPL seasons - " +  count);
+		for(int i=0;i<count;i++)
+		{
+			seasonName=js.getString("past[" + i +"].season_name");
+			rank=js.getString("past[" + i +"].rank");
+			total_points=js.getString("past[" + i +"].total_points");
+			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
+		}
+
+	}
+
+	public void fplJsonExtraction(String s) throws IOException {
+
+		JsonPath js = new JsonPath(s);
+		int count=js.getInt("past.size()");
+		String seasonName ,rank,total_points;
+		System.out.println("total FPL seasons - " +  count);
+		String ersteSeasons=js.getString("past[0].season_name");
+
+		if(count!=0)
+				{	for(int i=0;i<count;i++)
+					{
+						seasonName=js.getString("past[" + i +"].season_name");
+						rank=js.getString("past[" + i +"].rank");
+						total_points=js.getString("past[" + i +"].total_points");
+						System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
+					}
+				JSONObject obj=new JSONObject();
+				String lastSeason=js.getString("past[" + (count-1) +"].season_name");
+				obj.put("lastSeason",lastSeason);
+				obj.put("firstSeason",ersteSeasons);
+				obj.put("Seasons",count);
+				obj.put("Remark","Trial");
+
+				FileWriter file = new FileWriter("jason\\FPLtest.json",false);
+				file.write(obj.toJSONString());
+				file.close();
+		}
 	}
 	public static String Duracion(int dl) {
 		Calendar cal = Calendar.getInstance();
