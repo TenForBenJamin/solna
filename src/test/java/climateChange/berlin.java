@@ -101,6 +101,22 @@ public class berlin extends parama
         reUsableMethods sd = new reUsableMethods();
         //sd.twitterLikesParsing_adv(getReqRes, token);
         sd.twitterFollowingByUserId(getReqRes,22);
+        //sd.twitterFollowing_VerifiedProfiles(getReqRes,100);
+        //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
+
+    } public void verifiedFollowerByUserIdData(String anarok) throws IOException {
+        String token = tokenBearer();
+
+       Response resp = given().header("Authorization", "Bearer " + token).
+        queryParam("user.fields", "public_metrics,url,username,verified")
+               .queryParam("max_results","1000")
+                .get("https://api.twitter.com/2/users/" + anarok + "/following");
+        // System.out.println(resp.asString());
+        String getReqRes = resp.asString();
+        reUsableMethods sd = new reUsableMethods();
+        //sd.twitterLikesParsing_adv(getReqRes, token);
+        //sd.twitterFollowingByUserId(getReqRes,22);
+        sd.twitterFollowing_VerifiedProfiles(getReqRes,100);
         //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
 
     }
@@ -124,10 +140,11 @@ public class berlin extends parama
         String DilDosanjh="Rash99991";
         String ruksarD="67611162";
         String cyrus ="AntarikshTak";
+        String userName="aartimanncan";
         reUsableMethods sd = new reUsableMethods();
-        String twitterUserId = sd.getTwitterIdFromURLname("Tavysingh",token);
-        System.out.println(" The id for this user  is " +twitterUserId);
-        followersByUserIdData(twitterUserId);
+        String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
+        System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
+        verifiedFollowerByUserIdData(twitterUserId);
 
     }
 }
