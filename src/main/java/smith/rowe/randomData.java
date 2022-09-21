@@ -28,4 +28,18 @@ public class randomData {
         return ttest;
 
     }
+
+    public static String genRandomSpecificCapitalName() {
+        Faker faker = new Faker();
+        String soorarai=faker.country().countryCode3();
+        return soorarai;
+    }
+
+    public static String genRandomCity() {
+        Faker faker = new Faker();
+        String randomGenerated=faker.nation().capitalCity();
+        // For invalid random cities use String randomGenerated=faker.address().cityName();
+        return randomGenerated;
+
+    }
 }

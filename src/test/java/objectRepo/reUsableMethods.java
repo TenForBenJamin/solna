@@ -11,6 +11,7 @@ import io.restassured.response.Response;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Objects;
 import java.util.TimeZone;
 
 public class reUsableMethods
@@ -146,7 +147,7 @@ public class reUsableMethods
 	public static void twitterFollowingByUserId(String s , int schrute)
 	{
 
-		System.out.println(" inside twitterLikesParsing  method ");
+		System.out.println(" inside followingList  method ");
 		JsonPath js = new JsonPath(s);
 		//String dt = js.getString("dt");
 		 int ddt=js.getInt("meta.result_count");
@@ -165,6 +166,33 @@ public class reUsableMethods
 					+ " Verificiation flag is   "
 					+js.get("data[ " + i + "].verified"));
 		}
+	}
+
+	public static void twitterFollowing_VerifiedProfiles(String s , int schrute)
+	{
+
+		System.out.println(" inside followingList  method ");
+		JsonPath js = new JsonPath(s);
+		int ddt=js.getInt("meta.result_count");
+		System.out.println("total entries in Page is    " + ddt);
+		if (ddt<schrute)
+		{
+			schrute=ddt;
+		}
+		int verifiedCount=0;
+		for( int i=0;i<ddt;i++)
+		{
+			Boolean verifiedFlag=js.get("data[ " + i + "].verified");
+			//boolean b1=Boolean.parseBoolean(verifiedFlag);
+			if(verifiedFlag)
+			{
+				System.out.println("Verified  User " + (i+1) +" is \n"
+						+js.get("data[ " + i + "].name") +" and userName is "
+						+js.get("data[ " + i + "].username"));
+				verifiedCount=verifiedCount+1;
+			}
+		}
+		System.out.println("Total verified count =    " + verifiedCount);
 	}
 
 	public static String twitterLikesParsing_adv(String s , String tk)

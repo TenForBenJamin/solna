@@ -1,11 +1,18 @@
 package climateChange;
 
 
+import io.restassured.mapper.ObjectMapper;
+import io.restassured.mapper.ObjectMapperDeserializationContext;
+import io.restassured.mapper.ObjectMapperSerializationContext;
+import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
+import static smith.rowe.climateClouds.*;
+import static smith.rowe.randomData.*;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 import io.restassured.RestAssured;
@@ -106,4 +113,43 @@ public class hillStationIN  extends parama {
         //sd.simbleDaylengthPrint(getReqRes," Hill Station details ");
 
     }
+
+    @Test
+    public void singleTown() throws IOException
+    {
+        String ort= genRandomCity() ;
+        System.out.println(" place " +ort);
+        String apiKey=schussel();
+        RestAssured.baseURI =baseUrlopenWeather;
+        String getReqRes =
+                given().
+                        queryParam("q", ort).
+                        queryParam("appid", apiKey).
+                        queryParam("lang", OpCo).queryParam("units", "metric").
+                        when().get("data/2.5/weather").
+                        then().assertThat().statusCode(200).extract().response().asString();
+        JsonPath js = new JsonPath(getReqRes);
+        climateClouds sd = new climateClouds();
+        // sd.coordsExtractor(getReqRes);
+        sd.simbleDaylengthPrintJson(getReqRes," Hill Station details ");
+        /*sd.simbleDaylengthPrint(getReqRes," Hill Station details ");
+        String c=getDayLength(getReqRes);
+
+       */
+        String dL=getDayLengthValue(getReqRes);
+        JSONObject obj=new JSONObject();
+        String desc=getDescValue(getReqRes);
+        String currentTemp =getTemperatureValue(getReqRes);
+
+        obj.put("Place",ort);
+        obj.put("Daylength",dL);
+        obj.put("Season",desc);
+        obj.put("currentTemp",currentTemp);
+
+        FileWriter file = new FileWriter("jason\\" + ort +".json",false);
+        file.write(obj.toJSONString());
+        file.close();
+
+    }
+
 }

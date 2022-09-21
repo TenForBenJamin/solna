@@ -72,14 +72,15 @@ public class berlin extends parama
         }
     }
 
-   // @Test
+    @Test
     public void followersByUserId() throws IOException {
         String token = tokenBearer();
         String ruksarD="67611162";
         String cyrus ="4154116635";
+        String anarok="130770625";
        Response resp = given().header("Authorization", "Bearer " + token).
         queryParam("user.fields", "public_metrics,url,username,verified")
-                .get("https://api.twitter.com/2/users/" + cyrus + "/following");
+                .get("https://api.twitter.com/2/users/" + anarok + "/following");
         // System.out.println(resp.asString());
         String getReqRes = resp.asString();
         reUsableMethods sd = new reUsableMethods();
@@ -87,17 +88,63 @@ public class berlin extends parama
         sd.twitterFollowingByUserId(getReqRes,22);
         //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
 
+    } @Test
+    public void followersByUserIdData(String anarok) throws IOException {
+        String token = tokenBearer();
+
+       Response resp = given().header("Authorization", "Bearer " + token).
+        queryParam("user.fields", "public_metrics,url,username,verified")
+               .queryParam("max_results","1000")
+                .get("https://api.twitter.com/2/users/" + anarok + "/following");
+        // System.out.println(resp.asString());
+        String getReqRes = resp.asString();
+        reUsableMethods sd = new reUsableMethods();
+        //sd.twitterLikesParsing_adv(getReqRes, token);
+        sd.twitterFollowingByUserId(getReqRes,22);
+        //sd.twitterFollowing_VerifiedProfiles(getReqRes,100);
+        //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
+
+    } public void verifiedFollowerByUserIdData(String anarok) throws IOException {
+        String token = tokenBearer();
+
+       Response resp = given().header("Authorization", "Bearer " + token).
+        queryParam("user.fields", "public_metrics,url,username,verified")
+               .queryParam("max_results","1000")
+                .get("https://api.twitter.com/2/users/" + anarok + "/following");
+        // System.out.println(resp.asString());
+        String getReqRes = resp.asString();
+        reUsableMethods sd = new reUsableMethods();
+        //sd.twitterLikesParsing_adv(getReqRes, token);
+        //sd.twitterFollowingByUserId(getReqRes,22);
+        sd.twitterFollowing_VerifiedProfiles(getReqRes,100);
+        //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
+
     }
 
 
-  // @Test
+   @Test
    public void userIDwithName() throws IOException {
         String token = tokenBearer();
+        String DilDosanjh="Rash99991";
         String ruksarD="67611162";
         String cyrus ="AntarikshTak";
         reUsableMethods sd = new reUsableMethods();
-        String twitterUserId = sd.getTwitterIdFromURLname("Jahl_FFXIV",token);
+        String twitterUserId = sd.getTwitterIdFromURLname("Tavysingh",token);
         System.out.println(" The id for this user  is " +twitterUserId);
+        followersByUserIdData(twitterUserId);
+
+    }
+    @Test
+   public void getVerifiedFollowingForUser() throws IOException {
+        String token = tokenBearer();
+        String DilDosanjh="Rash99991";
+        String ruksarD="67611162";
+        String cyrus ="AntarikshTak";
+        String userName="aartimanncan";
+        reUsableMethods sd = new reUsableMethods();
+        String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
+        System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
+        verifiedFollowerByUserIdData(twitterUserId);
 
     }
 }
