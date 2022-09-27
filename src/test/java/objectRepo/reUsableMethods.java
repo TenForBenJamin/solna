@@ -220,7 +220,7 @@ public class reUsableMethods
 	public static void twitterFollowing_UnverifiedProfiles(String s , int schrute)
 	{
 
-		System.out.println(" inside followingList  method ");
+		System.out.println(" inside UnVerified  method ");
 		JsonPath js = new JsonPath(s);
 		int ddt=js.getInt("meta.result_count");
 		System.out.println("total entries in Page is    " + ddt);
@@ -236,9 +236,11 @@ public class reUsableMethods
 			if(!UnverifiedFlag)
 			{
 				UnverifiedCount=UnverifiedCount+1;
-				System.out.println("Unverified  User " + (UnverifiedCount) +" is \n"
+				System.out.println("User " + (UnverifiedCount) +" is \n"
 						+js.get("data[ " + i + "].name") +" and userName is "
-						+js.get("data[ " + i + "].username"));
+						+js.get("data[ " + i + "].username") +"  total followers - "
+						+js.get("data[ " + i + "].public_metrics.followers_count")
+						+ " Tweets - " + js.get("data[ " + i + "].public_metrics.tweet_count"));
 
 			}
 		}
