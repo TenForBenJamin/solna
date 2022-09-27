@@ -120,6 +120,17 @@ public class berlin extends parama
         //System.out.println(" The id for this " +cyrus +" is " +twitterUserId);
 
     }
+    @Test
+    public void UnverifiedFollowerByUserIdData(String anarok) throws IOException {
+        String token = tokenBearer();
+       Response resp = given().header("Authorization", "Bearer " + token).
+        queryParam("user.fields", "public_metrics,url,username,verified")
+               .queryParam("max_results","1000")
+                .get("https://api.twitter.com/2/users/" + anarok + "/following");
+        String getReqRes = resp.asString();
+        reUsableMethods sd = new reUsableMethods();
+        sd.twitterFollowing_UnverifiedProfiles(getReqRes,100);
+    }
 
 
    @Test
@@ -134,17 +145,38 @@ public class berlin extends parama
         followersByUserIdData(twitterUserId);
 
     }
+
     @Test
    public void getVerifiedFollowingForUser() throws IOException {
         String token = tokenBearer();
-        String DilDosanjh="Rash99991";
-        String ruksarD="67611162";
-        String cyrus ="AntarikshTak";
-        String userName="aartimanncan";
+        String userName="kalyanchaubey";
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
         System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
         verifiedFollowerByUserIdData(twitterUserId);
+
+    }
+
+    @Test
+    public void getAllFollowingForUser() throws IOException {
+        String token = tokenBearer();
+        String userName="aparnamulberry";
+        reUsableMethods sd = new reUsableMethods();
+        String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
+        System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
+        followersByUserIdData(twitterUserId);
+
+    }
+
+    @Test
+   public void getUnVerifiedFollowingForUser() throws IOException {
+
+        String userName="VikrantMassey";
+        String token = tokenBearer();
+        reUsableMethods sd = new reUsableMethods();
+        String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
+        System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
+        UnverifiedFollowerByUserIdData(twitterUserId);
 
     }
 }
