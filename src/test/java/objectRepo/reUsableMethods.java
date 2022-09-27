@@ -186,13 +186,65 @@ public class reUsableMethods
 			//boolean b1=Boolean.parseBoolean(verifiedFlag);
 			if(verifiedFlag)
 			{
-				System.out.println("Verified  User " + (i+1) +" is \n"
+				verifiedCount=verifiedCount+1;
+				System.out.println("Verified  User " + (verifiedCount) +" is \n"
 						+js.get("data[ " + i + "].name") +" and userName is "
 						+js.get("data[ " + i + "].username"));
-				verifiedCount=verifiedCount+1;
+
 			}
 		}
 		System.out.println("Total verified count =    " + verifiedCount);
+	}
+
+	public static void twitterFollowing_AllProfiles(String s , int schrute)
+	{
+
+		System.out.println(" inside followingList  method ");
+		JsonPath js = new JsonPath(s);
+		int ddt=js.getInt("meta.result_count");
+		System.out.println("total entries in Page is    " + ddt);
+		if (ddt<schrute)
+		{
+			schrute=ddt;
+		}
+		for( int i=0;i<ddt;i++)
+		{
+			System.out.println("following  User " + (i+1) +" is \n"
+					+js.get("data[ " + i + "].name") +" and userName is "
+					+js.get("data[ " + i + "].username")
+					+ " Verificiation flag is   "
+					+js.get("data[ " + i + "].verified"));
+		}
+	}
+
+	public static void twitterFollowing_UnverifiedProfiles(String s , int schrute)
+	{
+
+		System.out.println(" inside UnVerified  method ");
+		JsonPath js = new JsonPath(s);
+		int ddt=js.getInt("meta.result_count");
+		System.out.println("total entries in Page is    " + ddt);
+		if (ddt<schrute)
+		{
+			schrute=ddt;
+		}
+		int UnverifiedCount=0;
+		for( int i=0;i<ddt;i++)
+		{
+			Boolean UnverifiedFlag=js.get("data[ " + i + "].verified");
+			//boolean b1=Boolean.parseBoolean(verifiedFlag);
+			if(!UnverifiedFlag)
+			{
+				UnverifiedCount=UnverifiedCount+1;
+				System.out.println("User " + (UnverifiedCount) +" is \n"
+						+js.get("data[ " + i + "].name") +" and userName is "
+						+js.get("data[ " + i + "].username") +"  total followers - "
+						+js.get("data[ " + i + "].public_metrics.followers_count")
+						+ " Tweets - " + js.get("data[ " + i + "].public_metrics.tweet_count"));
+
+			}
+		}
+		System.out.println("Total Unverified count =    " + UnverifiedCount);
 	}
 
 	public static String twitterLikesParsing_adv(String s , String tk)
