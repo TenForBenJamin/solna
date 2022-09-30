@@ -171,7 +171,7 @@ public class berlin extends parama
     @Test
    public void getUnVerifiedFollowingForUser() throws IOException {
 
-        String userName="VikrantMassey";
+        String userName="kunalsaraogi";
         String token = tokenBearer();
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);

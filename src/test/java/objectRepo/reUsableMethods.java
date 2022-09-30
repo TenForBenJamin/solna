@@ -11,7 +11,6 @@ import io.restassured.response.Response;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.Objects;
 import java.util.TimeZone;
 
 public class reUsableMethods
@@ -377,7 +376,7 @@ public class reUsableMethods
 		System.out.println("First Season - " +  pastSeasons);
 
 	}
-	public void fplPastSeasonsCount(String s ) {
+	public void fplFirstSeasonsCount(String s ) {
 
 	JsonPath js = new JsonPath(s);
 	//String pastSeasons=js.getString("past.length");
