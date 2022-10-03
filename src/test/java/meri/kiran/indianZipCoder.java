@@ -28,11 +28,11 @@ public class indianZipCoder extends parama  {
 	@Test
 	public void zipSeries_Kerala()
 	{
-		System.out.println("  Zip - India ");
+		System.out.println("  Zip - Kerala ");
 		
 		RestAssured.baseURI =baseUrlopenWeather;
 		String varan=marwahi;
-		int startZip=603000;
+		int startZip=673500;
 		int endZip=startZip+100;
 		for(int i=startZip;i<endZip;i++)
 		{

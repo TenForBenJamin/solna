@@ -158,7 +158,7 @@ public class vini extends Baishh
 		String  mainTemp = js.getString("main.temp");
 	}
 	
-	//@Test(dataProvider="daley")
+	@Test(dataProvider="daley")
 	public void e2e(String ort , String comp) throws InterruptedException, IOException 
 	{
 		//System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");

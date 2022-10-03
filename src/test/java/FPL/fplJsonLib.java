@@ -28,7 +28,33 @@ public class fplJsonLib extends  parama{
        JsonPath js = new JsonPath(getReqRes);
        reUsableMethods sd = new reUsableMethods();
        // sd.coordsExtractor(getReqRes);
-       sd.fplJsonExtraction(getReqRes);
+       //sd.fplJsonExtraction(getReqRes);
+       sd.fplFirstSeasonsCount(getReqRes);
+       sd.fplPastSeasonsDetails(getReqRes);
+   }
+   @Test
+   public void fplAPIwithWeb() throws IOException {
+      int randomManagerId= genRandomMgrId();
+
+      System.out.println(" Testing FPL  - " +randomManagerId );
+      RestAssured.baseURI ="https://fantasy.premierleague.com";
+      String getReqRes =
+              given().
+                      when().get("/api/entry/" + randomManagerId   +"/history/").
+                      then().assertThat().statusCode(200).extract().response().asString();
+      JsonPath js = new JsonPath(getReqRes);
+      reUsableMethods sd = new reUsableMethods();
+      // sd.coordsExtractor(getReqRes);
+      //sd.fplJsonExtraction(getReqRes);
+      sd.fplFirstSeasonsCount(getReqRes);
+      sd.fplPastSeasonsDetails(getReqRes);
+      driver=initilizeDriver();
+      driver.manage().window().maximize();		// maximizing the window
+      int  gameweek =4 ;
+      String uri= "https://fantasy.premierleague.com/entry/" + randomManagerId + "/event/"+ gameweek ;
+      driver.get(uri);
+      String kanda = initilizeBrowser();
+      System.out.println("browser is   "+kanda);
    }
 
    @Test
@@ -45,4 +71,6 @@ public class fplJsonLib extends  parama{
       file.close();
 
    }
+
+
 }
