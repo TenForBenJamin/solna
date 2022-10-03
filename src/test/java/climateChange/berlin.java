@@ -149,7 +149,7 @@ public class berlin extends parama
     @Test
    public void getVerifiedFollowingForUser() throws IOException {
         String token = tokenBearer();
-        String userName="kalyanchaubey";
+        String userName="Broacha_Cyrus";
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
         System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
@@ -160,7 +160,7 @@ public class berlin extends parama
     @Test
     public void getAllFollowingForUser() throws IOException {
         String token = tokenBearer();
-        String userName="aparnamulberry";
+        String userName="thebanat";
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
         System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
@@ -171,7 +171,7 @@ public class berlin extends parama
     @Test
    public void getUnVerifiedFollowingForUser() throws IOException {
 
-        String userName="kunalsaraogi";
+        String userName="Broacha_Cyrus";
         String token = tokenBearer();
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
