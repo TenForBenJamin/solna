@@ -160,7 +160,7 @@ public class berlin extends parama
     @Test
     public void getAllFollowingForUser() throws IOException {
         String token = tokenBearer();
-        String userName="thebanat";
+        String userName="SatishRay_";
         reUsableMethods sd = new reUsableMethods();
         String twitterUserId = sd.getTwitterIdFromURLname(userName,token);
         System.out.println(" The id for this "  +userName +"  is " +twitterUserId);
