@@ -8,9 +8,9 @@
             <include name="differdange"></include>
 	        </methods>
       </class>
-        <class name="meri.kiran.indianZipCoder">
+        <class name="climateChange.berlin">
             <methods>
-            <include name="zipSeries_Kerala"></include>
+            <include name="randomCapitalWeatherCheck"></include>
             </methods>
         </class>
     </classes>
