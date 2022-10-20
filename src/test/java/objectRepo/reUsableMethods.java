@@ -397,7 +397,7 @@ public class reUsableMethods
 		for(int i=0;i<count;i++)
 		{
 			seasonName=js.getString("past[" + i +"].season_name");
-			rank=js.getString("past[" + i +"].rank");
+			rank=js.getString("past[" + i +"].rank");//rank has to be checked for number of digits
 			total_points=js.getString("past[" + i +"].total_points");
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
 		}
