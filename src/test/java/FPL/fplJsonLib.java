@@ -29,6 +29,7 @@ public class fplJsonLib extends  parama{
        reUsableMethods sd = new reUsableMethods();
        // sd.coordsExtractor(getReqRes);
        //sd.fplJsonExtraction(getReqRes);
+      //look for hidden champ, if the any of the rank is under 1000 fail the testcase
        sd.fplFirstSeasonsCount(getReqRes);
        sd.fplPastSeasonsDetails(getReqRes);
    }
