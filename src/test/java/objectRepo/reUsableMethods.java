@@ -409,13 +409,36 @@ public class reUsableMethods
 				 HR=RRR;
 				 seasonCount=(i+1);
 				 BS= seasonName;
-
 			}
-
 			total_points=js.getString("past[" + i +"].total_points");
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
 		}
 		System.out.println("Best Rank  - " + HR  +"  BestSeason - "  + BS + " attempt number "  + seasonCount);
+	}
+
+	public boolean lowRankFinder(String s ) {
+
+		JsonPath js = new JsonPath(s);
+		int HR= 10000000;
+		String BS= "current";
+		int seasonCount=1;
+		int count=js.getInt("past.size()");
+		String seasonName,rank,total_points;
+		System.out.println("total FPL seasons - " +  count);
+		boolean t34=false;
+		for(int i=0;i<count;i++)
+		{
+			seasonName=js.getString("past[" + i +"].season_name");
+			rank=js.getString("past[" + i +"].rank");
+			int RRR=rank.length() ;
+			System.out.println("length of Rank - " +RRR);
+			if(RRR<6){
+				t34=true;
+			}
+			total_points=js.getString("past[" + i +"].total_points");
+			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
+		}
+		return t34;
 	}
 
 	public void fplJsonExtraction(String s) throws IOException {

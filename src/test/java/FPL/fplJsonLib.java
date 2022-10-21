@@ -33,6 +33,22 @@ public class fplJsonLib extends  parama{
        sd.fplFirstSeasonsCount(getReqRes);
        sd.fplPastSeasonsDetails(getReqRes);
    }
+@Test
+   public void findingNeedleInHayStack() throws IOException {
+      int randomManagerId= genRandomMgrId();
+      System.out.println(" Testing FPL  - " +randomManagerId );
+      RestAssured.baseURI ="https://fantasy.premierleague.com";
+      String getReqRes =
+              given().
+                      when().get("/api/entry/" + randomManagerId   +"/history/").
+                      then().assertThat().statusCode(200).extract().response().asString();
+      JsonPath js = new JsonPath(getReqRes);
+      reUsableMethods sd = new reUsableMethods();
+      Boolean lowRank = sd.lowRankFinder(getReqRes);
+      if(lowRank){
+          assertEquals(false ,true,"Failed due to length of Rank less than 6 digits - ");
+      }
+   }
    @Test
    public void fplAPIwithWeb() throws IOException {
       int randomManagerId= genRandomMgrId();
