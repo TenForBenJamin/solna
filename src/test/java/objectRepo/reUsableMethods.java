@@ -391,6 +391,9 @@ public class reUsableMethods
 	public void fplPastSeasonsDetails(String s ) {
 
 		JsonPath js = new JsonPath(s);
+		int HR= 10000000;
+		String BS= "current";
+		int seasonCount=1;
 		int count=js.getInt("past.size()");
 		String seasonName,rank,total_points;
 		System.out.println("total FPL seasons - " +  count);
@@ -398,10 +401,21 @@ public class reUsableMethods
 		{
 			seasonName=js.getString("past[" + i +"].season_name");
 			rank=js.getString("past[" + i +"].rank");//rank has to be checked for number of digits
+			//BestRank
+			int RRR= Integer.parseInt(rank);
+			//System.out.println("integerised value is - " +RRR);
+			if(HR>RRR){
+				 //HR= Integer.parseInt(rank);
+				 HR=RRR;
+				 seasonCount=(i+1);
+				 BS= seasonName;
+
+			}
+
 			total_points=js.getString("past[" + i +"].total_points");
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
 		}
-
+		System.out.println("Best Rank  - " + HR  +"  BestSeason - "  + BS + " attempt number "  + seasonCount);
 	}
 
 	public void fplJsonExtraction(String s) throws IOException {
