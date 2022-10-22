@@ -431,9 +431,9 @@ public class reUsableMethods
 			seasonName=js.getString("past[" + i +"].season_name");
 			rank=js.getString("past[" + i +"].rank");
 			int RRR=rank.length() ;
-			System.out.println("length of Rank - " +RRR);
 			if(RRR<6){
 				t34=true;
+				System.out.println("length of Rank - " +RRR);
 			}
 			total_points=js.getString("past[" + i +"].total_points");
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);

@@ -24,7 +24,7 @@ public class randomData {
 
     public static int genRandomMgrId() {
         Faker faker = new Faker();
-        Integer ttest=faker.number().numberBetween(0,1000000);
+        Integer ttest=faker.number().numberBetween(0,100000);
         return ttest;
 
     }
