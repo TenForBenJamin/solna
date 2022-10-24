@@ -12,10 +12,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Baishh
 {
@@ -65,11 +68,35 @@ public class Baishh
 			System.setProperty("webdriver.chrome.driver","C:\\home\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
+
+		if(browserName.equalsIgnoreCase("chromeheadless"))
+		{
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			System.setProperty("webdriver.chrome.driver","C:\\home\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver(options);
+		}
+
 		
 		if(browserName.equalsIgnoreCase("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
-			driver= new FirefoxDriver();
+
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary(firefoxBinary);
+			options.setHeadless(true);  // <-- headless set here
+		}
+
+		if(browserName.equalsIgnoreCase("firefoxheadless"))
+		{
+			System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
+
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary(firefoxBinary);
+			options.setHeadless(true);  // <-- headless set here
+			driver= new FirefoxDriver(options);
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

@@ -103,7 +103,7 @@ public class fplJsonLib extends  parama{
          String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
          String[] latestPoints = fp.split("\n");
          fp=latestPoints[0];
-         System.out.println("LatestPoints is for User  " +randomManagerId  +" is " +fp);
+         System.out.println("LatestPoints is for User  " +randomMgId  +" is " +fp);
          driver.quit();
       }
 
