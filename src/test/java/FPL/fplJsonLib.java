@@ -101,17 +101,11 @@ public class fplJsonLib extends  parama{
          driver.get(uri);
          String kanda = initilizeBrowser();
          String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
-         //team Name //div[@class='Entry__TeamName-sc-1kf863-1 inZJya']
          String teamName= driver.findElement(By.xpath("//div[@class='Entry__TeamName-sc-1kf863-1 inZJya']")).getText() ;
-         // managerName //div[@class='Entry__EntryName-sc-1kf863-0 cMEsev']
          String managerName= driver.findElement(By.xpath("//div[@class='Entry__EntryName-sc-1kf863-0 cMEsev']")).getText() ;
-         //transfers //div[@class='EntryEvent__SecondaryValue-l17rqm-14 EntryEvent__TransfersValue-l17rqm-15 sRSFe diuHJS']
          String transfers= driver.findElement(By.xpath("//div[@class='EntryEvent__SecondaryValue-l17rqm-14" +
                  " EntryEvent__TransfersValue-l17rqm-15 sRSFe diuHJS']")).getText() ;
-         //GWR (//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[3]
          String GWR= driver.findElement(By.xpath("(//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[3]")).getText() ;
-         // avgPts (//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[1]
-         // sideBar (//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[8]
          String ovrPts= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[1]")).getText() ;
          String ovrRank= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[2]")).getText() ;
          String TotalPlys= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[3]")).getText() ;
