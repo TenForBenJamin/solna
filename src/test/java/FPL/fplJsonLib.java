@@ -131,6 +131,46 @@ public class fplJsonLib extends  parama{
       }
 
    }
+
+   public void singleIdScrapper(int ID) throws IOException {
+
+      int randomManagerId= ID;
+      for(int randomMgId=randomManagerId;randomMgId<(randomManagerId+1);randomMgId++){
+         driver=initilizeDriver();
+         driver.manage().window().maximize();		// maximizing the window
+         int  gameweek =13 ;
+         String uri= "https://fantasy.premierleague.com/entry/" + randomMgId + "/event/"+ gameweek ;
+         driver.get(uri);
+         String kanda = initilizeBrowser();
+         String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
+         String teamName= driver.findElement(By.xpath("//div[@class='Entry__TeamName-sc-1kf863-1 inZJya']")).getText() ;
+         String managerName= driver.findElement(By.xpath("//div[@class='Entry__EntryName-sc-1kf863-0 cMEsev']")).getText() ;
+         String transfers= driver.findElement(By.xpath("//div[@class='EntryEvent__SecondaryValue-l17rqm-14" +
+                 " EntryEvent__TransfersValue-l17rqm-15 sRSFe diuHJS']")).getText() ;
+         String GWR= driver.findElement(By.xpath("(//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[3]")).getText() ;
+         String ovrPts= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[1]")).getText() ;
+         String ovrRank= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[2]")).getText() ;
+         String TotalPlys= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[3]")).getText() ;
+         String gwPtsLastUpdated= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[4]")).getText() ;
+         String totalTransfers= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[5]")).getText() ;
+         String squadValue= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[6]")).getText() ;
+         String remBalance= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[7]")).getText() ;
+         String[] latestPoints = fp.split("\n");
+         fp=latestPoints[0];
+         //document.getElementsByClassName("Pitch__StyledPitchElement-sc-1mctasb-5 jLgWIY")[8].innerText - For spielerDetail
+
+
+         System.out.println("LatestPoints is for User  " +randomMgId  +" is " +fp);
+         System.out.println("managerName is for User  " +randomMgId  +" is " +managerName);
+         System.out.println("teamName is for User  " +randomMgId  +" is " +teamName);
+         System.out.println("transfers is for User  " +randomMgId  +" is " +transfers);
+         System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate " +gwPtsLastUpdated);
+         System.out.println("total  Transfers " +totalTransfers );
+         System.out.println("squadValue  " +squadValue  +" remainingBalance " +remBalance);
+
+         driver.quit();
+      }
+   }
    @Test
    public void earlyBirdsFPL(){
       int randomManagerId= 1;
@@ -148,11 +188,11 @@ public class fplJsonLib extends  parama{
 
    }
 @Test
-   public void superEarlyBirdsFPL(){
-      int randomManagerId= 1;
+   public void superEarlyBirdsFPL() throws IOException {
+      int randomManagerId= 700;
       int counter=0;
-      for(int randomMgId=randomManagerId;randomMgId<100;randomMgId++) {
-         System.out.println(" FPL managerID  - " + randomMgId);
+      for(int randomMgId=randomManagerId;randomMgId<1000;randomMgId++) {
+         //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
                  given().
@@ -160,13 +200,26 @@ public class fplJsonLib extends  parama{
                          then().assertThat().statusCode(200).extract().response().asString();
          JsonPath js = new JsonPath(getReqRes);
          reUsableMethods sd = new reUsableMethods();
-         Boolean lowRank = sd.lowRankFinderFourDigits(getReqRes);
+         //Boolean lowRank = sd.lowRankFinderThreeDigits(getReqRes);
+         //Boolean lowRank = sd.lowRankFinderFourDigits(getReqRes);
+         Boolean lowRank = sd.lowRankFinderConsistant10K(getReqRes);
+         int seasonCount = sd.fplPastSeasonsCount(getReqRes);
          if(lowRank){
-            sd.fplPastSeasonsDetails(getReqRes);
+            //sd.fplPastSeasonsDetails(getReqRes);
             counter=counter+1;
+            singleIdScrapper(randomMgId);
+
          }
+         System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
+
       }
    System.out.println("Gems unearthed = "+counter);
+   }
+
+   @Test
+   public void callerFPL() throws IOException {
+
+      singleIdScrapper(923);
    }
 
    @Test
