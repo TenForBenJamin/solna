@@ -414,6 +414,7 @@ public class reUsableMethods
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
 		}
 		System.out.println("Best Rank  - " + HR  +"  BestSeason - "  + BS + " attempt number "  + seasonCount);
+		System.out.println("-------------------------X-------------------------");
 	}
 
 	public boolean lowRankFinder(String s ) {
@@ -437,6 +438,31 @@ public class reUsableMethods
 			}
 			total_points=js.getString("past[" + i +"].total_points");
 			System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
+		}
+		return t34;
+	}
+
+	public boolean lowRankFinderFourDigits(String s ) {
+
+		JsonPath js = new JsonPath(s);
+		int HR= 10000000;
+		String BS= "current";
+		int seasonCount=1;
+		int count=js.getInt("past.size()");
+		String seasonName,rank,total_points;
+		System.out.println("total FPL seasons - " +  count);
+		boolean t34=false;
+		for(int i=0;i<count;i++)
+		{
+			seasonName=js.getString("past[" + i +"].season_name");
+			rank=js.getString("past[" + i +"].rank");
+			int RRR=rank.length() ;
+			if(RRR<5){
+				t34=true;
+				System.out.println("Top 10K rank -  " +rank);
+			}
+			total_points=js.getString("past[" + i +"].total_points");
+			//System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
 		}
 		return t34;
 	}

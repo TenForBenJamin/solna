@@ -83,8 +83,8 @@ public class fplJsonLib extends  parama{
    }
    @Test
       public void fplAPIwithWebScrapper() throws IOException {
-      int randomManagerId= genRandomMgrId();
-
+      //int randomManagerId= genRandomMgrId();
+      int randomManagerId= 1;
       System.out.println(" Testing FPL  - " +randomManagerId );
       RestAssured.baseURI ="https://fantasy.premierleague.com";
       String getReqRes =
@@ -93,6 +93,7 @@ public class fplJsonLib extends  parama{
                       then().assertThat().statusCode(200).extract().response().asString();
       JsonPath js = new JsonPath(getReqRes);
       reUsableMethods sd = new reUsableMethods();
+
       for(int randomMgId=randomManagerId;randomMgId<(randomManagerId+12);randomMgId++){
          driver=initilizeDriver();
          driver.manage().window().maximize();		// maximizing the window
@@ -115,6 +116,9 @@ public class fplJsonLib extends  parama{
          String remBalance= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[7]")).getText() ;
          String[] latestPoints = fp.split("\n");
          fp=latestPoints[0];
+         //document.getElementsByClassName("Pitch__StyledPitchElement-sc-1mctasb-5 jLgWIY")[8].innerText - For spielerDetail
+
+
          System.out.println("LatestPoints is for User  " +randomMgId  +" is " +fp);
          System.out.println("managerName is for User  " +randomMgId  +" is " +managerName);
          System.out.println("teamName is for User  " +randomMgId  +" is " +teamName);
@@ -122,9 +126,47 @@ public class fplJsonLib extends  parama{
          System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate " +gwPtsLastUpdated);
          System.out.println("total  Transfers " +totalTransfers );
          System.out.println("squadValue  " +squadValue  +" remainingBalance " +remBalance);
+         sd.fplPastSeasonsDetails(getReqRes);
          driver.quit();
       }
 
+   }
+   @Test
+   public void earlyBirdsFPL(){
+      int randomManagerId= 1;
+      for(int randomMgId=randomManagerId;randomMgId<500;randomMgId++) {
+         System.out.println(" Testing FPL  - " + randomMgId);
+         RestAssured.baseURI = "https://fantasy.premierleague.com";
+         String getReqRes =
+                 given().
+                         when().get("/api/entry/" + randomMgId + "/history/").
+                         then().assertThat().statusCode(200).extract().response().asString();
+         JsonPath js = new JsonPath(getReqRes);
+         reUsableMethods sd = new reUsableMethods();
+         sd.fplPastSeasonsDetails(getReqRes);
+      }
+
+   }
+@Test
+   public void superEarlyBirdsFPL(){
+      int randomManagerId= 1;
+      int counter=0;
+      for(int randomMgId=randomManagerId;randomMgId<100;randomMgId++) {
+         System.out.println(" FPL managerID  - " + randomMgId);
+         RestAssured.baseURI = "https://fantasy.premierleague.com";
+         String getReqRes =
+                 given().
+                         when().get("/api/entry/" + randomMgId + "/history/").
+                         then().assertThat().statusCode(200).extract().response().asString();
+         JsonPath js = new JsonPath(getReqRes);
+         reUsableMethods sd = new reUsableMethods();
+         Boolean lowRank = sd.lowRankFinderFourDigits(getReqRes);
+         if(lowRank){
+            sd.fplPastSeasonsDetails(getReqRes);
+            counter=counter+1;
+         }
+      }
+   System.out.println("Gems unearthed = "+counter);
    }
 
    @Test
