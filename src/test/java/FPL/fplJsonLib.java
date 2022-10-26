@@ -101,9 +101,27 @@ public class fplJsonLib extends  parama{
          driver.get(uri);
          String kanda = initilizeBrowser();
          String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
+         String teamName= driver.findElement(By.xpath("//div[@class='Entry__TeamName-sc-1kf863-1 inZJya']")).getText() ;
+         String managerName= driver.findElement(By.xpath("//div[@class='Entry__EntryName-sc-1kf863-0 cMEsev']")).getText() ;
+         String transfers= driver.findElement(By.xpath("//div[@class='EntryEvent__SecondaryValue-l17rqm-14" +
+                 " EntryEvent__TransfersValue-l17rqm-15 sRSFe diuHJS']")).getText() ;
+         String GWR= driver.findElement(By.xpath("(//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[3]")).getText() ;
+         String ovrPts= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[1]")).getText() ;
+         String ovrRank= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[2]")).getText() ;
+         String TotalPlys= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[3]")).getText() ;
+         String gwPtsLastUpdated= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[4]")).getText() ;
+         String totalTransfers= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[5]")).getText() ;
+         String squadValue= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[6]")).getText() ;
+         String remBalance= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[7]")).getText() ;
          String[] latestPoints = fp.split("\n");
          fp=latestPoints[0];
          System.out.println("LatestPoints is for User  " +randomMgId  +" is " +fp);
+         System.out.println("managerName is for User  " +randomMgId  +" is " +managerName);
+         System.out.println("teamName is for User  " +randomMgId  +" is " +teamName);
+         System.out.println("transfers is for User  " +randomMgId  +" is " +transfers);
+         System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate " +gwPtsLastUpdated);
+         System.out.println("total  Transfers " +totalTransfers );
+         System.out.println("squadValue  " +squadValue  +" remainingBalance " +remBalance);
          driver.quit();
       }
 

@@ -81,11 +81,7 @@ public class Baishh
 		if(browserName.equalsIgnoreCase("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver","C:\\Mava\\geckodriver.exe");
-
-			FirefoxBinary firefoxBinary = new FirefoxBinary();
-			FirefoxOptions options = new FirefoxOptions();
-			options.setBinary(firefoxBinary);
-			options.setHeadless(true);  // <-- headless set here
+			driver= new FirefoxDriver();
 		}
 
 		if(browserName.equalsIgnoreCase("firefoxheadless"))
