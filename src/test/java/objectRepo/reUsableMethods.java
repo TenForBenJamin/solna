@@ -527,9 +527,9 @@ public class reUsableMethods
 			seasonName=js.getString("past[" + i +"].season_name");
 			rank=js.getString("past[" + i +"].rank");
 			int RRR=rank.length() ;
-			if(RRR<4){
+			if(RRR<5){
 				consistantRanks=consistantRanks+1;
-				System.out.println("Top 10K rank -  " +rank);
+				//System.out.println("Top 1K rank -  " +rank);
 				if(consistantRanks>1)
 					t34=true;
 			}
