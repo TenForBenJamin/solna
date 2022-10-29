@@ -5,7 +5,7 @@
     <classes>
     	<class name="FPL.fplJsonLib">
       	<methods>
-            <include name="findingNeedleInHayStack"></include>
+            <include name="callerFPL"></include>
 	        </methods>
       </class>
         <class name="climateChange.berlin">

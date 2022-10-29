@@ -234,7 +234,7 @@ public class fplJsonLib extends  parama{
             //System.out.println(impStuff);
 
          }
-         //System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate " +gwPtsLastUpdated);
+         System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" LastUpdated/Latest - " +gwPtsLastUpdated+"/" +fp);
          driver.quit();
       }
    }
