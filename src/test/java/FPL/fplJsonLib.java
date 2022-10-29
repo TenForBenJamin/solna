@@ -1,6 +1,7 @@
 package FPL;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
@@ -181,7 +182,7 @@ public class fplJsonLib extends  parama{
       for(int randomMgId=randomManagerId;randomMgId<(randomManagerId+1);randomMgId++){
          driver=initilizeDriver();
          driver.manage().window().maximize();		// maximizing the window
-         int  gameweek =13 ;
+         int  gameweek =14 ;
          String uri= "https://fantasy.premierleague.com/entry/" + randomMgId + "/event/"+ gameweek ;
          driver.get(uri);
          String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
@@ -199,16 +200,39 @@ public class fplJsonLib extends  parama{
          String remBalance= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[7]")).getText() ;
          String[] latestPoints = fp.split("\n");
          fp=latestPoints[0];
-
-         for(int plyr=1;plyr<16;plyr++) {
-            String Prossy =driver.findElement(By.xpath("(//div[@class='Pitch__StyledPitchElement-sc-1mctasb-5 jLgWIY'])[" + plyr +"]")).getText() ;
+         /*
+         String xPathClasser = "//div[@class='Pitch__PitchElementWrap-sc-1mctasb-4 bWWBeR notranslate']";
+         List<WebElement> allInputElementsV   = driver.findElements(By.cssSelector(".PitchElementData__ElementValue-sc-1u4y6pr-1"));
+         List<WebElement> allInputElementsN   = driver.findElements(By.cssSelector(".PitchElementData__ElementName-sc-1u4y6pr-0"));
+         List<WebElement> xpathFinder   = driver.findElements(By.xpath(xPathClasser));
+*/
+         for(int plyr=0;plyr<15;plyr++) {
+            String Prossy =driver.findElement(By.xpath("(//*[@class='Pitch__PitchElementWrap-sc-1mctasb-4 bWWBeR notranslate'])[" + (plyr+1) +"]")).getText() ;
             //System.out.println("Raw string " +Prossy) ;
-            String[] result = Prossy.split("\n");
-             int splittedStringSize = result.length;
-             String PlyName =result[0];
-            String PlyPoints=result[1];
-            String impStuff ="" +PlyName+" " +PlyPoints;
-            System.out.println("Player " +plyr  +" - " +PlyName +"  " +PlyPoints);
+            String[] playerDetails = Prossy.split("\n");
+             int splittedStringSize = playerDetails.length;
+             if(splittedStringSize==1){
+                JavascriptExecutor js = (JavascriptExecutor)driver;
+                System.out.println("Missing Plyr") ;
+                Prossy = driver.findElement(By.xpath("(//*[@class='PitchElementData__StyledPitchElementData-sc-1u4y6pr-0 gTayAP'])[" + (plyr+1) +"]")).getText() ;
+                //String PlyName ="playerDetails[0]";
+                //System.out.println(PlyName);
+
+             }
+             else {
+                String PlyName =playerDetails[0];
+                String PlyPoints=playerDetails[1];
+                //System.out.println(PlyName);
+                String impStuff ="" +PlyName+" " +PlyPoints;
+                System.out.println(impStuff);
+             }
+
+
+             //PitchElementData__ElementValue-sc-1u4y6pr-2 fQREvA
+            //String PlyPoints=driver.findElement(By.xpath("(//div[@class='PitchElementData__ElementValue-sc-1u4y6pr-2 fQREvA'])[" + (plyr+1) +"]")).getText();
+            //String impStuff ="" +PlyName+" " +PlyPoints;
+            //System.out.println(impStuff);
+
          }
          //System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate " +gwPtsLastUpdated);
          driver.quit();
@@ -261,10 +285,10 @@ public class fplJsonLib extends  parama{
    }
    @Test
    public void superEarlyNoLogsFPL() throws IOException {
-      int randomManagerId= 1100;
+      int randomManagerId= 1200;
       int counter=0;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<1150;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<1250;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
@@ -300,7 +324,9 @@ public class fplJsonLib extends  parama{
    public void callerFPL() throws IOException {
 
       //singleIdScrapper(923);genRandomMgrId()
-      singleIdScrapperOvrPts(genRandomMgrId());
+      int randomManagerId= genRandomMgrId();
+      System.out.println(randomManagerId);
+      singleIdScrapperOvrPts(randomManagerId);
    }
 
    @Test
