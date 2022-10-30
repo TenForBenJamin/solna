@@ -436,7 +436,7 @@ public class reUsableMethods
 				 BS= seasonName;
 			}
 		}
-		return seasonCount;
+		return count;
 	}
 
 	public boolean lowRankFinder(String s ) {

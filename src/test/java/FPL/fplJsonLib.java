@@ -285,10 +285,10 @@ public class fplJsonLib extends  parama{
    }
    @Test
    public void superEarlyNoLogsFPL() throws IOException {
-      int randomManagerId= 2250;
+      int randomManagerId= 4250;
       int counter=0;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<4250;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<8000;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
