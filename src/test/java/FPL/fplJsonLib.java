@@ -325,8 +325,11 @@ public class fplJsonLib extends  parama{
 
       //singleIdScrapper(923);genRandomMgrId()
       int randomManagerId= genRandomMgrId();
-      System.out.println(randomManagerId);
-      singleIdScrapperOvrPts(randomManagerId);
+      //System.out.println(randomManagerId);
+      //singleIdScrapperOvrPts(randomManagerId);
+      // hardCoded run 64749
+      System.out.println("hardCoded run ");
+      singleIdScrapperOvrPts(64749);
    }
 
    @Test
