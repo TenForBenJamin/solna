@@ -288,7 +288,7 @@ public class fplJsonLib extends  parama{
       int randomManagerId= 1200;
       int counter=0;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<1250;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<12500;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
