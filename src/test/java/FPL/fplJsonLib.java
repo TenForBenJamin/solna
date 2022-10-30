@@ -316,7 +316,7 @@ public class fplJsonLib extends  parama{
    System.out.println("Gems unearthed = "+counter);
       for(int ar=0;ar<a.size();ar++) {
          //System.out.println(a.get(ar));
-         singleIdScrapperOvrPts((Integer) a.get(ar));
+         //singleIdScrapperOvrPts((Integer) a.get(ar));
       }
    }
 

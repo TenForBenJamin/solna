@@ -118,7 +118,7 @@
 	          <version>3.0.0-M5</version>
 	          <configuration>
 	          <suiteXmlFiles>
-	            <suiteXmlFile>twitter.xml</suiteXmlFile>
+	            <suiteXmlFile>zipLooper.xml</suiteXmlFile>
 	          </suiteXmlFiles>
 	        </configuration>
 	        </plugin>
