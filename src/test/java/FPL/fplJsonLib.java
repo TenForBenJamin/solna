@@ -348,6 +348,7 @@ public class fplJsonLib extends  parama{
    @Test
    public void f24Live() throws IOException {
       driver=initilizeDriver();
+      int failureCount=0;
       driver.manage().window().maximize();		// maximizing the window
       int  gameweek =14 ;
       String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
@@ -369,9 +370,16 @@ public class fplJsonLib extends  parama{
          else
             homeTeam=result[1];
 
-         System.out.println("Home Team is " +homeTeam +" and weather is "+f24Weather(homeTeam));
-      }
+         String temp= f24Weather(homeTeam).trim();
+         temp=temp.trim();
+         if(temp.equalsIgnoreCase("400 error"))
+            failureCount=failureCount+1;
 
+         System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp);
+      }
+      double ratiao=failureCount/count;
+      System.out.println("Total Failure/Success is " +failureCount +" / " +count +" ratio " +ratiao);
+      driver.quit();
    }
 
    public String f24Weather(String aarari)
@@ -391,9 +399,11 @@ public class fplJsonLib extends  parama{
                       then().assertThat().statusCode(200).extract().response().asString();
          JsonPath js = new JsonPath(getReqRes);
          reUsableMethods sd = new reUsableMethods();
-         // sd.coordsExtractor(getReqRes);
+          //sd.coordsExtractor(getReqRes);
          //sd.simbleDaylengthPrint(getReqRes," Capital details ");
          String  mainTemp = js.getString("main.temp");
+         String coundry = js.getString("sys.country");
+         mainTemp= mainTemp +"," +coundry;
          return mainTemp;
       }else
          return "400 error ";
