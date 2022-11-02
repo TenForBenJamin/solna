@@ -290,10 +290,10 @@ public class fplJsonLib extends  parama{
    }
    @Test
    public void superEarlyNoLogsFPL() throws IOException {
-      int randomManagerId= 4250;
+      int randomManagerId= 8000;
       int counter=0;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<8000;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<9000;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
@@ -332,14 +332,14 @@ public class fplJsonLib extends  parama{
    public void callerFPL() throws IOException {
 
       //singleIdScrapper(923);genRandomMgrId()
-      /*int randomManagerId= genRandomMgrId();
+      int randomManagerId= genRandomMgrId();
       System.out.println(randomManagerId);
       singleIdScrapperOvrPts(randomManagerId);
-      */
+      /*
       String randomCity= genRandomCapitalName();
 
       String weather = f24Weather("andomy");
-      System.out.println(weather);
+      System.out.println(weather);*/
       // hardCoded run
       //System.out.println("hardCoded run ");
      // singleIdScrapperOvrPts(64749);
