@@ -1,4 +1,7 @@
 package FPL;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
+import static smith.rowe.randomData.genRandomCapitalName;
 import static smith.rowe.randomData.genRandomMgrId;
 
 import io.restassured.RestAssured;
@@ -17,6 +21,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class fplJsonLib extends  parama{
 
@@ -285,10 +290,10 @@ public class fplJsonLib extends  parama{
    }
    @Test
    public void superEarlyNoLogsFPL() throws IOException {
-      int randomManagerId= 4250;
+      int randomManagerId= 8000;
       int counter=0;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<8000;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<9000;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
@@ -313,6 +318,9 @@ public class fplJsonLib extends  parama{
          //System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
 
       }
+
+
+
    System.out.println("Gems unearthed = "+counter);
       for(int ar=0;ar<a.size();ar++) {
          //System.out.println(a.get(ar));
@@ -327,9 +335,79 @@ public class fplJsonLib extends  parama{
       int randomManagerId= genRandomMgrId();
       System.out.println(randomManagerId);
       singleIdScrapperOvrPts(randomManagerId);
+      /*
+      String randomCity= genRandomCapitalName();
+
+      String weather = f24Weather("andomy");
+      System.out.println(weather);*/
       // hardCoded run
       //System.out.println("hardCoded run ");
      // singleIdScrapperOvrPts(64749);
+   }
+
+   @Test
+   public void f24Live() throws IOException {
+      driver=initilizeDriver();
+      int failureCount=0;
+      driver.manage().window().maximize();		// maximizing the window
+      int  gameweek =14 ;
+      String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
+      // xPath for Allgames (//a/span[@class='f24com_lang'])[1]
+      driver.get(uri);
+      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
+      //td[@class="home"]
+      List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
+      int count= xpathFinder.size();
+      System.out.println("total matches = " +count);
+      for(int i=1;i<count;i++)
+      {
+         String homeTeam=xpathFinder.get(i).getText();
+         homeTeam=homeTeam.trim();
+         String[] result = homeTeam.split(" ");
+         if(result.length<2)
+            homeTeam=result[0];
+         else
+            homeTeam=result[1];
+
+         String temp= f24Weather(homeTeam).trim();
+         temp=temp.trim();
+         if(temp.equalsIgnoreCase("400 error"))
+            failureCount=failureCount+1;
+
+         System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp);
+      }
+      double ratiao=failureCount/count;
+      System.out.println("Total Failure/Success is " +failureCount +" / " +count +" ratio " +ratiao);
+      driver.quit();
+   }
+
+   public String f24Weather(String aarari)
+   {
+
+      RestAssured.baseURI =baseUrlopenWeather;
+      RequestSpecification httpRequest = RestAssured.given();
+      httpRequest.queryParam("q", aarari).queryParam("appid", apiKey).queryParam("units", "metric");
+      Response response = httpRequest.request(Method.GET,"data/2.5/weather");
+      if(response.statusCode()==200){
+         String getReqRes =
+              given().
+                      queryParam("q", aarari).
+                      queryParam("appid", apiKey).
+                      queryParam("lang", OpCo).queryParam("units", "metric").
+                      when().get("data/2.5/weather").
+                      then().assertThat().statusCode(200).extract().response().asString();
+         JsonPath js = new JsonPath(getReqRes);
+         reUsableMethods sd = new reUsableMethods();
+          //sd.coordsExtractor(getReqRes);
+         //sd.simbleDaylengthPrint(getReqRes," Capital details ");
+         String  mainTemp = js.getString("main.temp");
+         String coundry = js.getString("sys.country");
+         mainTemp= mainTemp +"," +coundry;
+         return mainTemp;
+      }else
+         return "400 error ";
+
    }
 
    @Test

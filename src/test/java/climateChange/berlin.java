@@ -80,6 +80,7 @@ public class berlin extends parama
         String anarok="130770625";
        Response resp = given().header("Authorization", "Bearer " + token).
         queryParam("user.fields", "public_metrics,url,username,verified")
+               .queryParam("max_results","1000")
                 .get("https://api.twitter.com/2/users/" + anarok + "/following");
         // System.out.println(resp.asString());
         String getReqRes = resp.asString();
@@ -139,9 +140,10 @@ public class berlin extends parama
         String DilDosanjh="Rash99991";
         String ruksarD="67611162";
         String cyrus ="AntarikshTak";
+        String tweeterUserName="abcde";
         reUsableMethods sd = new reUsableMethods();
-        String twitterUserId = sd.getTwitterIdFromURLname("Tavysingh",token);
-        System.out.println(" The id for this user  is " +twitterUserId);
+        String twitterUserId = sd.getTwitterIdFromURLname("Sidhu_PB40ala",token);
+        System.out.println(" The id for " +tweeterUserName +"   is " +twitterUserId);
         followersByUserIdData(twitterUserId);
 
     }
