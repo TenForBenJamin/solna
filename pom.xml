@@ -14,7 +14,7 @@
   
   <profiles> 
    <profile>
-  	<id>germanStadiums</id>
+  	<id>f24</id>
   	<build>
 	    <pluginManagement>
 	      <plugins>
@@ -24,7 +24,7 @@
 	          <version>3.0.0-M5</version>
 	          <configuration>
 	          <suiteXmlFiles>
-	            <suiteXmlFile>germanStadiums.xml</suiteXmlFile>
+	            <suiteXmlFile>f24Live.xml</suiteXmlFile>
 	          </suiteXmlFiles>
 	        </configuration>
 	        </plugin>
