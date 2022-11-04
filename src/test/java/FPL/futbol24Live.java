@@ -22,6 +22,7 @@ import objectRepo.reUsableMethods;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -78,6 +79,8 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+
+
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
@@ -87,7 +90,7 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
-        for(int i=1;i<=100;i++)
+        for(int i=1;i<=10;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
@@ -104,7 +107,10 @@ public class futbol24Live extends parama{
 
             }
             statCount=statCount+1;
-            System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp);
+            Calendar cal= Calendar.getInstance();
+            SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+            String tim =sdf.format(cal.getTime());
+            System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp +" at " +tim);
         }
 
         float ratiao=failureCount/count;
@@ -135,6 +141,7 @@ public class futbol24Live extends parama{
             //sd.simbleDaylengthPrint(getReqRes," Capital details ");
             String  mainTemp = js.getString("main.temp");
             String coundry = js.getString("sys.country");
+            //coundry=restCOuntries(coundry);
             mainTemp= mainTemp +"," +coundry;
             return mainTemp;
         }else
@@ -207,4 +214,62 @@ public class futbol24Live extends parama{
         return homeTeam;
     }
 
+    public String restCOuntries(String coutryCode){
+
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutryCode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutryCode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+            int count=js.getInt("timezones.size()");
+
+            return countryName;
+        }else
+            return "400 error ";
+
+    }
+    public String restCOuntriesTimeZone(String coutryCode){
+
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutryCode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutryCode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+            int count=js.getInt("timezones.size()");
+            String timeZones="Total timeZones for " + countryName +" = " ;
+            for(int i=0;i<count;i++){
+                String currentTMZ=js.getString("timezones[ " +i +"]");
+                timeZones=timeZones +" " +(i+1) +" " +currentTMZ;
+            }
+
+            return timeZones;
+        }else
+            return "400 error ";
+
+    }
+@Test
+    public void trueCaller()
+    {
+       // String fullCountryName =restCOuntries("dz");
+        String fullCountryName =restCOuntriesTimeZone("gb");
+        System.out.println(fullCountryName);
+    }
 }

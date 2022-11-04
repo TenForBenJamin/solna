@@ -290,10 +290,11 @@ public class fplJsonLib extends  parama{
    }
    @Test
    public void superEarlyNoLogsFPL() throws IOException {
-      int randomManagerId= 9000;
+      int randomManagerId= getFplCount();
       int counter=0;
+      int endCount = randomManagerId+500;
       ArrayList a =new ArrayList();
-      for(int randomMgId=randomManagerId;randomMgId<10000;randomMgId++) {
+      for(int randomMgId=randomManagerId;randomMgId<endCount;randomMgId++) {
          //System.out.println(" FPL managerID  - " + randomMgId);
          RestAssured.baseURI = "https://fantasy.premierleague.com";
          String getReqRes =
@@ -316,16 +317,13 @@ public class fplJsonLib extends  parama{
             //sd.fplPastSeasonsDetails(getReqRes);
          }
          //System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
-
       }
-
-
-
-   System.out.println("Gems unearthed = "+counter);
+      System.out.println("Gems unearthed = "+counter);
       for(int ar=0;ar<a.size();ar++) {
          //System.out.println(a.get(ar));
          //singleIdScrapperOvrPts((Integer) a.get(ar));
       }
+      setFplCount(endCount);
    }
 
    @Test

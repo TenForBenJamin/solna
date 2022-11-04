@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Properties;
@@ -111,6 +112,29 @@ public class Baishh
 		return browserName;
 		
 	}
+	public  int getFplCount() throws IOException
+	{
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("C:/home/fpl.properties");
+
+		prop.load(fis);
+		String fplCount=prop.getProperty("fplCount");
+		int fplLastMgr=Integer.parseInt(fplCount);
+		return fplLastMgr;
+
+	}
+
+	public void setFplCount(int endCount) throws IOException {
+		Properties prop = new Properties();
+		//FileInputStream fis = new FileInputStream("C:/home/datafile.properties");
+		FileOutputStream fos = new FileOutputStream("C:/home/fpl.properties");
+		//prop.load(fos);
+		String lastCount = String.valueOf(endCount);
+		prop.setProperty("fplCount",lastCount);
+		prop.store(fos,"null");
+		System.out.println("property file updated with LastCount = "+lastCount);
+	}
+
 	public  String tokenBearer() throws IOException 
 	{
 		Properties prop = new Properties();
