@@ -22,6 +22,7 @@ import objectRepo.reUsableMethods;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -78,6 +79,8 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+
+
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
@@ -87,7 +90,7 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
-        for(int i=1;i<=100;i++)
+        for(int i=1;i<=10;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
@@ -104,7 +107,10 @@ public class futbol24Live extends parama{
 
             }
             statCount=statCount+1;
-            System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp);
+            Calendar cal= Calendar.getInstance();
+            SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+            String tim =sdf.format(cal.getTime());
+            System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp +" at " +tim);
         }
 
         float ratiao=failureCount/count;
