@@ -141,6 +141,7 @@ public class futbol24Live extends parama{
             //sd.simbleDaylengthPrint(getReqRes," Capital details ");
             String  mainTemp = js.getString("main.temp");
             String coundry = js.getString("sys.country");
+            //coundry=restCOuntries(coundry);
             mainTemp= mainTemp +"," +coundry;
             return mainTemp;
         }else
@@ -213,4 +214,33 @@ public class futbol24Live extends parama{
         return homeTeam;
     }
 
+    public String restCOuntries(String coutryCode){
+
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutryCode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutryCode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+
+
+            return countryName;
+        }else
+            return "400 error ";
+
+    }
+@Test
+    public void trueCaller()
+    {
+        String fullCountryName =restCOuntries("za");
+        System.out.println(fullCountryName);
+    }
 }
