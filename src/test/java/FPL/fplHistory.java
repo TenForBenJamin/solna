@@ -10,7 +10,7 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
 
-public class fplHistory extends parama {
+public class fplHistory implements centralTraffice{
 
     // here we need to pass the managerId and get the history , input is String
    @Test
@@ -36,4 +36,18 @@ public class fplHistory extends parama {
         System.out.println(" random  : " + genRandomMgrId());
     }
 
+    @Override
+    public void greenGo() {
+
+    }
+
+    @Override
+    public void redStop() {
+
+    }
+
+    @Override
+    public void yellowWait() {
+
+    }
 }

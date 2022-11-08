@@ -187,7 +187,7 @@ public class fplJsonLib extends  parama{
       for(int randomMgId=randomManagerId;randomMgId<(randomManagerId+1);randomMgId++){
          driver=initilizeDriver();
          driver.manage().window().maximize();		// maximizing the window
-         int  gameweek =14 ;
+         int  gameweek =15 ;
          String uri= "https://fantasy.premierleague.com/entry/" + randomMgId + "/event/"+ gameweek ;
          driver.get(uri);
          String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
@@ -314,6 +314,7 @@ public class fplJsonLib extends  parama{
            // singleIdScrapperOvrPts(randomMgId);
             System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
             a.add(randomMgId);
+            singleIdScrapperOvrPts(randomMgId);
             //sd.fplPastSeasonsDetails(getReqRes);
          }
          //System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);

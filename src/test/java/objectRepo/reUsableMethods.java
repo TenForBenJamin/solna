@@ -472,7 +472,7 @@ public class reUsableMethods
 		int seasonCount=1;
 		int count=js.getInt("past.size()");
 		String seasonName,rank,total_points;
-		System.out.println("total FPL seasons - " +  count);
+		//System.out.println("total FPL seasons - " +  count);
 		boolean t34=false;
 		for(int i=0;i<count;i++)
 		{
@@ -482,6 +482,7 @@ public class reUsableMethods
 			if(RRR<5){
 				t34=true;
 				System.out.println("Top 10K rank -  " +rank);
+				//singleIdScrapperOvrPts(39569);
 			}
 			total_points=js.getString("past[" + i +"].total_points");
 			//System.out.println("Season  - " + (i+1)  +" - "  + seasonName + " | Rank - "  + rank +"| totalPoints - "  + total_points);
@@ -496,7 +497,7 @@ public class reUsableMethods
 		int seasonCount=1;
 		int count=js.getInt("past.size()");
 		String seasonName,rank,total_points;
-		System.out.println("total FPL seasons - " +  count);
+		//System.out.println("total FPL seasons - " +  count);
 		boolean t34=false;
 		for(int i=0;i<count;i++)
 		{
