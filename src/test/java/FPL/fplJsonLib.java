@@ -181,6 +181,65 @@ public class fplJsonLib extends  parama{
       }
    }
 
+   public void singleIdScrapperWithGW(int ID,int gw) throws IOException {
+
+      int randomManagerId= ID;
+      for(int randomMgId=randomManagerId;randomMgId<(randomManagerId+1);randomMgId++){
+         driver=initilizeDriver();
+         driver.manage().window().maximize();		// maximizing the window
+         int  gameweek =gw ;
+         String uri= "https://fantasy.premierleague.com/entry/" + randomMgId + "/event/"+ gameweek ;
+         driver.get(uri);
+         WebElement img =driver.findElement(By.xpath("//div[@class='sc-bdnxRM hbrYOM']/img"));
+         String nationFlag=img.getAttribute("src");
+         String[] countryFlag = nationFlag.split("/flags/");
+         String secondSons =countryFlag[1];
+         String[] dotSepartor = secondSons.split(".gif");
+         nationFlag=dotSepartor[0];
+         String fp= driver.findElement(By.xpath("//div[@class='EntryEvent__PrimaryValue-l17rqm-4 fryVza']")).getText() ;
+         String teamName= driver.findElement(By.xpath("//div[@class='Entry__TeamName-sc-1kf863-1 inZJya']")).getText() ;
+         String managerName= driver.findElement(By.xpath("//div[@class='Entry__EntryName-sc-1kf863-0 cMEsev']")).getText() ;
+         String transfers= driver.findElement(By.xpath("//div[@class='EntryEvent__SecondaryValue-l17rqm-14" +
+                 " EntryEvent__TransfersValue-l17rqm-15 sRSFe diuHJS']")).getText() ;
+         String GWR= driver.findElement(By.xpath("(//div[@class='EntryEvent__SecondaryValue-l17rqm-14 sRSFe'])[3]")).getText() ;
+         String ovrPts= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[1]")).getText() ;
+         String ovrRank= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[2]")).getText() ;
+         String TotalPlys= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[3]")).getText() ;
+         String gwPtsLastUpdated= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[4]")).getText() ;
+         String totalTransfers= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[5]")).getText() ;
+         String squadValue= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[6]")).getText() ;
+         String remBalance= driver.findElement(By.xpath("(//div[@class='Entry__DataListValue-sc-1kf863-5 jUtEoF'])[7]")).getText() ;
+         String[] latestPoints = fp.split("\n");
+         fp=latestPoints[0];
+         /*
+         String xPathClasser = "//div[@class='Pitch__PitchElementWrap-sc-1mctasb-4 bWWBeR notranslate']";
+         List<WebElement> allInputElementsV   = driver.findElements(By.cssSelector(".PitchElementData__ElementValue-sc-1u4y6pr-1"));
+         List<WebElement> allInputElementsN   = driver.findElements(By.cssSelector(".PitchElementData__ElementName-sc-1u4y6pr-0"));
+         List<WebElement> xpathFinder   = driver.findElements(By.xpath(xPathClasser));
+*/
+         for(int plyr=0;plyr<15;plyr++) {
+            String Prossy =driver.findElement(By.xpath("(//*[@class='Pitch__PitchElementWrap-sc-1mctasb-4 bWWBeR notranslate'])[" + (plyr+1) +"]")).getText() ;
+            //System.out.println("Raw string " +Prossy) ;
+            String[] playerDetails = Prossy.split("\n");
+             int splittedStringSize = playerDetails.length;
+             if(splittedStringSize==1){
+                JavascriptExecutor js = (JavascriptExecutor)driver;
+                System.out.println("Missing Plyr") ;
+                Prossy = driver.findElement(By.xpath("(//*[@class='PitchElementData__StyledPitchElementData-sc-1u4y6pr-0 gTayAP'])[" + (plyr+1) +"]")).getText() ;
+                 }
+             else {
+                String PlyName =playerDetails[0];
+                String PlyPoints=playerDetails[1];
+                //System.out.println(PlyName);
+                String impStuff ="" +PlyName+" " +PlyPoints;
+                System.out.println(impStuff);
+             }
+         }
+         System.out.println("overall points " +ovrPts  +" overallRank " +ovrRank +" GW pts lastUpdate "
+                 +gwPtsLastUpdated +" plyName/country " +managerName +" / " +nationFlag);
+         driver.quit();
+      }
+   }
    public void singleIdScrapperOvrPts(int ID) throws IOException {
 
       int randomManagerId= ID;
@@ -314,7 +373,8 @@ public class fplJsonLib extends  parama{
            // singleIdScrapperOvrPts(randomMgId);
             System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
             a.add(randomMgId);
-            singleIdScrapperOvrPts(randomMgId);
+            //singleIdScrapperOvrPts(randomMgId);
+            singleIdScrapperWithGW(randomMgId,15);
             //sd.fplPastSeasonsDetails(getReqRes);
          }
          //System.out.println(" FPL managerID  - " + randomMgId +" and Total seasons " +seasonCount);
@@ -331,10 +391,13 @@ public class fplJsonLib extends  parama{
    public void callerFPL() throws IOException {
 
       //singleIdScrapper(923);genRandomMgrId()
+
+      singleIdScrapperWithGW(25735,15);/*
       int randomManagerId= genRandomMgrId();
       System.out.println(randomManagerId);
       singleIdScrapperOvrPts(randomManagerId);
-      /*
+
+
       String randomCity= genRandomCapitalName();
 
       String weather = f24Weather("andomy");
