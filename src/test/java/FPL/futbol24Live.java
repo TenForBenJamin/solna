@@ -114,12 +114,65 @@ public class futbol24Live extends parama{
         }
 
         float ratiao=failureCount/count;
-        Iterator<String> e = nat.iterator();
+        Iterator<String> e = nat.iterator();/*
         while(e.hasNext())
-            System.out.println(e.next());
+            System.out.println(e.next());*/
         System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" total Nations involved  " +nat.size());
         driver.quit();
     }
+      @Test
+    public void f24AllGamesV3() throws IOException {
+        driver=initilizeDriver();
+        int failureCount=0;
+        int statCount=0;
+        HashSet<String> team = new HashSet<String>();
+        HashSet<String>  nat = new HashSet<String>();
+        driver.manage().window().maximize();		// maximizing the window
+        String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
+        driver.get(uri);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
+        List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
+        int count= xpathFinder.size();
+        System.out.println("total matches = " +count);
+        for(int i=0;i<count;i++)
+        {
+            String homeTeam=xpathFinder.get(i).getText();
+            homeTeam=homeTeam.trim();
+            team.add(homeTeam);
+        }
+          driver.quit();
+        float ratiao=failureCount/count;
+        Iterator<String> e = nat.iterator();/*
+        while(e.hasNext())
+            System.out.println(e.next());*/
+
+         Iterator<String > ht = team.iterator();
+         while (ht.hasNext())
+         {
+             String wc=ht.next();
+             wc=wordProcesser(wc);
+             //String temp= f24Weather(homeTeam).trim();
+             String temp= f24Weather(wc).trim();
+             temp=temp.trim();
+             if(temp.equalsIgnoreCase("400 error"))
+                 failureCount=failureCount+1;
+             else
+             {
+                 String[] lowe = temp.split(",");
+                 nat.add(lowe[1]);
+
+             }
+             statCount=statCount+1;
+             Calendar cal= Calendar.getInstance();
+             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+             String tim =sdf.format(cal.getTime());
+             System.out.println("Home Team v3 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
+         }
+        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" total Nations involved  " +nat.size());
+
+    }
+
     public String f24Weather(String place)
     {
 
