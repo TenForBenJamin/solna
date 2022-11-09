@@ -79,8 +79,7 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
-
-
+        HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
@@ -90,10 +89,11 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
-        for(int i=1;i<=count;i++)
+        for(int i=0;i<count;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
+            team.add(homeTeam);
             homeTeam=wordProcesser(homeTeam);
             //String temp= f24Weather(homeTeam).trim();
             String temp= f24Weather(homeTeam).trim();
@@ -110,14 +110,14 @@ public class futbol24Live extends parama{
             Calendar cal= Calendar.getInstance();
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
             String tim =sdf.format(cal.getTime());
-            System.out.println("Home Team # " +i +" is " +homeTeam +" and weather is "+temp +" at " +tim);
+            System.out.println("Home Team # " + i +" is " + homeTeam +" and weather is    ->   "+ temp +"    at " +tim);
         }
 
         float ratiao=failureCount/count;
         Iterator<String> e = nat.iterator();
         while(e.hasNext())
             System.out.println(e.next());
-        System.out.println("Total Failure/Success is " +failureCount +" / " +statCount +" total Nations involved  " +nat.size());
+        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" total Nations involved  " +nat.size());
         driver.quit();
     }
     public String f24Weather(String place)
@@ -187,7 +187,17 @@ public class futbol24Live extends parama{
         hs.add("(W)");
         hs.add("SC");
         hs.add("SPb");
-
+        hs.add("Utd");
+        hs.add("University");
+        hs.add("SK");
+        hs.add("JK");
+        hs.add("1.");
+        hs.add("TC");
+        hs.add("St");
+        hs.add("BK");
+        hs.add("Club");
+        hs.add("GP");
+//Giresunspor
         Iterator<String> i=hs.iterator();
 
         Boolean flag = false;
