@@ -5,7 +5,7 @@
       <classes>
           <class name="FPL.futbol24Live">
               <methods>
-                  <include name="f24AllGamesV2"></include>
+                  <include name="f24AllGamesV3"></include>
               </methods>
           </class>
 

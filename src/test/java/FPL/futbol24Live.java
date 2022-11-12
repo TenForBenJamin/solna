@@ -138,7 +138,7 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
-        for(int i=0;i<10;i++)
+        for(int i=0;i<count;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
