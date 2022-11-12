@@ -125,6 +125,9 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+        float idealWeather=95;
+          float lastColdest =idealWeather;
+          String coldestPlace = "your mind";
         HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
@@ -135,7 +138,7 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
-        for(int i=0;i<count;i++)
+        for(int i=0;i<10;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
@@ -161,7 +164,13 @@ public class futbol24Live extends parama{
              {
                  String[] lowe = temp.split(",");
                  nat.add(lowe[1]);
-
+                 String exTemp= lowe[0];
+                 float cityTemp = Float.parseFloat(exTemp);
+                 if(cityTemp<lastColdest)
+                 {
+                      coldestPlace = wc +" " +temp;
+                       lastColdest = cityTemp;
+                 }
              }
              statCount=statCount+1;
              Calendar cal= Calendar.getInstance();
@@ -169,7 +178,8 @@ public class futbol24Live extends parama{
              String tim =sdf.format(cal.getTime());
              System.out.println("Home Team v3 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
          }
-        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" total Nations involved  " +nat.size());
+          System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
+          System.out.println("coldest place amongst the places is "+coldestPlace);
 
     }
 
@@ -250,7 +260,12 @@ public class futbol24Live extends parama{
         hs.add("BK");
         hs.add("Club");
         hs.add("GP");
+        hs.add("SV");
+        hs.add("Duchère");
+        hs.add("Vary");
+
 //Giresunspor
+       //
         Iterator<String> i=hs.iterator();
 
         Boolean flag = false;
