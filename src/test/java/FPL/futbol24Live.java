@@ -242,6 +242,7 @@ public class futbol24Live extends parama{
         hs.add("U21");
         hs.add("(R)");
         hs.add("FA");
+        hs.add("Morton");
         hs.add("Fotbol");
         hs.add("FC/SC");
         hs.add("Youth");
