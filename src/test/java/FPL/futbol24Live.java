@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import static FPL.wordProx.wordProcesserV2;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.testng.Assert.assertEquals;
@@ -154,7 +156,7 @@ public class futbol24Live extends parama{
          while (ht.hasNext())
          {
              String wc=ht.next();
-             wc=wordProcesser(wc);
+             wc=wordProcesserV2(wc);
              //String temp= f24Weather(homeTeam).trim();
              String temp= f24Weather(wc).trim();
              temp=temp.trim();
@@ -251,11 +253,15 @@ public class futbol24Live extends parama{
         hs.add("(W)");
         hs.add("SC");
         hs.add("SPb");
+        hs.add("Three");
         hs.add("Utd");
         hs.add("University");
         hs.add("SK");
         hs.add("JK");
+        hs.add("EAC");
+        hs.add("SE");
         hs.add("1.");
+        hs.add("Valley");
         hs.add("TC");
         hs.add("St");
         hs.add("BK");
