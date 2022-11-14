@@ -8,7 +8,12 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions - C. IF fB SE
+        // next additions -  IF fB SE VV
+        hs.add("VV");
+        hs.add("SE");
+        hs.add("fB");
+        hs.add("IF");
+        hs.add("C.");
         hs.add("United");
         hs.add("City");
         hs.add("IL");
