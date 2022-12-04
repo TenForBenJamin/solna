@@ -123,7 +123,7 @@ public class futbol24Live extends parama{
         driver.quit();
     }
       @Test
-    public void f24AllGamesV3() throws IOException {
+    public void f24AllGamesV3() throws IOException, InterruptedException {
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
@@ -135,8 +135,9 @@ public class futbol24Live extends parama{
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
         driver.get(uri);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
+          Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println("total matches = " +count);
