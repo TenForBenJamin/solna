@@ -8,8 +8,11 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  AZ Dynamos
+        // next additions -  AZ Dynamos & Spartans
         hs.add("VV");
+        hs.add("Market");
+        hs.add("Hotspurs");
+        hs.add("Spartans");
         hs.add("Fotboll");
         hs.add("Al");
         hs.add("Hainiu");
