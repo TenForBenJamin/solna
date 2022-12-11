@@ -10,7 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static FPL.wordProx.wordProcesserV2;
+import static FPL.wordProx.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.testng.Assert.assertEquals;
@@ -186,6 +186,76 @@ public class futbol24Live extends parama{
 
     }
 
+    @Test
+    public void f24AllGamesV4() throws IOException, InterruptedException {
+        driver=initilizeDriver();
+        int failureCount=0;
+        int statCount=0;
+        float idealWeather=95;
+          float lastColdest =idealWeather;
+          String coldestPlace = "your mind";
+        HashSet<String> team = new HashSet<String>();
+        HashSet<String>  nat = new HashSet<String>();
+        driver.manage().window().maximize();		// maximizing the window
+        String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
+        driver.get(uri);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
+          Thread.sleep(5000);
+        List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
+        int count= xpathFinder.size();
+        int currentIteration = 10;
+        System.out.println("total matches " +count +" and currentIteration " +currentIteration);
+        for(int i=0;i<currentIteration;i++)
+        {
+            String homeTeam=xpathFinder.get(i).getText();
+            homeTeam=homeTeam.trim();
+            team.add(homeTeam);
+        }
+          driver.quit();
+        float ratiao=failureCount/count;
+        Iterator<String> e = nat.iterator();/*
+        while(e.hasNext())
+            System.out.println(e.next());*/
+        String coldestCountry = null;
+         Iterator<String > ht = team.iterator();
+         while (ht.hasNext())
+         {
+             String wc=ht.next();
+             wc=wordProcesserV2(wc);
+             //String temp= f24Weather(homeTeam).trim();
+             String temp= f24Weather(wc).trim();
+             temp=temp.trim();
+             if(temp.equalsIgnoreCase("400 error"))
+                 failureCount=failureCount+1;
+             else
+             {
+                 String[] lowe = temp.split(",");
+                 nat.add(lowe[1]);
+                 // lowe[1] can be used to trigger the API
+                 String exTemp= lowe[0];
+                 float cityTemp = Float.parseFloat(exTemp);
+                 if(cityTemp<lastColdest)
+                 {
+                      coldestPlace = wc +" " +temp;
+                       lastColdest = cityTemp;
+                     String[] lander = temp.split(",");
+                      coldestCountry=getCountryName(lander[1]);
+                       
+                      // String lowestCountry = getCountryName(lowe[1].trim());
+                 }
+             }
+             statCount=statCount+1;
+             Calendar cal= Calendar.getInstance();
+             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+             String tim =sdf.format(cal.getTime());
+             System.out.println("Home Team v3 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
+         }
+          System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
+          System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry);
+
+    }
+
     public String f24Weather(String place)
     {
 
@@ -348,15 +418,20 @@ public class futbol24Live extends parama{
 
             return timeZones;
         }else
-            return "400 error ";
+            return "400 error";
 
     }
 @Test
     public void trueCaller()
     {
-       // String fullCountryName =restCOuntries("dz");
-        String fullCountryName =restCOuntriesTimeZone("gb");
-        System.out.println(fullCountryName);
+        //String fullCountryName =restCountriesTmzV2("mlt");
+        //String fullCountryName =restCOuntriesTimeZone("kz");
+        String bordersOfNation =restCountriesBoundary("jp");
+        System.out.println("Printer is " +bordersOfNation);
+
+        //String testSring =arrayProcesserV2("AND]");
+        //System.out.println("Printer is " +testSring);
+
     }
 
     public static int solution(int N) {
