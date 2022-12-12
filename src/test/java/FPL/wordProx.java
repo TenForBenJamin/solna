@@ -1,15 +1,29 @@
 package FPL;
 
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import objectRepo.reUsableMethods;
+
 import java.util.HashSet;
 import java.util.Iterator;
+
+import static io.restassured.RestAssured.given;
 
 public class wordProx {
 
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  AZ Dynamos
+        // next additions -  AZ Dynamos & Spartans
+        hs.add("Glory");
+        hs.add("District");
         hs.add("VV");
+        hs.add("Market");
+        hs.add("Hotspurs");
+        hs.add("Spartans");
         hs.add("Fotboll");
         hs.add("Al");
         hs.add("Hainiu");
@@ -69,7 +83,6 @@ public class wordProx {
 //Giresunspor
         //
         Iterator<String> i=hs.iterator();
-
         Boolean flag = false;
         String[] result = homeTeam.split(" ");
         if(result.length<2)
@@ -85,13 +98,111 @@ public class wordProx {
             }
             if(flag)
                 homeTeam=result[0];
-
         }
+          return homeTeam;
+    }
+
+    public static String restCountriesBoundary(String coutryCode){
+
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutryCode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutryCode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+            int count=js.getInt("borders.size()");
+            String allBorders="BorderNations of " + countryName +" = " ;
+            String totalBorders=js.getString("borders[0]");
+            String[] tzCount = totalBorders.split(",");
+            int totalTZ=tzCount.length;
+            for(int i=0;i<totalTZ;i++){
+                String temp = arrayProcesserV2(tzCount[i]); // need to replace "[" and "]" array prox
+                String currentBorderingNation=getCountryName(temp);
+                allBorders= allBorders +" " + currentBorderingNation +", "  ;
+
+                //allBorders=allBorders +" " +(totalTZ) +" " +totalBorders;
+            }
+            return allBorders;
+        }else
+            return "400 error ";
+
+    }
+    public static String restCountriesTmzV2(String coutryCode){
+
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutryCode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutryCode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+            int count=js.getInt("timezones.size()");
+            String timeZones="Total timeZones for " + countryName +" = " ;
+            for(int i=0;i<count;i++){
+                String currentTMZ=js.getString("timezones[ " +i +"]");
+                String[] tzCount = currentTMZ.split(",");
+                int totalTZ=tzCount.length;
+
+                timeZones=timeZones +" " +(totalTZ) +" " +currentTMZ;
+            }
+            return countryName +"  and TMZ details  -  " + timeZones;
+        }else
+            return "400 error ";
+
+    }
+
+    public static String arrayProcesserV2(String arrazItem)
+    {
+        String[] tzCount = arrazItem.split("\\]");
+        int totalTZ=tzCount.length;
+            arrazItem=tzCount[0];
+
+        String[] backBracCount = arrazItem.split("\\[");
+        int totalbackBracCount=backBracCount.length;
+        if(totalbackBracCount>1)
+            arrazItem=backBracCount[1];
+        arrazItem=arrazItem.trim();
+        return arrazItem;
+    }
+
+    public static String getCountryName(String coutrycode){
 
 
+        RestAssured.baseURI ="https://restcountries.com/";
+        RequestSpecification httpRequest = RestAssured.given();
+        Response response = httpRequest.request(Method.GET,"/v3.1/alpha/" +coutrycode);
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            when().get("/v3.1/alpha/" +coutrycode).
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            String  countryName = js.getString("[0].name.common");
+            String  deutschName = js.getString("[0].translations.deu.official");
+            String  capital = js.getString("[0].capital[0]");
+            String  fifaCode = js.getString("[0].fifa");
+            int count=js.getInt("timezones.size()");
 
+            return countryName;
+        }else
+            return "400 error ";
 
-        return homeTeam;
     }
 
 }
