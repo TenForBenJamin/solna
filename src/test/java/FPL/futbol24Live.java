@@ -191,6 +191,8 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+
+        String coldestCountryTwoLetter=null;
         float idealWeather=95;
           float lastColdest =idealWeather;
           String coldestPlace = "your mind";
@@ -204,7 +206,7 @@ public class futbol24Live extends parama{
           Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
-        int currentIteration = 10;
+        int currentIteration = count;
         System.out.println("total matches " +count +" and currentIteration " +currentIteration);
         for(int i=0;i<currentIteration;i++)
         {
@@ -240,9 +242,8 @@ public class futbol24Live extends parama{
                       coldestPlace = wc +" " +temp;
                        lastColdest = cityTemp;
                      String[] lander = temp.split(",");
-                      coldestCountry=getCountryName(lander[1]);
-                       
-                      // String lowestCountry = getCountryName(lowe[1].trim());
+                     coldestCountryTwoLetter=lander[1];
+                      coldestCountry=getCountryName(coldestCountryTwoLetter);
                  }
              }
              statCount=statCount+1;
@@ -252,8 +253,8 @@ public class futbol24Live extends parama{
              System.out.println("Home Team v3 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
          }
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
-          System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry);
-
+          System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
+          System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
     }
 
     public String f24Weather(String place)
@@ -426,7 +427,7 @@ public class futbol24Live extends parama{
     {
         //String fullCountryName =restCountriesTmzV2("mlt");
         //String fullCountryName =restCOuntriesTimeZone("kz");
-        String bordersOfNation =restCountriesBoundary("jp");
+        String bordersOfNation =restCountriesBoundary("tha");
         System.out.println("Printer is " +bordersOfNation);
 
         //String testSring =arrayProcesserV2("AND]");
