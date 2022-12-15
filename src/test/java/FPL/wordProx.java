@@ -121,6 +121,10 @@ public class wordProx {
             int count=js.getInt("borders.size()");
             String allBorders="BorderNations of " + countryName +" = " ;
             String totalBorders=js.getString("borders[0]");
+            if(totalBorders==null) {
+                 allBorders=countryName + "  has No Borders";
+            }
+            else {
             String[] tzCount = totalBorders.split(",");
             int totalTZ=tzCount.length;
             for(int i=0;i<totalTZ;i++){
@@ -129,6 +133,7 @@ public class wordProx {
                 allBorders= allBorders +" " + currentBorderingNation +", "  ;
 
                 //allBorders=allBorders +" " +(totalTZ) +" " +totalBorders;
+            }
             }
             return allBorders;
         }else
@@ -203,6 +208,13 @@ public class wordProx {
         }else
             return "400 error ";
 
+    }
+
+    public static int numberOfYearsForFixed(int p , int r , int t){
+
+
+
+        return 4;
     }
 
 }
