@@ -216,9 +216,7 @@ public class futbol24Live extends parama{
         }
           driver.quit();
         float ratiao=failureCount/count;
-        Iterator<String> e = nat.iterator();/*
-        while(e.hasNext())
-            System.out.println(e.next());*/
+        Iterator<String> e = nat.iterator();
         String coldestCountry = null;
          Iterator<String > ht = team.iterator();
          while (ht.hasNext())
@@ -427,8 +425,8 @@ public class futbol24Live extends parama{
     {
         //String fullCountryName =restCountriesTmzV2("mlt");
         //String fullCountryName =restCOuntriesTimeZone("kz");
-        String bordersOfNation =restCountriesBoundary("tha");
-        System.out.println("Printer is " +bordersOfNation);
+        String bordersOfNation =restCountriesBoundary("uz"); // to get the border field
+        System.out.println("Response - " +bordersOfNation);
 
         //String testSring =arrayProcesserV2("AND]");
         //System.out.println("Printer is " +testSring);
