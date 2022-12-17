@@ -19,6 +19,7 @@ public class wordProx {
         HashSet<String> hs = new HashSet<String>();
         // next additions -  AZ Dynamos & Spartans
         hs.add("Glory");
+        hs.add("Rovers");
         hs.add("District");
         hs.add("VV");
         hs.add("Market");
@@ -121,14 +122,21 @@ public class wordProx {
             int count=js.getInt("borders.size()");
             String allBorders="BorderNations of " + countryName +" = " ;
             String totalBorders=js.getString("borders[0]");
+            if(totalBorders==null) {
+                 allBorders=countryName + "  has No Borders";
+            }
+            else {
             String[] tzCount = totalBorders.split(",");
             int totalTZ=tzCount.length;
+            System.out.println("total bordering nations - " +totalTZ);
             for(int i=0;i<totalTZ;i++){
                 String temp = arrayProcesserV2(tzCount[i]); // need to replace "[" and "]" array prox
+                String threeLetterCountryCode=temp;
                 String currentBorderingNation=getCountryName(temp);
                 allBorders= allBorders +" " + currentBorderingNation +", "  ;
-
-                //allBorders=allBorders +" " +(totalTZ) +" " +totalBorders;
+                System.out.println( "Nation " +(i+1) +" is " + threeLetterCountryCode +"," +currentBorderingNation);
+               // allBorders=allBorders +" " +(totalTZ) +" " +totalBorders;
+            }
             }
             return allBorders;
         }else
@@ -203,6 +211,13 @@ public class wordProx {
         }else
             return "400 error ";
 
+    }
+
+    public static int numberOfYearsForFixed(int p , int r , int t){
+
+
+
+        return 4;
     }
 
 }
