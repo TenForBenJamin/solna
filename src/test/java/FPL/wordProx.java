@@ -19,6 +19,8 @@ public class wordProx {
         HashSet<String> hs = new HashSet<String>();
         // next additions -  AZ Dynamos & Spartans
         hs.add("Glory");
+        hs.add("Sporting");
+        hs.add("Bld.");
         hs.add("Rovers");
         hs.add("District");
         hs.add("VV");
@@ -201,11 +203,18 @@ public class wordProx {
                             then().assertThat().statusCode(200).extract().response().asString();
             JsonPath js = new JsonPath(getReqRes);
             reUsableMethods sd = new reUsableMethods();
-            String  countryName = js.getString("[0].name.common");
-            String  deutschName = js.getString("[0].translations.deu.official");
-            String  capital = js.getString("[0].capital[0]");
-            String  fifaCode = js.getString("[0].fifa");
-            int count=js.getInt("timezones.size()");
+            String  countryName = null;
+            try {
+                  countryName = js.getString("[0].name.common");
+                String  deutschName = js.getString("[0].translations.deu.official");
+                String  capital = js.getString("[0].capital[0]");
+                String  fifaCode = js.getString("[0].fifa");
+                int count=js.getInt("timezones.size()");
+            }
+            catch (Exception e){
+                countryName ="exception";
+            }
+
 
             return countryName;
         }else

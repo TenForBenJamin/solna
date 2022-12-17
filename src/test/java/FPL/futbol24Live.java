@@ -286,21 +286,6 @@ public class futbol24Live extends parama{
 
     public String wordProcesser(String homeTeam)
     {
-        /*HashMap<Integer,String> hm= new HashMap<Integer,String>();
-        hm.put(1,"United");
-        hm.put(2,"City");
-        hm.put(3,"FC");
-        hm.put(4,"FK");
-        hm.put(2,"de");
-        hm.put(3,"FC");
-         Set sn = hm.entrySet();
-        Iterator it =sn.iterator();
-        while(it.hasNext())
-        {
-            Map.Entry mp=(Map.Entry)it.next();
-
-        }
-*/
         HashSet<String> hs = new HashSet<String>();
         hs.add("United");
         hs.add("City");
@@ -340,9 +325,6 @@ public class futbol24Live extends parama{
         hs.add("SV");
         hs.add("Duchère");
         hs.add("Vary");
-
-//Giresunspor
-       //
         Iterator<String> i=hs.iterator();
 
         Boolean flag = false;
@@ -362,10 +344,6 @@ public class futbol24Live extends parama{
                 homeTeam=result[0];
 
         }
-
-
-
-
         return homeTeam;
     }
 
@@ -423,11 +401,12 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        //String fullCountryName =restCountriesTmzV2("mlt");
-        //String fullCountryName =restCOuntriesTimeZone("kz");
-        String bordersOfNation =restCountriesBoundary("uz"); // to get the border field
+        //String timeZonesOfCountry =restCountriesTmzV2("mlt");
+        //String fullCountryName =getCountryName("Mac");
+        String bordersOfNation =restCountriesBoundary("chn"); // to get the border field
         System.out.println("Response - " +bordersOfNation);
-
+       // System.out.println("Response - " +timeZonesOfCountry);
+       // System.out.println("Response - " +fullCountryName);
         //String testSring =arrayProcesserV2("AND]");
         //System.out.println("Printer is " +testSring);
 
