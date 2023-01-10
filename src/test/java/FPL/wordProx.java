@@ -19,7 +19,10 @@ public class wordProx {
         HashSet<String> hs = new HashSet<String>();
         // next additions -  AZ Dynamos & Spartans
         hs.add("Glory");
+        hs.add("09");
         hs.add("Town");
+        hs.add("Park");
+        hs.add("Zeiss");
         hs.add("Sporting");
         hs.add("Bld.");
         hs.add("Rovers");

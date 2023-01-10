@@ -10,6 +10,9 @@ import io.restassured.path.json.JsonPath;
 import objectRepo.parama;
 import objectRepo.reUsableMethods;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class fplHistory implements centralTraffice{
 
     // here we need to pass the managerId and get the history , input is String
@@ -31,9 +34,41 @@ public class fplHistory implements centralTraffice{
        sd.fplPasthistoryFirstSeason(getReqRes);
 
    }
+
+
     @Test
     public void fplrandomGen() {
         System.out.println(" random  : " + genRandomMgrId());
+        int[] m = {12,42,35,24};
+        int[] n = {5,47,31,2};
+        for(int i=0;i<m.length;i++)
+        {
+            //System.out.println(m[i]);
+        }
+        Arrays.sort(m);
+
+        for(int i=0;i<m.length;i++)
+        {
+            //System.out.println(m[i]);
+        }
+
+        System.out.println(solution(m, n));
+
+    }
+
+    int solution(int[] A, int[] B) {
+        int n = A.length;
+        int m = B.length;;
+        Arrays.sort(A);
+        Arrays.sort(B);
+        int i = 0;
+        for (int k = 0; k < n; k++) {
+            while (i < m - 1 && B[i] < A[k])
+                i += 1;
+            if (A[k] == B[i])
+                return A[k];
+        }
+        return -1;
     }
 
     @Override
