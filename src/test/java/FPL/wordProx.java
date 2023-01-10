@@ -20,6 +20,8 @@ public class wordProx {
         // next additions -  AZ Dynamos & Spartans
         hs.add("Glory");
         hs.add("Town");
+        hs.add("Park");
+        hs.add("Zeiss");
         hs.add("Sporting");
         hs.add("Bld.");
         hs.add("Rovers");

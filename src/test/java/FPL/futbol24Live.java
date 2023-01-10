@@ -403,7 +403,7 @@ public class futbol24Live extends parama{
     {
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         //String fullCountryName =getCountryName("Mac");
-        String bordersOfNation =restCountriesBoundary("chn"); // to get the border field
+        String bordersOfNation =restCountriesBoundary("chi"); // to get the border field
         System.out.println("Response - " +bordersOfNation);
        // System.out.println("Response - " +timeZonesOfCountry);
        // System.out.println("Response - " +fullCountryName);
