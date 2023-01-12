@@ -95,8 +95,6 @@ public class wordProx {
         hs.add("Duchère");
         hs.add("Vary");
 
-//Giresunspor
-        //
         Iterator<String> i=hs.iterator();
         Boolean flag = false;
         String[] result = homeTeam.split(" ");
@@ -111,8 +109,16 @@ public class wordProx {
                 if(homeTeam.equalsIgnoreCase(macher))
                     flag=true;
             }
-            if(flag)
-                homeTeam=result[0];
+            if(flag){
+                //if "/" is found then split and take the first word
+                String brazilClubs =result[0];
+                String[] br_result = brazilClubs.split("/");
+                if(br_result.length<2)
+                    homeTeam=result[0];
+                else
+                    homeTeam=br_result[0];
+            }
+
         }
           return homeTeam;
     }
