@@ -193,9 +193,12 @@ public class futbol24Live extends parama{
         int statCount=0;
 
         String coldestCountryTwoLetter=null;
+        String hottestCountryTwoLetter=null;
         float idealWeather=95;
+        float lastHottest=0;
           float lastColdest =idealWeather;
           String coldestPlace = "your mind";
+        String hotPlace = "your mind";
         HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
@@ -218,6 +221,7 @@ public class futbol24Live extends parama{
         float ratiao=failureCount/count;
         Iterator<String> e = nat.iterator();
         String coldestCountry = null;
+        String hottestCountry = null;
          Iterator<String > ht = team.iterator();
          while (ht.hasNext())
          {
@@ -242,6 +246,13 @@ public class futbol24Live extends parama{
                      String[] lander = temp.split(",");
                      coldestCountryTwoLetter=lander[1];
                  }
+                 if(cityTemp>lastHottest)
+                 {
+                     hotPlace = wc +" " +temp;
+                     lastHottest = cityTemp;
+                     String[] lander = temp.split(",");
+                     hottestCountryTwoLetter=lander[1];
+                 }
              }
              statCount=statCount+1;
              Calendar cal= Calendar.getInstance();
@@ -250,9 +261,12 @@ public class futbol24Live extends parama{
              System.out.println("Home Team v4 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
          }
           coldestCountry=getCountryName(coldestCountryTwoLetter);
+          hottestCountry=getCountryName(hottestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
           System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
+          System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
+          System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
     }
 
     public String f24Weather(String place)
