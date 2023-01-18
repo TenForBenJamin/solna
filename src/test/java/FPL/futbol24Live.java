@@ -241,15 +241,15 @@ public class futbol24Live extends parama{
                        lastColdest = cityTemp;
                      String[] lander = temp.split(",");
                      coldestCountryTwoLetter=lander[1];
-                      coldestCountry=getCountryName(coldestCountryTwoLetter);
                  }
              }
              statCount=statCount+1;
              Calendar cal= Calendar.getInstance();
              SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
              String tim =sdf.format(cal.getTime());
-             System.out.println("Home Team v3 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
+             System.out.println("Home Team v4 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
          }
+          coldestCountry=getCountryName(coldestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
           System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
@@ -402,11 +402,11 @@ public class futbol24Live extends parama{
     public void trueCaller()
     {
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
-        //String fullCountryName =getCountryName("Mac");
-        String bordersOfNation =restCountriesBoundary("chi"); // to get the border field
+        String fullCountryName =getCountryName("GT");
+        System.out.println("Response - " +fullCountryName);
+        String bordersOfNation =restCountriesBoundary("GT"); // to get the border field
         System.out.println("Response - " +bordersOfNation);
        // System.out.println("Response - " +timeZonesOfCountry);
-       // System.out.println("Response - " +fullCountryName);
         //String testSring =arrayProcesserV2("AND]");
         //System.out.println("Printer is " +testSring);
 
