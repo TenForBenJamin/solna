@@ -264,8 +264,9 @@ public class futbol24Live extends parama{
           hottestCountry=getCountryName(hottestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
           System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
-        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
+          System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
+          System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
     }
 
     public String f24Weather(String place)
