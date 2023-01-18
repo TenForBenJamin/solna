@@ -241,7 +241,6 @@ public class futbol24Live extends parama{
                        lastColdest = cityTemp;
                      String[] lander = temp.split(",");
                      coldestCountryTwoLetter=lander[1];
-                      coldestCountry=getCountryName(coldestCountryTwoLetter);
                  }
              }
              statCount=statCount+1;
@@ -250,6 +249,7 @@ public class futbol24Live extends parama{
              String tim =sdf.format(cal.getTime());
              System.out.println("Home Team v4 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
          }
+          coldestCountry=getCountryName(coldestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
           System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
