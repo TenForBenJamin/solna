@@ -98,31 +98,38 @@ public class wordProx {
         Iterator<String> i=hs.iterator();
         Boolean flag = false;
         String[] result = homeTeam.split(" ");
-        if(result.length<2)
+        if(result.length<2){
             homeTeam=result[0];
+            homeTeam=brazilClubIdentifier(homeTeam);
+        }
         else {
             homeTeam = result[1];
             while(i.hasNext())
             {
-                //System.out.println(i.next());
                 String macher = i.next();
                 if(homeTeam.equalsIgnoreCase(macher))
-                    flag=true;
+                    flag=true;// second word is cliche
             }
             if(flag){
                 //if "/" is found then split and take the first word
-                String brazilClubs =result[0];
-                String[] br_result = brazilClubs.split("/");
-                if(br_result.length<2)
-                    homeTeam=result[0];
-                else
-                    homeTeam=br_result[0];
+                homeTeam=brazilClubIdentifier(result[0]);
             }
-
         }
           return homeTeam;
     }
 
+    public static String brazilClubIdentifier(String clubName){
+        // example Palmeiras/SP Youth , Jacuipense/BA Lagarto/SE
+        String brazilClubs =clubName;
+        String[] br_result = brazilClubs.split("/");
+        String op;
+        if(br_result.length<2)
+            op=clubName;
+        else
+            op=br_result[0];
+
+        return op;
+    }
     public static String restCountriesBoundary(String coutryCode){
 
         RestAssured.baseURI ="https://restcountries.com/";

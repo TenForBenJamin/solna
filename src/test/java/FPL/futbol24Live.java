@@ -415,14 +415,19 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
+       /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         String fullCountryName =getCountryName("GT");
         System.out.println("Response - " +fullCountryName);
         String bordersOfNation =restCountriesBoundary("GT"); // to get the border field
         System.out.println("Response - " +bordersOfNation);
+
        // System.out.println("Response - " +timeZonesOfCountry);
-        //String testSring =arrayProcesserV2("AND]");
-        //System.out.println("Printer is " +testSring);
+        //String testSring =arrayProcesserV2("AND]");*/
+        //System.out.println("Printer is " +testSring);//Sampaio Correa/MA
+        String brazillianName="Sampaio Correa/MA";
+        System.out.println("wcBrazillianName  - " +brazilClubIdentifier(brazillianName));
+
 
     }
 
