@@ -226,12 +226,13 @@ public class futbol24Live extends parama{
          while (ht.hasNext())
          {
              String wc=ht.next();
-             wc=wordProcesserV2(wc);
+             wc=wordProcesserV2(wc); // word extraction happens here
              //String temp= f24Weather(homeTeam).trim();
              String temp= f24Weather(wc).trim();
              temp=temp.trim();
-             if(temp.equalsIgnoreCase("400 error"))
-                 failureCount=failureCount+1;
+             if(temp.equalsIgnoreCase("400 error")) {
+                 failureCount = failureCount + 1; // need to write more logic to extract the failure reason
+             }
              else
              {
                  String[] lowe = temp.split(",");
@@ -415,7 +416,10 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-       /*
+        String oTS="novara";
+        System.out.println(" One Time Search result  - " +jorginho(oTS));
+
+        /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         String fullCountryName =getCountryName("GT");
         System.out.println("Response - " +fullCountryName);
@@ -423,11 +427,32 @@ public class futbol24Live extends parama{
         System.out.println("Response - " +bordersOfNation);
 
        // System.out.println("Response - " +timeZonesOfCountry);
-        //String testSring =arrayProcesserV2("AND]");*/
+        //String testSring =arrayProcesserV2("AND]");
         //System.out.println("Printer is " +testSring);//Sampaio Correa/MA
         String brazillianName="Caruaru City/PE";
-        System.out.println("wcBrazillianName  - " +brazilClubIdentifier(brazillianName));
+        System.out.println("wcBrazillianName  - " +brazilClubIdentifier(brazillianName));*/
 
+    }
+    public String jorginho(String j5)
+    {
+
+            String wc=j5;
+            wc=wordProcesserV2(wc); // word extraction happens here
+            //String temp= f24Weather(homeTeam).trim();
+            String temp= f24Weather(wc).trim();
+            temp=temp.trim();
+            if(temp.equalsIgnoreCase("400 error")) {
+                 // need to write more logic to extract the failure reason
+            }
+            else
+            {
+                String[] lowe = temp.split(",");
+                // lowe[1] can be used to trigger the API
+                String exTemp= lowe[0];
+                float cityTemp = Float.parseFloat(exTemp);
+
+            }
+            return temp;
 
     }
 

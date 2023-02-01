@@ -48,7 +48,6 @@ public class wordProx {
         hs.add("IK");
         hs.add("Cuju");
         hs.add("Lions");
-        hs.add("IK");
         hs.add("SE");
         hs.add("fB");
         hs.add("IF");
