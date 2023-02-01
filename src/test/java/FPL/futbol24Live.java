@@ -425,7 +425,7 @@ public class futbol24Live extends parama{
        // System.out.println("Response - " +timeZonesOfCountry);
         //String testSring =arrayProcesserV2("AND]");*/
         //System.out.println("Printer is " +testSring);//Sampaio Correa/MA
-        String brazillianName="Sampaio Correa/MA";
+        String brazillianName="Caruaru City/PE";
         System.out.println("wcBrazillianName  - " +brazilClubIdentifier(brazillianName));
 
 
