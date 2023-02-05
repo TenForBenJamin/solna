@@ -17,8 +17,9 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Bullets Rangers &  hs.add("OSC");
+        // next additions -  Bullets Rangers &  hs.add("Africa");
         hs.add("Sepasi");
+        hs.add("Africa");
         hs.add("OSC");
         hs.add("County");
         hs.add("AC");
@@ -48,7 +49,6 @@ public class wordProx {
         hs.add("IK");
         hs.add("Cuju");
         hs.add("Lions");
-        hs.add("IK");
         hs.add("SE");
         hs.add("fB");
         hs.add("IF");
