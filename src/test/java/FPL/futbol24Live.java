@@ -416,7 +416,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="novara";
+        String oTS="black Africa";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
@@ -435,7 +435,6 @@ public class futbol24Live extends parama{
     }
     public String jorginho(String j5)
     {
-
             String wc=j5;
             wc=wordProcesserV2(wc); // word extraction happens here
             //String temp= f24Weather(homeTeam).trim();
@@ -443,6 +442,8 @@ public class futbol24Live extends parama{
             temp=temp.trim();
             if(temp.equalsIgnoreCase("400 error")) {
                  // need to write more logic to extract the failure reason
+                // Likely reason nonPlace related name.
+                // need to have a keyValue pair to fix the problem example NS Mura vs Murska sobota
             }
             else
             {
@@ -454,6 +455,22 @@ public class futbol24Live extends parama{
             }
             return temp;
 
+    }
+@Test
+    public static void mainz()
+    {
+        boolean t = true;
+        first : {
+            second : {
+                third : {
+                    System.out.println("Before the break");
+                    if (t) // break out of second block
+                        break second;
+                }
+                System.out.println("This won't execute");
+            }
+            System.out.println("This is after the second block");
+        }
     }
 
     public static int solution(int N) {
