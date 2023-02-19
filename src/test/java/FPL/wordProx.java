@@ -7,9 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import objectRepo.reUsableMethods;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
@@ -18,7 +16,8 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Bullets Rangers &  hs.add("Africa");
+        // next additions -  Bullets Rangers &  hs.add("Zelvia");
+        hs.add("Zelvia");
         hs.add("Sepasi");
         hs.add("Africa");
         hs.add("OSC");
@@ -137,22 +136,32 @@ public class wordProx {
 
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
-        // Paola Hibernians Paola hm.put("Samut Prakan City","Samut Prakan");
-
-        hm.put("AFC Leopords","Nairobi");
+        String originalKeyName=null;
+        // Paola Hibernians Paola hm.put("CD Numancia","Soria,ES");
+        String paola=null;
+        hm.put("AFC Leopards","Nairobi");
         hm.put("Port FC","Khlong Toei");
         hm.put("Hibernians Paola","Paola,MT");
         hm.put("Samut Prakan City","Samut Prakan");
+        hm.put("Rivers United","Port Harcourt");
+        hm.put("CA Vianés","La Rioja");
+        hm.put("Viking FK Youth","Stavanger");
+        hm.put("Viking FK","Stavanger");
+        hm.put("CD Numancia","Soria,ES");
 
-        String brazilClubs =clubName;
-        String[] br_result = brazilClubs.split("/");
-        String op;
-        if(br_result.length<2)
-            op=clubName;
-        else
-            op=br_result[0];
-
-        return op;
+        Set sn=hm.entrySet();
+        Iterator it= sn.iterator();
+        while(it.hasNext())
+        {
+            //String macher = it.next();
+            Map.Entry mp=( Map.Entry)it.next();
+             originalKeyName=mp.getKey().toString();
+            //System.out.println("search value is " +mp.getValue());
+            if(clubName.equalsIgnoreCase(originalKeyName))
+                paola=mp.getValue().toString();// second word is cliche
+        }
+        System.out.println("realValue is  value is " +paola);
+        return paola;
     }
     public static String restCountriesBoundary(String coutryCode){
 

@@ -225,8 +225,8 @@ public class futbol24Live extends parama{
          Iterator<String > ht = team.iterator();
          while (ht.hasNext())
          {
-             String wc=ht.next();
-             wc=wordProcesserV2(wc); // word extraction happens here
+             String realName=ht.next();
+             String wc=wordProcesserV2(realName); // word extraction happens here
              //String temp= f24Weather(homeTeam).trim();
              String temp= f24Weather(wc).trim();
              temp=temp.trim();
@@ -416,7 +416,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="black Africa";
+        String oTS="AFC Leopards";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
@@ -443,7 +443,14 @@ public class futbol24Live extends parama{
             if(temp.equalsIgnoreCase("400 error")) {
                  // need to write more logic to extract the failure reason
                 // Likely reason nonPlace related name.
+                System.out.println("Need to check if replacement exists for  " +wc);//Sampaio Correa/MA
                 // need to have a keyValue pair to fix the problem example NS Mura vs Murska sobota
+                temp=southendReplacement(j5);
+                if (temp == null) {
+                    System.out.println("Need to work more for   " +j5);
+                }
+                else
+                   temp= f24Weather(temp).trim();
             }
             else
             {
