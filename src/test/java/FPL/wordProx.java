@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import objectRepo.reUsableMethods;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -123,6 +124,25 @@ public class wordProx {
 
     public static String brazilClubIdentifier(String clubName){
         // example Palmeiras/SP Youth , Jacuipense/BA Lagarto/SE
+        String brazilClubs =clubName;
+        String[] br_result = brazilClubs.split("/");
+        String op;
+        if(br_result.length<2)
+            op=clubName;
+        else
+            op=br_result[0];
+
+        return op;
+    }
+
+    public static String southendReplacement(String clubName){
+        HashMap<String,String> hm = new HashMap<String,String>();
+        // Paola Hibernians Paola hm.put("Hibernians Paola","Paola,MT");
+
+        hm.put("AFC Leopords","Nairobi");
+        hm.put("Port FC","Khlong Toei");
+        hm.put("Hibernians Paola","Paola,MT");
+
         String brazilClubs =clubName;
         String[] br_result = brazilClubs.split("/");
         String op;
