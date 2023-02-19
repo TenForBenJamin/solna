@@ -137,11 +137,12 @@ public class wordProx {
 
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
-        // Paola Hibernians Paola hm.put("Hibernians Paola","Paola,MT");
+        // Paola Hibernians Paola hm.put("Samut Prakan City","Samut Prakan");
 
         hm.put("AFC Leopords","Nairobi");
         hm.put("Port FC","Khlong Toei");
         hm.put("Hibernians Paola","Paola,MT");
+        hm.put("Samut Prakan City","Samut Prakan");
 
         String brazilClubs =clubName;
         String[] br_result = brazilClubs.split("/");
