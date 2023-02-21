@@ -141,6 +141,8 @@ public class wordProx {
         // Paola Hibernians Paola hm.put("Raya2 Expansión","Monterrey,MX");
         String paola=null;
         hm.put("Raya2 Expansión","Monterrey,MX");
+        hm.put("Rld alajuelense","Alajuela,CR");
+        hm.put("Real Kashmir FC","Srinagar,IN");
         hm.put("AFC Leopards","Nairobi");
         hm.put("Port FC","Khlong Toei");
         hm.put("Hibernians Paola","Paola,MT");
