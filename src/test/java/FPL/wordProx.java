@@ -16,8 +16,9 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Bullets Rangers &  hs.add("Zelvia");
+        // next additions -  Bullets Rangers &  hs.add("Unido");
         hs.add("Zelvia");
+        hs.add("Unido");
         hs.add("Sepasi");
         hs.add("Africa");
         hs.add("OSC");
@@ -137,8 +138,9 @@ public class wordProx {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-        // Paola Hibernians Paola hm.put("CD Numancia","Soria,ES");
+        // Paola Hibernians Paola hm.put("Raya2 Expansión","Monterrey,MX");
         String paola=null;
+        hm.put("Raya2 Expansión","Monterrey,MX");
         hm.put("AFC Leopards","Nairobi");
         hm.put("Port FC","Khlong Toei");
         hm.put("Hibernians Paola","Paola,MT");
@@ -148,6 +150,18 @@ public class wordProx {
         hm.put("Viking FK Youth","Stavanger");
         hm.put("Viking FK","Stavanger");
         hm.put("CD Numancia","Soria,ES");
+        hm.put("SønderjyskE","Haderslev,DK");
+        hm.put("Al Qaisoma","Qaisumah,SA");
+        hm.put("St Albans City","St Albans,GB");
+        hm.put("Platinum City Rovers FC","Potchefstroom");
+        hm.put("Al Akhdood","Najran,SA");
+        hm.put("Hapoel Qalansawe","Qalansawe");
+        hm.put("Kapaz PFK II","Ganja,AZ");
+        hm.put("Kapaz PFK","Ganja,AZ");
+        hm.put("Hapoel Petah Tikva","Petah Tikva");
+
+
+
 
         Set sn=hm.entrySet();
         Iterator it= sn.iterator();
@@ -160,7 +174,7 @@ public class wordProx {
             if(clubName.equalsIgnoreCase(originalKeyName))
                 paola=mp.getValue().toString();// second word is cliche
         }
-        System.out.println("realValue is  value is " +paola);
+        //System.out.println("realValue is  value is " +paola);
         return paola;
     }
     public static String restCountriesBoundary(String coutryCode){

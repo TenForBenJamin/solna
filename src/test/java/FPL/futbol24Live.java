@@ -77,7 +77,7 @@ public class futbol24Live extends parama{
     }
 
     @Test
-    public void f24AllGamesV2() throws IOException {
+    public void f24AllGamesV2() throws IOException, InterruptedException {
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
@@ -231,7 +231,9 @@ public class futbol24Live extends parama{
              String temp= f24Weather(wc).trim();
              temp=temp.trim();
              if(temp.equalsIgnoreCase("400 error")) {
-                 failureCount = failureCount + 1; // need to write more logic to extract the failure reason
+                 temp =jorginho(realName);// need to write more logic to extract the failure reason
+                 if(temp == null)
+                     failureCount = failureCount + 1;
              }
              else
              {
@@ -416,7 +418,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="AFC Leopards";
+        String oTS="Al Qaisoma";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
@@ -443,11 +445,11 @@ public class futbol24Live extends parama{
             if(temp.equalsIgnoreCase("400 error")) {
                  // need to write more logic to extract the failure reason
                 // Likely reason nonPlace related name.
-                System.out.println("Need to check if replacement exists for  " +wc);//Sampaio Correa/MA
+                //System.out.println("Need to check if replacement exists for  " +wc);//Sampaio Correa/MA
                 // need to have a keyValue pair to fix the problem example NS Mura vs Murska sobota
                 temp=southendReplacement(j5);
                 if (temp == null) {
-                    System.out.println("Need to work more for   " +j5);
+                   // System.out.println("Need to work more for   " +j5);
                 }
                 else
                    temp= f24Weather(temp).trim();
