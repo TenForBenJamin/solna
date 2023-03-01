@@ -222,11 +222,16 @@ public class futbol24Live extends parama{
         Iterator<String> e = nat.iterator();
         String coldestCountry = null;
         String hottestCountry = null;
+        String wc;
          Iterator<String > ht = team.iterator();
          while (ht.hasNext())
          {
-             String realName=ht.next();
-             String wc=wordProcesserV2(realName); // word extraction happens here
+             String realName=ht.next(); // first initialization
+             String firstCheckMap=southendReplacement(realName);
+             if (firstCheckMap == null)
+                 wc=wordProcesserV2(realName);
+             else
+                 wc=firstCheckMap; // word extraction happens here
              //String temp= f24Weather(homeTeam).trim();
              String temp= f24Weather(wc).trim();
              temp=temp.trim();
@@ -447,7 +452,8 @@ public class futbol24Live extends parama{
                 // Likely reason nonPlace related name.
                 //System.out.println("Need to check if replacement exists for  " +wc);//Sampaio Correa/MA
                 // need to have a keyValue pair to fix the problem example NS Mura vs Murska sobota
-                temp=southendReplacement(j5);
+                temp=null;
+                //temp=southendReplacement(j5);
                 if (temp == null) {
                    // System.out.println("Need to work more for   " +j5);
                 }
