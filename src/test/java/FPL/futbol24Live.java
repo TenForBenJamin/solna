@@ -231,9 +231,9 @@ public class futbol24Live extends parama{
              if (firstCheckMap == null)
                  wc=wordProcesserV2(realName);
              else
-                 wc=firstCheckMap; // word extraction happens here
+                 wc=firstCheckMap; // caught the exact word
              //String temp= f24Weather(homeTeam).trim();
-             String temp= f24Weather(wc).trim();
+             String temp= f24Weather(wc).trim(); // real
              temp=temp.trim();
              if(temp.equalsIgnoreCase("400 error")) {
                  temp =jorginho(realName);// need to write more logic to extract the failure reason
@@ -266,7 +266,7 @@ public class futbol24Live extends parama{
              Calendar cal= Calendar.getInstance();
              SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
              String tim =sdf.format(cal.getTime());
-             System.out.println("Home Team v4 # " + statCount +" is " + wc +" and weather is    ->   "+ temp +"    at " +tim);
+             System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
          }
           coldestCountry=getCountryName(coldestCountryTwoLetter);
           hottestCountry=getCountryName(hottestCountryTwoLetter);
@@ -423,7 +423,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="Al Qaisoma";
+        String oTS="FK Radnički 1923";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
@@ -442,8 +442,14 @@ public class futbol24Live extends parama{
     }
     public String jorginho(String j5)
     {
-            String wc=j5;
-            wc=wordProcesserV2(wc); // word extraction happens here
+            String wc;
+        String realName=j5; // first initialization
+        String firstCheckMap=southendReplacement(realName);
+        if (firstCheckMap == null)
+            wc=wordProcesserV2(realName);
+        else
+            wc=firstCheckMap;
+
             //String temp= f24Weather(homeTeam).trim();
             String temp= f24Weather(wc).trim();
             temp=temp.trim();
