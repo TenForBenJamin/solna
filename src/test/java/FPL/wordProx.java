@@ -138,11 +138,26 @@ public class wordProx {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-        // Paola Sudeva Moonlight Paola hm.put("San Gwann","San Gwann");
+        // Paola Sudeva Moonlight Paola hm.put("Debrecen VSC","Debrecen,Hu");
         String paola=null;
         hm.put("Hertha BSC","Berlin,DE");
+        hm.put("Sotra SK","Bergen");
+        hm.put("Juventus U23","Turin,IT");
+        hm.put("Debrecen VSC","Debrecen,Hu");
+        hm.put("Juventus U19","Turin,IT");
+        hm.put("Juventus","Turin,IT");
         hm.put("Baroka FC","Polokwane,za");
+        hm.put("Maringá FC/PR","Maringá,BR");
+        hm.put("FK Radnički 1923","Kragujevac");
+        hm.put("Univ de Chile","Ñuñoa,CL");
+        hm.put("Grêmio/RS U20","Porto Alegre");
+        hm.put("Marumo Gallants FC","Polokwane");
+        hm.put("FCSB","Bucharest");
+        hm.put("Grêmio/RS","Porto Alegre");
+        hm.put("ASEC Mimosas","Abidjan");
         hm.put("San Gwann","San Gwann");
+        hm.put("TRAU FC","Imphal");
+        hm.put("Beitar Tel Aviv Bat Yam","Ramla,IL");
         hm.put("CD Dragon","San Miguel,SV");
         hm.put("Great Olympics","Accra");
         hm.put("Tshakhuma TM","Thohoyandou,za");
