@@ -191,7 +191,7 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
-
+        String debuggerEntry = "Bataeh SC";
         String coldestCountryTwoLetter=null;
         String hottestCountryTwoLetter=null;
         float idealWeather=95;
@@ -227,6 +227,8 @@ public class futbol24Live extends parama{
          while (ht.hasNext())
          {
              String realName=ht.next(); // first initialization
+            if(realName==debuggerEntry)
+                System.out.println("Stop the count ");
              String firstCheckMap=southendReplacement(realName);
              if (firstCheckMap == null)
                  wc=wordProcesserV2(realName);
