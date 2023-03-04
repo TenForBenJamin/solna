@@ -191,7 +191,7 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
-        String debuggerEntry = "Bataeh SC";
+        String debuggerEntry = "AS Arta";
         String coldestCountryTwoLetter=null;
         String hottestCountryTwoLetter=null;
         float idealWeather=95;
@@ -425,7 +425,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="FK Radnički 1923";
+        String oTS="Bataeh SC";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
