@@ -191,7 +191,7 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
-        String debuggerEntry = "AS Arta";
+        String debuggerEntry = "debugging instance";
         String coldestCountryTwoLetter=null;
         String hottestCountryTwoLetter=null;
         float idealWeather=95;
@@ -270,13 +270,13 @@ public class futbol24Live extends parama{
              String tim =sdf.format(cal.getTime());
              System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
          }
-          coldestCountry=getCountryName(coldestCountryTwoLetter);
-          hottestCountry=getCountryName(hottestCountryTwoLetter);
+          //coldestCountry=getCountryName(coldestCountryTwoLetter);
+          //hottestCountry=getCountryName(hottestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
-          System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
+          /*System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
           System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-          System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+          System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
     }
 
     public String f24Weather(String place)
