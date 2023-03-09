@@ -145,7 +145,8 @@ public class wordProx {
         hm.put("Deportes Tolima","Ibague");
         hm.put("KF Gjilani","Gjilan");
         hm.put("JK Tammeka Tartu","Tartu");
-        hm.put("Ararat-2","Yeravan");
+        hm.put("Ararat-2","Yerevan");
+        hm.put("FC Ararat-Armenia-2","Yerevan");
         hm.put("Levadia II Tallinn","Tallinn");
         hm.put("Rio Ave","Vila do Conde");
         hm.put("Patriotas FC","Tunja,CO");
