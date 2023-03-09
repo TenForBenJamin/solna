@@ -425,7 +425,7 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="Juniors";
+        String oTS="Águia de Marabá/PA";
         System.out.println(" One Time Search result  - " +jorginho(oTS));
 
         /*
