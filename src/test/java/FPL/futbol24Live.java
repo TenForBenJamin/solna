@@ -425,8 +425,8 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="Águia de Marabá/PA";
-        System.out.println(" One Time Search result  - " +jorginho(oTS));
+        String oTS="Yeoju Citizen";
+        System.out.println(" One Time Search result for "+oTS +"  - " +jorginho(oTS));
 
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
