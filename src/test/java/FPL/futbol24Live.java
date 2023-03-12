@@ -191,6 +191,7 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+        int methodUtilzationCount=0;
         String debuggerEntry = "debugging instance";
         String coldestCountryTwoLetter=null;
         String hottestCountryTwoLetter=null;
@@ -232,8 +233,10 @@ public class futbol24Live extends parama{
              String firstCheckMap=southendReplacement(realName);
              if (firstCheckMap == null)
                  wc=wordProcesserV2(realName);
-             else
-                 wc=firstCheckMap; // caught the exact word
+             else {
+                 wc = firstCheckMap; // caught the exact word
+                 methodUtilzationCount=methodUtilzationCount+1;
+             }
              //String temp= f24Weather(homeTeam).trim();
              String temp= f24Weather(wc).trim(); // real
              temp=temp.trim();
@@ -273,8 +276,9 @@ public class futbol24Live extends parama{
           //coldestCountry=getCountryName(coldestCountryTwoLetter);
           //hottestCountry=getCountryName(hottestCountryTwoLetter);
           System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
-          /*System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
-          System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
+          System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
+         /*System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
+          System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );methodUtilzationCount
           System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
           System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
     }
