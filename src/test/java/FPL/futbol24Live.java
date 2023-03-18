@@ -50,7 +50,7 @@ public class futbol24Live extends parama{
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
         driver.get(uri);
         Thread.sleep(2000);// (//a/span[@class='f24com_lang'])[1] for live
-        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
