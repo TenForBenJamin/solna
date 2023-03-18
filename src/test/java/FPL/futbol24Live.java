@@ -55,23 +55,26 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         int currentIteration = count;
+        List<String> al = new ArrayList<>(count);
         System.out.println("total matches " +count +" and currentIteration " +currentIteration);
         for(int i=0;i<currentIteration;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
             team.add(homeTeam);
+            al.add(homeTeam); // alCounter=0;alCounter<count
         }
         driver.quit();
+        int alCounter=0;
         float ratiao=failureCount/count;
         Iterator<String> e = nat.iterator();
         String coldestCountry = null;
         String hottestCountry = null;
         String wc;
         Iterator<String > ht = team.iterator();
-        while (ht.hasNext())
+        while (alCounter<count)
         {
-            String realName=ht.next(); // first initialization
+            String realName=al.get(alCounter); // first initialization
             if(realName==debuggerEntry)
                 System.out.println("Stop the count ");
             String firstCheckMap=southendReplacement(realName);
@@ -116,6 +119,7 @@ public class futbol24Live extends parama{
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
             String tim =sdf.format(cal.getTime());
             System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
+            alCounter++;
         }
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
