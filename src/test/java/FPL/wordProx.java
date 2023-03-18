@@ -16,9 +16,10 @@ public class wordProx {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Bullets Rangers &  hs.add("Unido");
+        // next additions -  Bullets Rangers &  hs.add("Calcio");
         hs.add("Zelvia");
         hs.add("Unido");
+        hs.add("Calcio");
         hs.add("Sepasi");
         hs.add("Africa");
         hs.add("OSC");
@@ -138,15 +139,21 @@ public class wordProx {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                              Mohammedan SC               hm.put("The Strongest","La Paz");
+            //                              Mohammedan SC               hm.put("Oure FA","Svendborg");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("Tala'ea Al Jaish Cairo","Cairo");
         hm.put("Al Fateh Youth","Hofuf,SA");
         hm.put("Apollon Smyrni","Athens");
+        hm.put("ZESCO United","Ndola");
         hm.put("Gandzasar FC","Kapan");
         hm.put("Hajer Youth","Hofuf,SA");
         hm.put("SC Farense U23","Faro");
+        hm.put("Stabaek","Bærum");
+        hm.put("Halmstads BK","Halmstad");
+        hm.put("SK Traeff","Molde");
+        hm.put("Oure FA","Svendborg");
+        hm.put("Lunds BK","Lund");
         hm.put("SC Farense","Faro");
         hm.put("The Strongest","La Paz");
         hm.put("Sepsi OSK","Sfantu Gheorghe");
