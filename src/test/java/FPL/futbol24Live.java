@@ -121,14 +121,15 @@ public class futbol24Live extends parama{
             System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
             alCounter++;
         }
-        coldestCountry=getCountryName(coldestCountryTwoLetter);
-        hottestCountry=getCountryName(hottestCountryTwoLetter);
         System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
+        /*
+        coldestCountry=getCountryName(coldestCountryTwoLetter);
+        hottestCountry=getCountryName(hottestCountryTwoLetter);
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
         System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
     }
 
     @Test
