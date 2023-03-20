@@ -50,7 +50,7 @@ public class futbol24Live extends parama{
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
         driver.get(uri);
         Thread.sleep(2000);// (//a/span[@class='f24com_lang'])[1] for live
-        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+        driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
@@ -123,13 +123,13 @@ public class futbol24Live extends parama{
         }
         System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
-        /*
+
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
         System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
     }
 
     @Test
