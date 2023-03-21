@@ -139,13 +139,17 @@ public class wordProx {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                              Mohammedan SC               hm.put("FK Ekranas","Panevezys");
+            //                              Mohammedan SC               hm.put("North Pine","Brisbane");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("Tala'ea Al Jaish Cairo","Cairo");
         hm.put("Shatin SA","Hong Kong");
+        hm.put("Maroons FC","Kampala");
+        hm.put("North Pine","Brisbane");
+        hm.put("Vipers SC","Kampala");
         hm.put("RCD Espanyol B","Barcelona,ES");
         hm.put("RCD Espanyol","Barcelona,ES");
+        hm.put("Ceramica Cleopatra","Nasr City");
         hm.put("Energetik-BGU (R)","Minsk");
         hm.put("Batman Petrolspor","Batman");
         hm.put("Sheffield Wed U21","Sheffield");
