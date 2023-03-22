@@ -219,7 +219,7 @@ public class wordProx {
         hm.put("İnegölspor","İnegöl");
         hm.put("Al Nassr Riyadh","Riyadh");
         hm.put("TSV 1860","Munich");
-        hm.put("Ipswich Knights","Ipswich");
+        hm.put("Ipswich Knights","Ipswich,AU");
         hm.put("CD Santa Úrsula","Santa Ursula");
         hm.put("Binh Phuoc FC","dong xoai");
         hm.put("AO Pyliou","Kos");
