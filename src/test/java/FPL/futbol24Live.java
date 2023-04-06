@@ -137,46 +137,106 @@ public class futbol24Live extends parama{
         driver=initilizeDriver();
         int failureCount=0;
         int statCount=0;
+        int methodUtilzationCount=0;
+        String debuggerEntry = "debugging instance";
+        String coldestCountryTwoLetter=null;
+        String hottestCountryTwoLetter=null;
+        Double fahr=null;
+        float idealWeather=95;
+        float lastHottest=0;
+        float lastColdest =idealWeather;
+        String coldestPlace = "your mind";
+        String hotPlace = "your mind";
         HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
         driver.get(uri);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(2000);// (//a/span[@class='f24com_lang'])[1] for live
         driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
+        Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
-        System.out.println("total matches = " +count);
-        for(int i=0;i<count;i++)
+        int currentIteration = count;
+        List<String> al = new ArrayList<>(count);
+        System.out.println("total matches " +count +" and currentIteration " +currentIteration);
+        for(int i=0;i<currentIteration;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
             team.add(homeTeam);
-            homeTeam=wordProcesser(homeTeam);
+            al.add(homeTeam); // alCounter=0;alCounter<count
+        }
+        driver.quit();
+        int alCounter=0;
+        float ratiao=failureCount/count;
+        Iterator<String> e = nat.iterator();
+        String coldestCountry = null;
+        String hottestCountry = null;
+        String wc;
+        Iterator<String > ht = team.iterator();
+        while (alCounter<count)
+        {
+            String realName=al.get(alCounter); // first initialization
+            if(realName==debuggerEntry)
+                System.out.println("Stop the count ");
+            String firstCheckMap=southendReplacement(realName);
+            if (firstCheckMap == null)
+                wc=wordProcesserV2(realName);
+            else {
+                wc = firstCheckMap; // caught the exact word
+                methodUtilzationCount=methodUtilzationCount+1;
+            }
             //String temp= f24Weather(homeTeam).trim();
-            String temp= f24Weather(homeTeam).trim();
+            String temp= f24Weather(wc).trim(); // real
             temp=temp.trim();
-            if(temp.equalsIgnoreCase("400 error"))
-                failureCount=failureCount+1;
+            if(temp.equalsIgnoreCase("400 error")) {
+                temp =jorginho(realName);// need to write more logic to extract the failure reason
+                fahr=0.0;
+                if(temp == null)
+                    failureCount = failureCount + 1;
+                else
+                    fahr = f24Distance(wc);
+            }
             else
             {
+                fahr = f24Distance(wc);
                 String[] lowe = temp.split(",");
                 nat.add(lowe[1]);
-
+                // lowe[1] can be used to trigger the API
+                String exTemp= lowe[0];
+                float cityTemp = Float.parseFloat(exTemp);
+                if(cityTemp<lastColdest)
+                {
+                    coldestPlace = wc +" " +temp;
+                    lastColdest = cityTemp;
+                    String[] lander = temp.split(",");
+                    coldestCountryTwoLetter=lander[1];
+                }
+                if(cityTemp>lastHottest)
+                {
+                    hotPlace = wc +" " +temp;
+                    lastHottest = cityTemp;
+                    String[] lander = temp.split(",");
+                    hottestCountryTwoLetter=lander[1];
+                }
             }
             statCount=statCount+1;
             Calendar cal= Calendar.getInstance();
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
             String tim =sdf.format(cal.getTime());
-            System.out.println("Home Team # " + i +" is " + homeTeam +" and weather is    ->   "+ temp +"    at " +tim);
+            System.out.println("Home Team v2 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +fahr +" kms");
+            alCounter++;
         }
+        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
+        System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
 
-        float ratiao=failureCount/count;
-        Iterator<String> e = nat.iterator();/*
-        while(e.hasNext())
-            System.out.println(e.next());*/
-        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" total Nations involved  " +nat.size());
-        driver.quit();
+        coldestCountry=getCountryName(coldestCountryTwoLetter);
+        hottestCountry=getCountryName(hottestCountryTwoLetter);
+        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
+        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
+        System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
     }
       @Test
     public void f24AllGamesV3() throws IOException, InterruptedException {
@@ -485,8 +545,8 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="Yeoju Citizen";
-        System.out.println(" One Time Search result for "+oTS +"  - " +jorginho(oTS));
+        String oTS="baku";
+        System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
 
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");

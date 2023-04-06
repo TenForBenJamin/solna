@@ -5,13 +5,16 @@ import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import objectRepo.parama;
 import objectRepo.reUsableMethods;
+import org.testng.annotations.Test;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
-public class wordProx {
+public class wordProx extends parama {
 
     public static String wordProcesserV2(String homeTeam)
     {
@@ -25,6 +28,7 @@ public class wordProx {
         hs.add("OSC");
         hs.add("County");
         hs.add("AC");
+        hs.add("KE");
         hs.add("Shenhua");
         hs.add("Tunisien");
         hs.add("Stars");
@@ -139,11 +143,19 @@ public class wordProx {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                       hm.put("CS Switchbacks","Colorado Springs, Colorado");
+            //                                       hm.put("Jagiellonia Youth","Białystok");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("Tala'ea Al Jaish Cairo","Cairo");
         hm.put("Shatin SA","Hong Kong");
+        hm.put("CD Magallanes","San Bernardo, Chile");
+        hm.put("Silkeborg IF","Silkeborg");
+        hm.put("Honduras Progreso","El Progreso");
+        hm.put("SP Falcons","Ulaanbaatar");
+        hm.put("Inter d'Escaldes","Andorra");
+        hm.put("CD Marathón","San Pedro Sula");
+        hm.put("Liverpool (URU)","Montevideo");
+        hm.put("Richmond Kickers","Richmond");
         hm.put("Maroons FC","Kampala");
         hm.put("North Pine","Brisbane");
         hm.put("Vipers SC","Kampala");
@@ -184,6 +196,7 @@ public class wordProx {
         hm.put("Gaddafi FC","Jinja");
         hm.put("Holland Park Hawks","Camp Hill,AU");
         hm.put("Jagiellonia II","Białystok");
+        hm.put("Jagiellonia Youth","Białystok");
         hm.put("Patacona CF","Alboraya");
         hm.put("RANS Nusantara","bogor");
         hm.put("Slavia TU Kosice","Kosice");
@@ -636,6 +649,62 @@ public class wordProx {
         }else
             return "400 error ";
 
+    }
+    public static final double EARTH_RADIUS = 6371; // in kilometers
+    public static Double f24Distance(String place)
+    {
+        RestAssured.baseURI =baseUrlopenWeather;
+        RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
+        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            queryParam("q", place).
+                            queryParam("appid", apiKey).
+                            queryParam("lang", OpCo).queryParam("units", "metric").
+                            when().get("data/2.5/weather").
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            reUsableMethods sd = new reUsableMethods();
+            //sd.coordsExtractor(getReqRes);
+            //sd.simbleDaylengthPrint(getReqRes," Capital details ");
+            String  latS = js.getString("coord.lat");
+            String lonS = js.getString("coord.lon");
+            String nameOfPlace = js.getString("name");
+            //coundry=restCOuntries(coundry);
+            double lat = Double.parseDouble(latS);
+            double lon = Double.parseDouble(lonS);
+            double Coordx= malta(lat,lon);
+            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
+            double roundedNumber = Double.parseDouble(df.format(Coordx));
+            //35.8922 , 14.5183
+            return roundedNumber;
+        }else
+            return 400.0;
+    }
+
+    public static double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+        double EARTH_RADIUS = 6371; // in kilometers
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) *
+                        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return EARTH_RADIUS * c;
+    }
+    @Test
+    public static Double malta(double lat2, double lon2) {
+        // required params are lat2,lon2 and cityName
+
+        double lat1 = 35.8922; // Malta latitude
+        double lon1 = 14.5183; // Malta longitude
+        // New York City longitude
+        double distance = calculateDistance(lat1, lon1, lat2, lon2);
+       // System.out.printf("The distance between you and other city is %.2f km.", distance);
+       // String chain="The distance between you and other city is %.2f km."+ distance;
+        return distance;
     }
 
     public static int numberOfYearsForFixed(int p , int r , int t){
