@@ -157,7 +157,7 @@ public class futbol24Live extends parama{
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
-        int currentIteration = 20;
+        int currentIteration = count;
         List<String> al = new ArrayList<>(count);
         System.out.println("total matches " +count +" and currentIteration " +currentIteration);
         for(int i=0;i<currentIteration;i++)
