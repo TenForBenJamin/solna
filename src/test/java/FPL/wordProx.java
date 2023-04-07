@@ -19,12 +19,15 @@ public class wordProx extends parama {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Peterborough Sports &  hs.add("Sports");
+        // next additions -  Peterborough Sports &  hs.add("Wanderers");
         hs.add("Zelvia");
         hs.add("Unido");
         hs.add("Calcio");
         hs.add("Sepasi");
         hs.add("Africa");
+        hs.add("Athletic");
+        hs.add("AFC");
+        hs.add("Wanderers");
         hs.add("OSC");
         hs.add("Sports");
         hs.add("County");
@@ -144,7 +147,7 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                       hm.put("Aumund-Vegesack","Vegesack");
+            //                                       hm.put("Cobh Ramblers","Cobh");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("Tala'ea Al Jaish Cairo","Cairo");
@@ -152,8 +155,18 @@ public class wordProx extends parama {
         hm.put("CD Magallanes","San Bernardo, Chile");
         hm.put("Silkeborg IF","Silkeborg");
         hm.put("Aumund-Vegesack","Vegesack");
+        hm.put("Villarreal CF B","Valencia,ES");
+        hm.put("Villarreal CF","Valencia,ES");
+        hm.put("St Patrick's Dublin","Dublin");
         hm.put("Southend United","Southend,GB");
+        hm.put("Cobh Ramblers","Cobh");
         hm.put("Varzim SC","Póvoa de Varzim");
+        hm.put("SC Telstar","Velsen");
+        hm.put("Ammanford AFC","Ammanford");
+        hm.put("SL16 FC","Liege");
+        hm.put("Tractor SC","Tabriz");
+        hm.put("Real San Joaquín","San Joaquín,CL");
+        hm.put("Glenavon","Lurgan");
         hm.put("Chesterfield","Chesterfield,UK");
         hm.put("Bala Town","Gwynedd");
         hm.put("Vukovar '91","Vinkovci");
