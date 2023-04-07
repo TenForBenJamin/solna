@@ -517,9 +517,6 @@ public class wordProx extends parama {
         hm.put("Kapaz PFK","Ganja,AZ");
         hm.put("Hapoel Petah Tikva","Petah Tikva");
 
-
-
-
         Set sn=hm.entrySet();
         Iterator it= sn.iterator();
         while(it.hasNext())
