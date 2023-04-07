@@ -63,7 +63,7 @@ public class futbol24Live extends parama{
         }
         int currentIteration = count;
         List<String> al = new ArrayList<>(count);
-        System.out.println("total matches " +count +" and currentIteration " +currentIteration);
+        System.out.println(" -------------------XXXXXX___________total matches --------------  " +count +" and currentIteration -------------X-----------" +currentIteration);
         for(int i=0;i<currentIteration;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
