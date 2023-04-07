@@ -154,7 +154,7 @@ public class wordProx extends parama {
         hm.put("Shatin SA","Hong Kong");
         hm.put("CD Magallanes","San Bernardo, Chile");
         hm.put("Silkeborg IF","Silkeborg");
-        hm.put("UD San Fernando","San Bartolomé de Tirajana");
+        hm.put("UD San Fernando","San Bartolome de Tirajana");
         hm.put("Aumund-Vegesack","Vegesack");
         hm.put("Villarreal CF B","Valencia,ES");
         hm.put("Villarreal CF","Valencia,ES");
@@ -166,7 +166,7 @@ public class wordProx extends parama {
         hm.put("Ammanford AFC","Ammanford");
         hm.put("SL16 FC","Liege");
         hm.put("Tractor SC","Tabriz");
-        hm.put("Real San Joaquín","San Joaquín,CL");
+        hm.put("Real San Joaquín","San Joaquin,CL");
         hm.put("Glenavon","Lurgan");
         hm.put("Chesterfield","Chesterfield,UK");
         hm.put("Bala Town","Gwynedd");
