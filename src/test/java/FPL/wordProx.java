@@ -19,11 +19,12 @@ public class wordProx extends parama {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Peterborough Sports &  hs.add("Wanderers");
+        // next additions -  Peterborough Sports &  hs.add("Citizen");
         hs.add("Zelvia");
         hs.add("Unido");
         hs.add("Calcio");
         hs.add("Sepasi");
+        hs.add("Citizen");
         hs.add("Africa");
         hs.add("Athletic");
         hs.add("AFC");
@@ -147,13 +148,19 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                       hm.put("Erbaaspor SK","Erbaa");
+            //                                       hm.put("Atromitos Youth","Athens");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Reggina Youth","Reggio Calabria");
         hm.put("SKA-Khabarovsk","Khabarovsk");
+        hm.put("FC Twente","Enschede");
+        hm.put("Atromitos Youth","Athens");
+        hm.put("Atromitos","Athens");
         hm.put("Erbaaspor SK","Erbaa");
+        hm.put("Lee Man FC","Hong Kong");
+        hm.put("East Bengal B","Kolkata");
+        hm.put("East Bengal","Kolkata");
         hm.put("Logan Lightning","Logan City");
         hm.put("Benfica de Macau","Macau");
         hm.put("Pohang Steelers","Pohang");
