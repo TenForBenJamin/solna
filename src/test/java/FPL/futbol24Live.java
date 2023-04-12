@@ -24,6 +24,7 @@ import objectRepo.reUsableMethods;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -54,7 +55,7 @@ public class futbol24Live extends parama{
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
-        if(count>400)// for weekends
+        if(count>200)// for weekends
         {
             //driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
@@ -133,8 +134,8 @@ public class futbol24Live extends parama{
 
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
-        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
-        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
+        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
+        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +f24Distance(hotPlace));
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
         System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
     }
@@ -330,69 +331,61 @@ public class futbol24Live extends parama{
 
     }
 
-    public String wordProcesser(String homeTeam)
+    public  Double f24Distance(String place)
     {
-        HashSet<String> hs = new HashSet<String>();
-        hs.add("United");
-        hs.add("City");
-        hs.add("FC");
-        hs.add("FK");
-        hs.add("U20");
-        hs.add("U19");
-        hs.add("U16");
-        hs.add("U17");
-        hs.add("U23");
-        hs.add("U21");
-        hs.add("(R)");
-        hs.add("FA");
-        hs.add("Morton");
-        hs.add("Fotbol");
-        hs.add("FC/SC");
-        hs.add("Youth");
-        hs.add("CF");
-        hs.add("FA");
-        hs.add("(W)");
-        hs.add("SC");
-        hs.add("SPb");
-        hs.add("Three");
-        hs.add("Utd");
-        hs.add("University");
-        hs.add("SK");
-        hs.add("JK");
-        hs.add("EAC");
-        hs.add("SE");
-        hs.add("1.");
-        hs.add("Valley");
-        hs.add("TC");
-        hs.add("St");
-        hs.add("BK");
-        hs.add("Club");
-        hs.add("GP");
-        hs.add("SV");
-        hs.add("Duchère");
-        hs.add("Vary");
-        Iterator<String> i=hs.iterator();
+        String[] pla = place.split(" ");
+        place=pla[0];
+        RestAssured.baseURI =baseUrlopenWeather;
+        RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
+        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
 
-        Boolean flag = false;
-        String[] result = homeTeam.split(" ");
-        if(result.length<2)
-            homeTeam=result[0];
-        else {
-            homeTeam = result[1];
-            while(i.hasNext())
-            {
-                //System.out.println(i.next());
-                String macher = i.next();
-                if(homeTeam.equalsIgnoreCase(macher))
-                    flag=true;
-            }
-            if(flag)
-                homeTeam=result[0];
+            String getReqRes =
+                    given().
+                            queryParam("q", place).
+                            queryParam("appid", apiKey).
+                            queryParam("lang", OpCo).queryParam("units", "metric").
+                            when().get("data/2.5/weather").
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            String  latS = js.getString("coord.lat");
+            String lonS = js.getString("coord.lon");
+            String nameOfPlace = js.getString("name");
+            //coundry=restCOuntries(coundry);
+        if(300>200){
+            double lat = Double.parseDouble(latS);
+            double lon = Double.parseDouble(lonS);
+            double Coordx= malta(lat,lon);
+            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
+            double roundedNumber = Double.parseDouble(df.format(Coordx));
+            //35.8922 , 14.5183
+            return roundedNumber;
+        }else
+            return 400.0;
+    }
+    @Test
+    public Double malta(double lat2, double lon2) {
+        // required params are lat2,lon2 and cityName
 
-        }
-        return homeTeam;
+        double lat1 = 35.8922; // Malta latitude
+        double lon1 = 14.5183; // Malta longitude
+        // New York City longitude
+        double distance = calculateDistance(lat1, lon1, lat2, lon2);
+        // System.out.printf("The distance between you and other city is %.2f km.", distance);
+        // String chain="The distance between you and other city is %.2f km."+ distance;
+        return distance;
     }
 
+    public double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+        double EARTH_RADIUS = 6371; // in kilometers
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) *
+                        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return EARTH_RADIUS * c;
+    }
     public String restCOuntries(String coutryCode){
 
         RestAssured.baseURI ="https://restcountries.com/";
@@ -447,8 +440,8 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller()
     {
-        String oTS="baku";
-        System.out.println(" One Time Search result for "+oTS +"  - " +jorginho(oTS));
+        String oTS="Austria";
+        System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
 
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
