@@ -148,12 +148,27 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                       hm.put("Skjetten SK","Lillestrøm");
+            //                                      hm.put("Marconi Stallions","Sydney");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Reggina Youth","Reggio Calabria");
+        hm.put("Busan I'Park","Busan");
+        hm.put("Hong Kong U23","Hong Kong");
+        hm.put("ADO Den Haag (W)","Den Haag");
+        hm.put("ADO Den Haag","Den Haag");
+        hm.put("Hong Kong","Hong Kong");
+        hm.put("Marconi Stallions","Sydney");
+        hm.put("Silver Strikers","Lilongwe");
         hm.put("Tishreen SC","Latakia");
+        hm.put("WS Wanderers","Sydney");
+        hm.put("Hrvatski Dragovoljac","Zagreb");
+        hm.put("Club Africain Tunis","Tunis");
+        hm.put("Étoile Sahel Sousse","Sousse");
+        hm.put("Dalian Professional","Dalian");
+        hm.put("Os Belenenses SAD","Lisbon");
+        hm.put("Beroe Stara Zagora","Stara Zagora");
+        hm.put("Blau-Weiß 90 Berlin","Berlin");
         hm.put("Skjetten SK","Lillestrøm");
         hm.put("Bahlinger SC","Bahlingen");
         hm.put("IK Junkeren","Bodo,NO");
@@ -305,6 +320,7 @@ public class wordProx extends parama {
         hm.put("CR Témouchent","Ain Temouchent");
         hm.put("Chayka FK Pesch","Peschanokopskoye");
         hm.put("Hamburger SV II","Hamburg");
+        hm.put("Hamburger SV U19","Hamburg");
         hm.put("Hamburger SV","Hamburg");
         hm.put("1. FC Saarbrücken","Saarbrücken");
         hm.put("Halmstads BK","Halmstad");
