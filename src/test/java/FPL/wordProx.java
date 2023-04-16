@@ -19,9 +19,10 @@ public class wordProx extends parama {
     public static String wordProcesserV2(String homeTeam)
     {
         HashSet<String> hs = new HashSet<String>();
-        // next additions -  Peterborough Sports &  hs.add("Citizen");
+        // next additions -  Pyunik Academy &  hs.add("Academy");
         hs.add("Zelvia");
         hs.add("Unido");
+        hs.add("Academy");
         hs.add("Calcio");
         hs.add("Sepasi");
         hs.add("Citizen");
@@ -148,12 +149,24 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                      hm.put("St Ives Town","St Ives");
+            //                                      hm.put("Sevilla Atlético","Seville");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Reggina Youth","Reggio Calabria");
+        hm.put("Unión Adarve","Madrid");
+        hm.put("Caldas SC","Caldas da Rainha");
+        hm.put("Sevilla Atlético","Seville");
+        hm.put("Sevilla","Seville");
         hm.put("Busan I'Park","Busan");
+        hm.put("Rayo Vallecano B","Madrid");
+        hm.put("Rayo Vallecano","Madrid");
+        hm.put("RCD Mallorca B","Palma de Mallorca");
+        hm.put("Pyunik Academy","Yereven");
+        hm.put("Mito HollyHock","Mito,JP");
+        hm.put("Abdysh-Ata Kant","kant,KG");
+        hm.put("CD Ebro","Zaragoza");
+        hm.put("Siheung Citizen","Ansan");
         hm.put("Hong Kong U23","Hong Kong");
         hm.put("St Ives Town","St Ives");
         hm.put("Dorchester Town","Dorchester,GB");
@@ -509,6 +522,8 @@ public class wordProx extends parama {
         hm.put("Ironi Kiryat Shmona","Kiryat Shmona");
         hm.put("O'Higgins","Rancagua");
         hm.put("Real Sociedad (W)","San Sebastián,ES");
+        hm.put("Real Sociedad B","San Sebastián,ES");
+        hm.put("Real Sociedad","San Sebastián,ES");
         hm.put("Pors Grenland","Porsgrunn,NO");
         hm.put("Panathinaikos Youth","Athens,GR");
         hm.put("Panathinaikos","Athens,GR");
