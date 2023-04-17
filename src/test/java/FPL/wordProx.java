@@ -20,6 +20,7 @@ public class wordProx extends parama {
     {
         HashSet<String> hs = new HashSet<String>();
         // next additions -  Pyunik Academy &  hs.add("Academy");
+        hs.add("2");
         hs.add("Zelvia");
         hs.add("Unido");
         hs.add("Academy");
@@ -149,12 +150,31 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                      hm.put("Unión Santa Fe","Santa Fe,AR");
+            //                                     hm.put("Bergnäsets AIK ","Luleå");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Reggina Youth","Reggio Calabria");
         hm.put("Unión Adarve","Madrid");
+        hm.put("Binh Dinh FC","Qui Nhon");
+        hm.put("Egersunds IK","Egersund");
+        hm.put("IL Hodd 2","Ulsteinvik");
+        hm.put("Bergnäsets AIK ","Luleå");
+        hm.put("Trelleborgs FF","Trelleborg");
+        hm.put("IL Hodd","Ulsteinvik");
+        hm.put("Maccabi Ironi Ashdod","Ashdod");
+        hm.put("SJK Akatemia","Seinäjoki");
+        hm.put("West Bromwich U21","West Bromwich");
+        hm.put("West Bromwich","West Bromwich");
+        hm.put("Thanh Hoa FC","Thanh Hoa");
+        hm.put("SK Brann 2","Bergen,nO");
+        hm.put("Viborg FF (R)","Viborg FF");
+        hm.put("Boluspor","Bolu");
+        hm.put("Viborg FF","Viborg FF");
+        hm.put("Talanta FC","Nairobi");
+        hm.put("Tromso 2","Tromso");
+        hm.put("Shirak-2","Gyumri");
+        hm.put("FK Elektron","Veliky Novgorod");
         hm.put("Unión Santa Fe","Santa Fe,AR");
         hm.put("Caldas SC","Caldas da Rainha");
         hm.put("Sevilla Atlético","Seville");
@@ -164,6 +184,8 @@ public class wordProx extends parama {
         hm.put("Rayo Vallecano","Madrid");
         hm.put("RCD Mallorca B","Palma de Mallorca");
         hm.put("Pyunik Academy","Yereven");
+        hm.put("Pyunik FC","Yereven");
+        hm.put("Urartu-2","Yereven");
         hm.put("Mito HollyHock","Mito,JP");
         hm.put("Abdysh-Ata Kant","kant,KG");
         hm.put("CD Ebro","Zaragoza");
