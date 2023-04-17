@@ -149,12 +149,13 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                      hm.put("Sevilla Atlético","Seville");
+            //                                      hm.put("Unión Santa Fe","Santa Fe,AR");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Reggina Youth","Reggio Calabria");
         hm.put("Unión Adarve","Madrid");
+        hm.put("Unión Santa Fe","Santa Fe,AR");
         hm.put("Caldas SC","Caldas da Rainha");
         hm.put("Sevilla Atlético","Seville");
         hm.put("Sevilla","Seville");

@@ -57,7 +57,7 @@ public class futbol24Live extends parama{
         int count= xpathFinder.size();
         if(count>200)// for weekends
         {
-            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            //driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
@@ -131,7 +131,6 @@ public class futbol24Live extends parama{
         }
         System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
-
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
@@ -211,13 +210,13 @@ public class futbol24Live extends parama{
         int failureCount=0;
         int statCount=0;
         int methodUtilzationCount=0;
-        String debuggerEntry = "debugging instance";
+        String debuggerEntry = "debugging instanze";
         String coldestCountryTwoLetter=null;
         String hottestCountryTwoLetter=null;
         float idealWeather=95;
         float lastHottest=0;
-          float lastColdest =idealWeather;
-          String coldestPlace = "your mind";
+        float lastColdest =idealWeather;
+        String coldestPlace = "your mind";
         String hotPlace = "your mind";
         HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
@@ -226,85 +225,96 @@ public class futbol24Live extends parama{
         driver.get(uri);
         Thread.sleep(2000);// (//a/span[@class='f24com_lang'])[1] for live
         driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[2]")).click();
-          Thread.sleep(5000);
+        Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
+        if(count>200)// for weekends
+        {
+            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            Thread.sleep(4000);
+            xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
+            count= xpathFinder.size();
+        }
         int currentIteration = count;
-        System.out.println("total matches " +count +" and currentIteration " +currentIteration);
+        List<String> al = new ArrayList<>(count);
+        System.out.println(" -------------------XXXXXX___________total matches --------------  " +count +" and currentIteration -------------X-----------" +currentIteration);
         for(int i=0;i<currentIteration;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
             homeTeam=homeTeam.trim();
             team.add(homeTeam);
+            al.add(homeTeam); // alCounter=0;alCounter<count
         }
-          driver.quit();
+        driver.quit();
+        int alCounter=0;
         float ratiao=failureCount/count;
         Iterator<String> e = nat.iterator();
         String coldestCountry = null;
         String hottestCountry = null;
         String wc;
-         Iterator<String > ht = team.iterator();
-         while (ht.hasNext())
-         {
-             String realName=ht.next(); // first initialization
+        Iterator<String > ht = team.iterator();
+        while (alCounter<count)
+        {
+            String realName=al.get(alCounter); // first initialization
             if(realName==debuggerEntry)
                 System.out.println("Stop the count ");
-             String firstCheckMap=southendReplacement(realName);
-             if (firstCheckMap == null)
-                 wc=wordProcesserV2(realName);
-             else {
-                 wc = firstCheckMap; // caught the exact word
-                 methodUtilzationCount=methodUtilzationCount+1;
-             }
-             //String temp= f24Weather(homeTeam).trim();
-             String temp= f24Weather(wc).trim(); // real
-             temp=temp.trim();
-             if(temp.equalsIgnoreCase("400 error")) {
-                 temp =jorginho(realName);// need to write more logic to extract the failure reason
-                 if(temp == null)
-                     failureCount = failureCount + 1;
-             }
-             else
-             {
-                 String[] lowe = temp.split(",");
-                 nat.add(lowe[1]);
-                 // lowe[1] can be used to trigger the API
-                 String exTemp= lowe[0];
-                 float cityTemp = Float.parseFloat(exTemp);
-                 if(cityTemp<lastColdest)
-                 {
-                      coldestPlace = wc +" " +temp;
-                       lastColdest = cityTemp;
-                     String[] lander = temp.split(",");
-                     coldestCountryTwoLetter=lander[1];
-                 }
-                 if(cityTemp>lastHottest)
-                 {
-                     hotPlace = wc +" " +temp;
-                     lastHottest = cityTemp;
-                     String[] lander = temp.split(",");
-                     hottestCountryTwoLetter=lander[1];
-                 }
-             }
-             statCount=statCount+1;
-             Calendar cal= Calendar.getInstance();
-             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
-             String tim =sdf.format(cal.getTime());
-             System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
-         }
-          coldestCountry=getCountryName(coldestCountryTwoLetter);
-          hottestCountry=getCountryName(hottestCountryTwoLetter);
-          System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
-          System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
-          System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry );
-          System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry );
-          System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-          System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+            String firstCheckMap=southendReplacement(realName);
+            if (firstCheckMap == null)
+                wc=wordProcesserV2(realName);
+            else {
+                wc = firstCheckMap; // caught the exact word
+                methodUtilzationCount=methodUtilzationCount+1;
+            }
+            //String temp= f24Weather(homeTeam).trim();
+            String temp= f24Displacement(wc).trim(); // real
+            temp=temp.trim();
+            if(temp.equalsIgnoreCase("400 error")) {
+                temp =jorginho(realName);// need to write more logic to extract the failure reason
+                if(temp == null)
+                    failureCount = failureCount + 1;
+            }
+            else
+            {
+                /*
+                String[] lowe = temp.split(",");
+                nat.add(lowe[1]);
+                // lowe[1] can be used to trigger the API
+                String exTemp= lowe[0];
+                float cityTemp = Float.parseFloat(exTemp);
+                if(cityTemp<lastColdest)
+                {
+                    coldestPlace = wc +" " +temp;
+                    lastColdest = cityTemp;
+                    String[] lander = temp.split(",");
+                    coldestCountryTwoLetter=lander[1];
+                }
+                if(cityTemp>lastHottest)
+                {
+                    hotPlace = wc +" " +temp;
+                    lastHottest = cityTemp;
+                    String[] lander = temp.split(",");
+                    hottestCountryTwoLetter=lander[1];
+                }*/
+            }
+            statCount=statCount+1;
+            Calendar cal= Calendar.getInstance();
+            SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+            String tim =sdf.format(cal.getTime());
+            System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
+            alCounter++;
+        }
+   /*System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
+        System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
+        coldestCountry=getCountryName(coldestCountryTwoLetter);
+        hottestCountry=getCountryName(hottestCountryTwoLetter);
+        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
+        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +f24Distance(hotPlace));
+        System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
     }
 
     public String f24Weather(String place)
     {
-
         RestAssured.baseURI =baseUrlopenWeather;
         RequestSpecification httpRequest = RestAssured.given();
         httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
@@ -362,6 +372,41 @@ public class futbol24Live extends parama{
             return roundedNumber;
         }else
             return 400.0;
+    }
+    public  String f24Displacement(String place)
+    {
+        String[] pla = place.split(" ");
+        place=pla[0];
+        RestAssured.baseURI =baseUrlopenWeather;
+        RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
+        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            queryParam("q", place).
+                            queryParam("appid", apiKey).
+                            queryParam("lang", OpCo).queryParam("units", "metric").
+                            when().get("data/2.5/weather").
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            String  latS = js.getString("coord.lat");
+            String lonS = js.getString("coord.lon");
+            String nameOfPlace = js.getString("name");
+            //coundry=restCOuntries(coundry);
+            double lat = Double.parseDouble(latS);
+            double lon = Double.parseDouble(lonS);
+            double Coordx= malta(lat,lon);
+            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
+            double roundedNumber = Double.parseDouble(df.format(Coordx));
+            String  mainTemp = js.getString("main.temp");
+            String coundry = js.getString("sys.country");
+            //coundry=restCOuntries(coundry);
+            mainTemp= roundedNumber +"," +coundry;
+            return mainTemp;
+        }else
+            return "400 error ";
+
     }
     @Test
     public Double malta(double lat2, double lon2) {
