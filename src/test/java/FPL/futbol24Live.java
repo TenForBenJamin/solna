@@ -266,7 +266,7 @@ public class futbol24Live extends parama{
                 methodUtilzationCount=methodUtilzationCount+1;
             }
             //String temp= f24Weather(homeTeam).trim();
-            String temp= f24Displacement(wc).trim(); // real
+            String temp= f24Windy(wc).trim(); // real
             temp=temp.trim();
             if(temp.equalsIgnoreCase("400 error")) {
                 temp =jorginho(realName);// need to write more logic to extract the failure reason
@@ -399,6 +399,45 @@ public class futbol24Live extends parama{
             double Coordx= malta(lat,lon);
             DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
             double roundedNumber = Double.parseDouble(df.format(Coordx));
+            String  mainTemp = js.getString("main.temp");
+            String coundry = js.getString("sys.country");
+            //coundry=restCOuntries(coundry);
+            mainTemp= roundedNumber +"," +coundry;
+            return mainTemp;
+        }else
+            return "400 error ";
+
+    }
+    public  String f24Windy(String place)
+    {
+        String[] pla = place.split(" ");
+        place=pla[0];
+        RestAssured.baseURI =baseUrlopenWeather;
+        RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
+        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
+        if(response.statusCode()==200){
+            String getReqRes =
+                    given().
+                            queryParam("q", place).
+                            queryParam("appid", apiKey).
+                            queryParam("lang", OpCo).queryParam("units", "metric").
+                            when().get("data/2.5/weather").
+                            then().assertThat().statusCode(200).extract().response().asString();
+            JsonPath js = new JsonPath(getReqRes);
+            String  latS = js.getString("coord.lat");
+            String lonS = js.getString("coord.lon");
+            String  windSpeed = js.getString("wind.speed");
+            String windDirection = js.getString("wind.deg");
+            String nameOfPlace = js.getString("name");
+
+            //coundry=restCOuntries(coundry);
+            double lat = Double.parseDouble(windSpeed);
+            double lon = Double.parseDouble(windDirection);
+            double windSpeedDouble=lat*3.6;
+            //double Coordx= malta(lat,lon);
+            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
+            double roundedNumber = Double.parseDouble(df.format(windSpeedDouble));
             String  mainTemp = js.getString("main.temp");
             String coundry = js.getString("sys.country");
             //coundry=restCOuntries(coundry);
