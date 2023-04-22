@@ -150,7 +150,7 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                     hm.put("Gangwon B","Gangneung");
+            //                                     hm.put("Kuban Holding","Pavlovskaya");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
@@ -159,6 +159,8 @@ public class wordProx extends parama {
         hm.put("Hapoel Kafr Kanna","Kafr Kanna");
         hm.put("Ulsan Hyundai","Ulsan");
         hm.put("Omiya Ardija","Omiya");
+        hm.put("Kuban Holding","Pavlovskaya");
+        hm.put("FK Vidar","Stavanger");
         hm.put("Gangwon B","Gangneung");
         hm.put("Hapoel Bnei Zalafa","Zalafa");
         hm.put("Colo Colo","Macul");
