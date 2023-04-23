@@ -150,12 +150,25 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                     hm.put("Unión Molinense","Murcia");
+            //                                     hm.put("Samsunspor","Samsun");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Galatasaray SK","Istanbul");
         hm.put("Unión Molinense","Murcia");
+        hm.put("CE Europa","Barcelona,ES");
+        hm.put("BK Forward","Orebro");
+        hm.put("PE Sant Jordi","Sant Josep de sa Talaia");
+        hm.put("PE Sant Jordi","Sant Jordi");
+        hm.put("Rizespor","Rize");
+        hm.put("Samsunspor","Samsun");
+        hm.put("Bodrumspor SK","Bodrum");
+        hm.put("Kasımpaşa SK","Istanbul");
+        hm.put("FC Vilafranca","Vilafranca,ES");
+        hm.put("Crystal Palace (W)","Londres");
+        hm.put("Crystal Palace","Londres");
+        hm.put("Tromsdalen UIL","Tromso");
+        hm.put("Hirnyk-Sport","Horishni Plavni");
         hm.put("Zabbar St. Patrick","Zabbar,MT");
         hm.put("Ujpest FC II","Budapest");
         hm.put("Ujpest FC","Budapest");
@@ -245,6 +258,7 @@ public class wordProx extends parama {
         hm.put("Rayo Vallecano B","Madrid");
         hm.put("Rayo Vallecano","Madrid");
         hm.put("RCD Mallorca B","Palma de Mallorca");
+        hm.put("Atlético Baleares","Palma de Mallorca");
         hm.put("Pyunik Academy","Yereven");
         hm.put("Pyunik FC","Yereven");
         hm.put("Urartu-2","Yereven");
@@ -537,6 +551,7 @@ public class wordProx extends parama {
         hm.put("Sakaryaspor","Adapazarı");
         hm.put("JK Tammeka Tartu II","Tartu");
         hm.put("CA Osasuna (W)","Pamplona");
+        hm.put("CA Osasuna B","Pamplona");
         hm.put("Glenwood Redbacks","Glenwood,AU");
         hm.put("KF Ballkani","Suva Reka");
         hm.put("Deportes Tolima","Ibague");
