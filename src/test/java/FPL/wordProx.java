@@ -150,11 +150,25 @@ public class wordProx extends parama {
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
-            //                                     hm.put("Galatasaray SK","Istanbul");
+            //                                     hm.put("Unión Molinense","Murcia");
             String paola=null;
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("UMF Sindri","Höfn");
         hm.put("Galatasaray SK","Istanbul");
+        hm.put("Unión Molinense","Murcia");
+        hm.put("Zabbar St. Patrick","Zabbar,MT");
+        hm.put("Ujpest FC II","Budapest");
+        hm.put("Ujpest FC","Budapest");
+        hm.put("Heidelberg Utd U21","Heidelberg,AU");
+        hm.put("Centenary Stormers","Darra");
+        hm.put("Kirivong Sok Sen Chey","Doun Kaev");
+        hm.put("Taichung Futuro","Taichung");
+        hm.put("FC Petrzalka","Bratislava");
+        hm.put("Sunshine Coast","Sunshine Coast");
+        hm.put("Heidelberg Utd","Heidelberg,AU");
+        hm.put("Kawasaki Frontale","Kawasaki");
+        hm.put("Heidelberg United","Heidelberg,AU");
+        hm.put("Newcastle Olympic","Newcastle,AU");
         hm.put("Reggina Youth","Reggio Calabria");
         hm.put("Union Saint-Gilloise","Belgium");
         hm.put("Southside Eagles","Brisbane");
@@ -162,6 +176,7 @@ public class wordProx extends parama {
         hm.put("Macarthur Rams","Campbelltown");
         hm.put("SD Raiders","Moorebank");
         hm.put("Kitchee SC","Hong kong");
+        hm.put("Tai Po FC","Hong kong");
         hm.put("HK Rangers","Hong kong");
         hm.put("FO Jas Qyran","Almaty");
         hm.put("Adelaide Comets","Adelaide");
