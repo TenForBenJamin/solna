@@ -55,7 +55,7 @@ public class futbol24Live extends parama{
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
-        if(count>200)// for weekends
+        if(count>400)// for weekends
         {
             driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
