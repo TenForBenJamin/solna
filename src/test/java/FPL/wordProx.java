@@ -82,6 +82,7 @@ public class wordProx extends parama {
         hs.add("U23");
         hs.add("Blasters");
         hs.add("U21");
+        hs.add("U22");
         hs.add("(R)");
         hs.add("FA");
         hs.add("Morton");
