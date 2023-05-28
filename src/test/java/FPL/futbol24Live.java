@@ -55,16 +55,17 @@ public class futbol24Live extends parama{
         Thread.sleep(5000);
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
+        System.out.println(" -------------------XXXXXX___________total matches --------------  " +count);
         if(count>400)// for weekends
         {
-            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            //driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
         }
         int currentIteration = count;
         List<String> al = new ArrayList<>(count);
-        System.out.println(" -------------------XXXXXX___________total matches --------------  " +count +" and currentIteration -------------X-----------" +currentIteration);
+        System.out.println(" &nd currentIteration -------------X-----------" +currentIteration);
         for(int i=0;i<currentIteration;i++)
         {
             String homeTeam=xpathFinder.get(i).getText();
