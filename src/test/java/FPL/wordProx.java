@@ -162,6 +162,13 @@ public class wordProx extends parama {
         hm.put("Rio Ave U23","Vila do Conde");
         hm.put("Shakhtar D. Youth","Donetsk");
         hm.put("Mexico (W) U20","Mexico,MX");
+        hm.put("Team Thoren","Umeå");
+        hm.put("Myawady FC","Naypyidaw");
+        hm.put("SoCal Seahorses","La Mirada, California");
+        hm.put("Real Salt Lake","Salt Lake");
+        hm.put("FC Shukura","Kobuleti");
+        hm.put("Augnablik","Kópavogur")
+        ;hm.put("Viettel FC","Hanoi");
         hm.put("FC Südtirol","South Tyrol,IT");
         hm.put("Always Ready","El Alto");
         hm.put("IK Oddevold","Uddevalla");
@@ -318,6 +325,10 @@ public class wordProx extends parama {
         hm.put("Caldas SC","Caldas da Rainha");
         hm.put("Sevilla Atlético","Seville");
         hm.put("Sevilla","Seville");
+        hm.put("VPV","Helsinki");
+        hm.put("Varbergs GIF","Varberg");
+        hm.put("Melhus Fotball","Melhus");
+        hm.put("Kultsu FC","Joutseno");
         hm.put("Sevilla FC","Seville");
         hm.put("Busan I'Park","Busan");
         hm.put("Rayo Vallecano B","Madrid");
@@ -325,6 +336,7 @@ public class wordProx extends parama {
         hm.put("RCD Mallorca B","Palma de Mallorca");
         hm.put("Atlético Baleares","Palma de Mallorca");
         hm.put("Pyunik Academy","Yereven");
+        hm.put("FC Ararat-Armenia","Yereven");
         hm.put("Pyunik FC","Yereven");
         hm.put("Urartu-2","Yereven");
         hm.put("Mito HollyHock","Mito,JP");
