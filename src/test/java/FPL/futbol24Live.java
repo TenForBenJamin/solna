@@ -131,13 +131,13 @@ public class futbol24Live extends parama{
             alCounter++;
         }
         System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
-        System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
+        System.out.println("methodUtilzationCount --- " +methodUtilzationCount );/*
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
         System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +f24Distance(hotPlace));
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
     }
 
 
