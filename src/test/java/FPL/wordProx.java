@@ -25,6 +25,7 @@ public class wordProx extends parama {
         hs.add("Unido");
         hs.add("Academy");
         hs.add("TI");
+        hs.add("Eagles");
         hs.add("Calcio");
         hs.add("Sepasi");
         hs.add("Citizen");
@@ -184,6 +185,16 @@ public class wordProx extends parama {
         hm.put("FK Belusa","Trencin");
         hm.put("AS Marsa","La Marsa");
         hm.put("HamKam","Hamar,NO");
+        hm.put("Cartusia","Kartuzy");
+        hm.put("Pine Hills","Brisbane");
+        hm.put("Rostocker FC","Rostock");
+        hm.put("FK Suduva","Mariampole");
+        hm.put("Halsen IF","Larvik");
+        hm.put("Bodens BK","Boden");
+        hm.put("Strommen IF","Strømmen");
+        hm.put("Lahden Reipas","Lahti,FI");
+        hm.put("Big Bullets FC","Blantyre");
+        hm.put("Edgeworth Eagles","Edgeworth,AU");
         hm.put("Hamborn 07","Duisburg,DE");
         hm.put("Metalist Kh. Youth","Kharkiv");
         hm.put("Metalist 1925 Kharkiv","Kharkiv");
@@ -508,6 +519,7 @@ public class wordProx extends parama {
         hm.put("SC Farense U23","Faro");
         hm.put("Stabaek","Bærum");
         hm.put("Stabaek (W)","Bærum");
+        hm.put("Aral Samali","Nukus");
         hm.put("Stabaek 2","Bærum");
         hm.put("Sarpsborg 08","Sarpsborg");
         hm.put("St Patrick's Dublin","Dublin,IE");
@@ -519,9 +531,11 @@ public class wordProx extends parama {
         hm.put("Mjällby AIF","Blekinge");
         hm.put("Young Lions","Singapore");
         hm.put("Jagiellonia","Białystok");
+        hm.put("Räppe GoIF ","Vaxjo");
         hm.put("FC Noah","Yerevan");
         hm.put("SK Lisen","Brno");
         hm.put("IK Start","Kristiansund");
+        hm.put("IK Start 2","Kristiansund");
         hm.put("Malmö FF","Malmo");
         hm.put("BK Hacken FF (W)","Gothenburg");
         hm.put("BK Hacken","Gothenburg");
