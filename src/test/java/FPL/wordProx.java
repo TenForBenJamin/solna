@@ -186,6 +186,12 @@ public class wordProx extends parama {
         hm.put("AS Marsa","La Marsa");
         hm.put("HamKam","Hamar,NO");
         hm.put("Cartusia","Kartuzy");
+        hm.put("Kamatamare Sanuki","Takamatsu");
+        hm.put("Nagoya Grampus","Nagoya");
+        hm.put("Village Superstars","Basseterre");
+        hm.put("Security Forces Utd","Basseterre");
+        hm.put("Costa Rica (W) U16","Costa Rica");
+        hm.put("Costa Rica","Costa Rica");
         hm.put("FC Bunyodkor-2","Bunyodkor");
         hm.put("FC Bunyodkor","Bunyodkor");
         hm.put("Pine Hills","Brisbane");
