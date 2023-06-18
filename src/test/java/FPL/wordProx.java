@@ -186,6 +186,10 @@ public class wordProx extends parama {
         hm.put("AS Marsa","La Marsa");
         hm.put("HamKam","Hamar,NO");
         hm.put("Cartusia","Kartuzy");
+        hm.put("India","India,IN");
+        hm.put("India U17","India,IN");
+        hm.put("India U20","India,IN");
+        hm.put("India U19","India,IN");
         hm.put("Kamatamare Sanuki","Takamatsu");
         hm.put("Nagoya Grampus","Nagoya");
         hm.put("Village Superstars","Basseterre");
@@ -495,6 +499,10 @@ public class wordProx extends parama {
         hm.put("Sheffield Wednesday","Sheffield");
         hm.put("Helsingborgs U21","Helsingborg");
         hm.put("Helsingborgs","Helsingborg");
+        hm.put("Shonan Bellmare","Hiratsuka");
+        hm.put("Shimizu S-Pulse","Shizuoka");
+        hm.put("Seoul Jungnang","Seoul");
+        hm.put("Diambars FC","Dakar");
         hm.put("Ghazl Al Mahalla","Gharbia Governorate");
         hm.put("Khimik-Avgust","Vurnary");
         hm.put("Energetik-BGU","Minsk");
@@ -526,6 +534,11 @@ public class wordProx extends parama {
         hm.put("Hajer Youth","Hofuf,SA");
         hm.put("SC Farense U23","Faro");
         hm.put("Stabaek","Bærum");
+        hm.put("France U18","Paris");
+        hm.put("France","Paris");
+        hm.put("San Luis Quillota","Quillota");
+        hm.put("New Mexico United","Albuquerque");
+        hm.put("Renaissance Zemamra","Casablanca");
         hm.put("Stabaek (W)","Bærum");
         hm.put("Aral Samali","Nukus");
         hm.put("Stabaek 2","Bærum");
@@ -548,6 +561,7 @@ public class wordProx extends parama {
         hm.put("BK Hacken FF (W)","Gothenburg");
         hm.put("BK Hacken","Gothenburg");
         hm.put("BK Häcken","Gothenburg");
+        hm.put("BK Häcken (W)","Gothenburg");
         hm.put("CR Témouchent","Ain Temouchent");
         hm.put("Chayka FK Pesch","Peschanokopskoye");
         hm.put("Hamburger SV II","Hamburg");
