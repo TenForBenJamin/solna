@@ -2,10 +2,7 @@ package smith.rowe;
 
 import static io.restassured.RestAssured.given;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.TimeZone;
@@ -133,6 +130,68 @@ public class Baishh
 		prop.setProperty("fplCount",lastCount);
 		prop.store(fos,"null");
 		System.out.println("property file updated with LastCount = "+lastCount);
+	}
+	public void setWeatherCorrections(String endCount) throws IOException {
+		Properties prop = new Properties();
+		//FileInputStream fis = new FileInputStream("C:/home/datafile.properties");
+		FileOutputStream fos = new FileOutputStream("C:/Users/ss585/IdeaProjects/firstWindow/weatherCorrection.properties");
+		//prop.load(fos);
+		// Determine the count of existing lines in the property file
+		int lastLineCount = prop.size();
+		String key = "key" + (lastLineCount + 1);
+		String value = endCount;
+		//properties.setProperty(key, value);
+		String lastCount = String.valueOf(endCount);
+		prop.setProperty(key,value);
+		prop.store(fos,"null");
+		System.out.println("property file updated with LastCount = "+lastCount);
+	}
+
+	public void setWeatherCorrectionsD(double endCount) throws IOException {
+
+
+		String filePath = "C:/Users/ss585/IdeaProjects/firstWindow/weatherCorrection.properties";
+
+		Properties properties = new Properties();
+		InputStream input = null;
+		OutputStream output = null;
+
+		try {
+			// Read the existing property file into a Properties object
+			input = new FileInputStream(filePath);
+			properties.load(input);
+
+			// Find the last line in the property file
+			int lastLineNumber = properties.size();
+			String lastCount = String.valueOf(endCount);
+			// Add a line after the last line
+			String newLineKey = "line" + (lastLineNumber + 1);
+			String newLineValue = lastCount;
+			properties.setProperty(newLineKey, newLineValue);
+
+			// Save the updated properties to the file
+			output = new FileOutputStream(filePath);
+			properties.store(output, null);
+
+			System.out.println("Line added after the last line in the property file.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 	public  String tokenBearer() throws IOException 
