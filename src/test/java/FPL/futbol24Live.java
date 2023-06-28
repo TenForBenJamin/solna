@@ -75,13 +75,13 @@ public class futbol24Live extends parama{
         }
         driver.quit();
         int alCounter=0;
-        float ratiao=failureCount/count;
+        float ratiao=failureCount/currentIteration;
         Iterator<String> e = nat.iterator();
         String coldestCountry = null;
         String hottestCountry = null;
         String wc;
         Iterator<String > ht = team.iterator();
-        while (alCounter<count)
+        while (alCounter<currentIteration)
         {
             String realName=al.get(alCounter); // first initialization
             if(realName==debuggerEntry)
@@ -134,10 +134,12 @@ public class futbol24Live extends parama{
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
+        String kaltest="coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace);
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
         System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +f24Distance(hotPlace));
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
         System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+        //setWeatherCorrections(kaltest);
     }
 
 
@@ -631,11 +633,10 @@ public class futbol24Live extends parama{
 
     }
 @Test
-    public void trueCaller()
-    {
-        String oTS="Austria";
+    public void trueCaller() throws IOException {
+        String oTS="kochi";
         System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
-
+        setWeatherCorrectionsD(f24Distance(oTS));
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         String fullCountryName =getCountryName("GT");
