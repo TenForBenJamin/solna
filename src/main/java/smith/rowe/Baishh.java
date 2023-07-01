@@ -194,6 +194,51 @@ public class Baishh
 		}
 	}
 
+	public void setWeatherCorrectionsS(String endCount) throws IOException {
+
+
+		String filePath = "C:/Users/ss585/IdeaProjects/firstWindow/weatherCorrection.properties";
+
+		Properties properties = new Properties();
+		InputStream input = null;
+		OutputStream output = null;
+
+		try {
+			// Read the existing property file into a Properties object
+			input = new FileInputStream(filePath);
+			properties.load(input);
+
+			// Find the last line in the property file
+			int lastLineNumber = properties.size();
+			String lastCount = String.valueOf(endCount);
+			// Add a line after the last line
+			String newLineKey = "line" + (lastLineNumber + 1);
+			String newLineValue = lastCount;
+			properties.setProperty(newLineKey, newLineValue);
+			// Save the updated properties to the file
+			output = new FileOutputStream(filePath);
+			properties.store(output, null);
+			//System.out.println("Line added after the last line in the property file.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
 	public  String tokenBearer() throws IOException 
 	{
 		Properties prop = new Properties();

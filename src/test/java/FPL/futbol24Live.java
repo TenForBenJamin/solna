@@ -58,7 +58,7 @@ public class futbol24Live extends parama{
         System.out.println(" -------------------XXXXXX___________total matches --------------  " +count);
         if(count>400)// for weekends
         {
-           // driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
@@ -98,8 +98,10 @@ public class futbol24Live extends parama{
             temp=temp.trim();
             if(temp.equalsIgnoreCase("400 error")) {
                 temp =jorginho(realName);// need to write more logic to extract the failure reason
-                if(temp == null)
+                if(temp == null) {
                     failureCount = failureCount + 1;
+                    //setWeatherCorrectionsS(" " + realName + " notFound ");
+                }
             }
             else
             {
@@ -634,9 +636,9 @@ public class futbol24Live extends parama{
     }
 @Test
     public void trueCaller() throws IOException {
-        String oTS="kochi";
+        String oTS="nuuk";
         System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
-        setWeatherCorrectionsD(f24Distance(oTS));
+        setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         String fullCountryName =getCountryName("GT");
