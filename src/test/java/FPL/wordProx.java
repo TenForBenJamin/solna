@@ -155,6 +155,7 @@ public class wordProx extends parama {
         return op;
     }
 
+
     public static String southendReplacement(String clubName){
         HashMap<String,String> hm = new HashMap<String,String>();
         String originalKeyName=null;
@@ -186,7 +187,9 @@ public class wordProx extends parama {
         hm.put("AS Marsa","La Marsa");
         hm.put("HamKam","Hamar,NO");
         hm.put("Cartusia","Kartuzy");
+        hm.put("Unión Comercio","Rioja");
         hm.put("Racing Club","Buenos Aires");
+        hm.put("Defensa y Justicia","Buenos Aires");
         hm.put("Lebanon","Beirut");
         hm.put("Estudiantes FC","Merida,VE");
         hm.put("Onze Créateurs ","Bamako");
@@ -554,14 +557,23 @@ public class wordProx extends parama {
         hm.put("Hajer Youth","Hofuf,SA");
         hm.put("SC Farense U23","Faro");
         hm.put("Stabaek","Bærum");
+        hm.put("Qingdao Red Lions","Qingdao");
+        hm.put("JEF United Chiba","Chiba");
+        hm.put("Notts County (W)","Nottingham");
+        hm.put("Notts County","Nottingham");
+        hm.put("SK Djerv 1919","Haugesund");
+        hm.put("FC Futura","Porvoo");
+        hm.put("Highlanders FC","Bulawayo");
         hm.put("France U18","Paris");
         hm.put("France","Paris");
         hm.put("San Luis Quillota","Quillota");
         hm.put("New Mexico United","Albuquerque");
         hm.put("Renaissance Zemamra","Casablanca");
         hm.put("Stabaek (W)","Bærum");
+        hm.put("Asane Fotball","Bergen");
         hm.put("Aral Samali","Nukus");
         hm.put("Stabaek 2","Bærum");
+        hm.put("Stabaek 2","oslo");
         hm.put("Sarpsborg 08","Sarpsborg");
         hm.put("St Patrick's Dublin","Dublin,IE");
         hm.put("Bohemians FC","Dublin,IE");
