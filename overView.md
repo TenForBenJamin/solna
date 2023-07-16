@@ -1,6 +1,7 @@
 # WeatherAPI playing around
 
-Sequence f24 request 
+Sequence futbol24 request 
+
 ´´´mermaid
 graph TD;
     A[Start] --> B{already present in SouthEnd Method};
