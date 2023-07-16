@@ -1,6 +1,6 @@
 # WeatherAPI playing around
 
-Sequence futbol24 request 
+Sequence futbool24 request 
 
 ´´´mermaid
 graph TD;
