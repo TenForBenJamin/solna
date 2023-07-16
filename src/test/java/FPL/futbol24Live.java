@@ -81,7 +81,7 @@ public class futbol24Live extends parama{
         String hottestCountry = null;
         String wc;
         Iterator<String > ht = team.iterator();
-        while (alCounter<currentIteration)
+        while (alCounter<currentIteration-1)
         {
             String realName=al.get(alCounter); // first initialization
             if(realName==debuggerEntry)
@@ -454,38 +454,7 @@ public class futbol24Live extends parama{
 
     }
 
-    public  Double f24Distance(String place)
-    {
-        String[] pla = place.split(" ");
-        place=pla[0];
-        RestAssured.baseURI =baseUrlopenWeather;
-        RequestSpecification httpRequest = RestAssured.given();
-        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
-        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
 
-            String getReqRes =
-                    given().
-                            queryParam("q", place).
-                            queryParam("appid", apiKey).
-                            queryParam("lang", OpCo).queryParam("units", "metric").
-                            when().get("data/2.5/weather").
-                            then().assertThat().statusCode(200).extract().response().asString();
-            JsonPath js = new JsonPath(getReqRes);
-            String  latS = js.getString("coord.lat");
-            String lonS = js.getString("coord.lon");
-            String nameOfPlace = js.getString("name");
-            //coundry=restCOuntries(coundry);
-        if(300>200){
-            double lat = Double.parseDouble(latS);
-            double lon = Double.parseDouble(lonS);
-            double Coordx= malta(lat,lon);
-            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
-            double roundedNumber = Double.parseDouble(df.format(Coordx));
-            //35.8922 , 14.5183
-            return roundedNumber;
-        }else
-            return 400.0;
-    }
     public  String f24Displacement(String place)
     {
         String[] pla = place.split(" ");
@@ -636,9 +605,11 @@ public class futbol24Live extends parama{
     }
 @Test
     public void trueCaller() throws IOException {
-        String oTS="nuuk";
+        String oTS="tromso";
         System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
         setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
+        //| Vestri | - notFound
+        // need to write something which will compare 400 result to all failed in ppt file , if not found it will add at the lastLine .
         /*
         //String timeZonesOfCountry =restCountriesTmzV2("mlt");
         String fullCountryName =getCountryName("GT");
@@ -689,6 +660,39 @@ public class futbol24Live extends parama{
             }
             return temp;
 
+    }
+
+    public  Double f24Distance(String place)
+    {
+        String[] pla = place.split(" ");
+        place=pla[0];
+        RestAssured.baseURI =baseUrlopenWeather;
+        RequestSpecification httpRequest = RestAssured.given();
+        httpRequest.queryParam("q", place).queryParam("appid", apiKey).queryParam("units", "metric");
+        Response response = httpRequest.request(Method.GET,"data/2.5/weather");
+
+        String getReqRes =
+                given().
+                        queryParam("q", place).
+                        queryParam("appid", apiKey).
+                        queryParam("lang", OpCo).queryParam("units", "metric").
+                        when().get("data/2.5/weather").
+                        then().assertThat().statusCode(200).extract().response().asString();
+        JsonPath js = new JsonPath(getReqRes);
+        String  latS = js.getString("coord.lat");
+        String lonS = js.getString("coord.lon");
+        String nameOfPlace = js.getString("name");
+        //coundry=restCOuntries(coundry);
+        if(300>200){
+            double lat = Double.parseDouble(latS);
+            double lon = Double.parseDouble(lonS);
+            double Coordx= malta(lat,lon);
+            DecimalFormat df = new DecimalFormat("#.##"); // pattern for two decimal places
+            double roundedNumber = Double.parseDouble(df.format(Coordx));
+            //35.8922 , 14.5183
+            return roundedNumber;
+        }else
+            return 400.0;
     }
 @Test
     public static void mainz()
