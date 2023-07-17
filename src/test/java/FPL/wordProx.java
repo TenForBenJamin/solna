@@ -557,6 +557,12 @@ public class wordProx extends parama {
         hm.put("Hajer Youth","Hofuf,SA");
         hm.put("SC Farense U23","Faro");
         hm.put("Stabaek","Bærum");
+        hm.put("Volos NFC","Volos");
+        hm.put("FK Metalac","Gornji Milanovac");
+        hm.put("Jönköpings S. U21","Jönköping");
+        hm.put("Burkina Faso U20","Burkina Faso");
+        hm.put("Burkina Faso","Burkina Faso");
+        hm.put("CFC Hertha 06","Berlin");
         hm.put("Qingdao Red Lions","Qingdao");
         hm.put("JEF United Chiba","Chiba");
         hm.put("Notts County (W)","Nottingham");
