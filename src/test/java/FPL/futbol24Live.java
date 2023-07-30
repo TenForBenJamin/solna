@@ -58,7 +58,7 @@ public class futbol24Live extends parama{
         System.out.println(" -------------------XXXXXX___________total matches --------------  " +count);
         if(count>400)// for weekends
         {
-            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            //driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
@@ -136,9 +136,11 @@ public class futbol24Live extends parama{
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
-        String kaltest="coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace);
-        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +f24Distance(coldestPlace));
-        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +f24Distance(hotPlace));
+        Double cp=f24Distance(coldestPlace);
+        Double hp=f24Distance(hotPlace);
+        String kaltest="coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +cp;
+        System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +cp);
+        System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +hp);
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
         System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
         //setWeatherCorrections(kaltest);
@@ -605,9 +607,11 @@ public class futbol24Live extends parama{
     }
 @Test
     public void trueCaller() throws IOException {
-        String oTS="tromso";
-        System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
-        setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
+        String oTS="oia";
+        String path="C:\\Users\\ss585\\IdeaProjects\\firstWindow\\ppt\\DailyPropertyEquasition\\";
+        mainzer(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
+       // System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
+        //setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
         //| Vestri | - notFound
         // need to write something which will compare 400 result to all failed in ppt file , if not found it will add at the lastLine .
         /*
