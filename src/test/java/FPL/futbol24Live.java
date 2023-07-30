@@ -608,8 +608,8 @@ public class futbol24Live extends parama{
 @Test
     public void trueCaller() throws IOException {
         String oTS="oia";
-        String path="C:\\Users\\ss585\\IdeaProjects\\firstWindow\\ppt\\DailyPropertyEquasition\\";
-        mainzer(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
+        //String path="C:\\Users\\ss585\\IdeaProjects\\firstWindow\\ppt\\DailyPropertyEquasition\\";
+        //mainzer(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
        // System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
         //setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
         //| Vestri | - notFound
