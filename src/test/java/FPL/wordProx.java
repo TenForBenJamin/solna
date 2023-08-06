@@ -377,6 +377,9 @@ public class wordProx extends parama {
         hm.put("Caldas SC","Caldas da Rainha");
         hm.put("Sevilla Atlético","Seville");
         hm.put("Sevilla","Seville");
+        hm.put("Army FC","Phnom Penh");
+        hm.put("Kocaelispor","Kocaeli");
+        hm.put("Schalke 04","Gelsenkirchen");
         hm.put("Salernitana","Salerno");
         hm.put("Cultural Leonesa","Leon,Es");
         hm.put("SD Logroñés","Logroño");
