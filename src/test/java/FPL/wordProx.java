@@ -377,6 +377,12 @@ public class wordProx extends parama {
         hm.put("Caldas SC","Caldas da Rainha");
         hm.put("Sevilla Atlético","Seville");
         hm.put("Sevilla","Seville");
+        hm.put("Egen UI","Nordborg");
+        hm.put("Mamelodi Sundowns","Mamelodi");
+        hm.put("FK 03 Pirmasens","Pirmasens");
+        hm.put("Chester FC","Chester,GB");
+        hm.put("Sao Bento/SP","Sorocaba");
+        hm.put("Crewe Alexandra","Crewe");
         hm.put("KF Liria","Prizren");
         hm.put("Rigas Futbola skola","Riga");
         hm.put("Qyzylqum","Zarafshan");
@@ -685,6 +691,9 @@ public class wordProx extends parama {
         hm.put("1. FC Saarbrücken","Saarbrücken");
         hm.put("Halmstads BK","Halmstad");
         hm.put("SK Traeff","Molde");
+        hm.put("Molde FK","Molde");
+        hm.put("SD Ponferradina","Ponferrada");
+        hm.put("Hviti Riddarinn","Mosfellsbær");
         hm.put("Oure FA","Svendborg");
         hm.put("Lunds BK","Lund");
         hm.put("SC Farense","Faro");
