@@ -47,6 +47,7 @@ public class futbol24Live extends parama{
         String hotPlace = "your mind";
         HashSet<String> team = new HashSet<String>();
         HashSet<String>  nat = new HashSet<String>();
+        HashSet<String>  phailed = new HashSet<String>();
         driver.manage().window().maximize();		// maximizing the window
         String uri= "https://www.futbol24.com/Live/?__igp=1&LiveDate=&o=0";
         driver.get(uri);
@@ -77,6 +78,7 @@ public class futbol24Live extends parama{
         int alCounter=0;
         float ratiao=failureCount/currentIteration;
         Iterator<String> e = nat.iterator();
+        Iterator<String> ph = phailed.iterator();
         String coldestCountry = null;
         String hottestCountry = null;
         String wc;
@@ -101,11 +103,13 @@ public class futbol24Live extends parama{
                 if(temp == null) {
                     failureCount = failureCount + 1;
                     //setWeatherCorrectionsS(" " + realName + " notFound ");
+                    phailed.add(realName);
                 }
             }
             else
             {
                 String[] lowe = temp.split(",");
+                // Nation is added to the list
                 nat.add(lowe[1]);
                 // lowe[1] can be used to trigger the API
                 String exTemp= lowe[0];
@@ -124,15 +128,18 @@ public class futbol24Live extends parama{
                     String[] lander = temp.split(",");
                     hottestCountryTwoLetter=lander[1];
                 }
+                statCount=statCount+1;
+                Calendar cal= Calendar.getInstance();
+                SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+                String tim =sdf.format(cal.getTime());
+                System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
             }
-            statCount=statCount+1;
-            Calendar cal= Calendar.getInstance();
-            SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
-            String tim =sdf.format(cal.getTime());
-            System.out.println("Home Team v4 # " + statCount +" is " + realName +" and weather is    ->   "+ temp +"    at " +tim);
+
             alCounter++;
         }
-        System.out.println("Total Failure/Success is " + failureCount + " / " + statCount +" = " +(double)failureCount/(double)statCount +" total Nations involved  " +nat.size());
+        printFailedHashSet(phailed);
+        int realCount=failureCount+statCount;
+        System.out.println("Total Failure/Success is " + failureCount + " / " + realCount +" = " +(double)failureCount/(double)realCount +" total Nations involved  " +nat.size());
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
         coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
@@ -144,6 +151,14 @@ public class futbol24Live extends parama{
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
         System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
         //setWeatherCorrections(kaltest);
+    }
+
+    // Method to print HashSet entries
+    public static void printFailedHashSet(HashSet<String> set) {
+        System.out.println("Total Failed count  --- " +set.size() );
+        for (String entry : set) {
+            System.out.println(entry);
+        }
     }
 
 
