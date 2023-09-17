@@ -59,7 +59,7 @@ public class futbol24Live extends parama{
         System.out.println(" -------------------XXXXXX___________total matches --------------  " +count);
         if(count>400)// for weekends
         {
-           // driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
@@ -622,10 +622,10 @@ public class futbol24Live extends parama{
     }
 @Test
     public void trueCaller() throws IOException {
-        String oTS="oia";
+        String oTS="Fenerbahçe SK";
         //String path="C:\\Users\\ss585\\IdeaProjects\\firstWindow\\ppt\\DailyPropertyEquasition\\";
         //mainzer(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
-       // System.out.println(" One Time Search result for "+oTS +"  - " +f24Distance(oTS));
+       System.out.println(" One Time Search result for "+oTS +"  - " +jorginho(oTS));
         //setWeatherCorrectionsS("distance between malta and " + oTS + " is " +f24Distance(oTS));
         //| Vestri | - notFound
         // need to write something which will compare 400 result to all failed in ppt file , if not found it will add at the lastLine .
