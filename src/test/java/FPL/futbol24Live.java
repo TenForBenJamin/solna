@@ -57,9 +57,9 @@ public class futbol24Live extends parama{
         List<WebElement> xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
         int count= xpathFinder.size();
         System.out.println(" -------------------XXXXXX___________total matches --------------  " +count);
-        if(count>400)// for weekends
+        if(count>500)// for weekends
         {
-            driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
+           // driver.findElement(By.xpath("(//a/span[@class='f24com_lang'])[1]")).click();
             Thread.sleep(4000);
             xpathFinder   = driver.findElements(By.xpath("//td[@class='home']"));
             count= xpathFinder.size();
