@@ -418,6 +418,17 @@ public class wordProx extends parama {
         hm.put("Canvey Island","Canvey Island,gb");
         hm.put("Beaconsfield Town","Beaconsfield,gb");
         hm.put("Sevilla","Seville");
+        hm.put("Breidablik","Kópavogur");
+        hm.put("England (W) U23","londres");
+        hm.put("Bohemians FC","Dublin");
+        hm.put("Poland (W) U19","Poznan");
+        hm.put("Norway (W) U19","oslo");
+        hm.put("Bristol City U21","Bristol,gb");
+        hm.put("Italy (W) U19","bari");
+        hm.put("Morocco (W) U23","Rabat");
+        hm.put("Blooming","Santa Cruz de la Sierra");
+        hm.put("Holland (W) U19","Amsterdam,nl");
+        hm.put("Holland (W) U23","Amsterdam,nl");
         hm.put("Viitorul Tārgu Jiu","Târgu Jiu");
         hm.put("SKA-Khabarovsk-2","Khabarovsk");
         hm.put("Seoul Nowon Utd","Seoul");
@@ -1014,7 +1025,9 @@ public class wordProx extends parama {
         hm.put("Celtic LFC (W)","glasgow");
         hm.put("ASAC Concorde","Nouakchott");
         hm.put("Kastamonuspor","Kastamonu");
+        hm.put("All Boys","Floresta,AR");
         hm.put("PAOK Salonica","Thessaloniki,GR");
+        hm.put("PAOK Salonica B","Thessaloniki,GR");
         hm.put("Melita FC","St. Julian's,MT,");
         hm.put("Virtus Entella","Chiavari,IT");
         hm.put("Wollongong Wolves","Wollongong");
