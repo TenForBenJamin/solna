@@ -418,6 +418,9 @@ public class wordProx extends parama {
         hm.put("Canvey Island","Canvey Island,gb");
         hm.put("Beaconsfield Town","Beaconsfield,gb");
         hm.put("Sevilla","Seville");
+        hm.put("Al Sarhan SC","mafraq");
+        hm.put("Altay SK Izmir","Izmir");
+        hm.put("Mdina Knights","Rabat,mt");
         hm.put("Breidablik","Kópavogur");
         hm.put("England (W) U23","londres");
         hm.put("Bohemians FC","Dublin");
