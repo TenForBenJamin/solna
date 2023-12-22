@@ -381,6 +381,12 @@ public class wordProx extends parama {
         hm.put("Boreham Wood","london");
         hm.put("Northampton","Northampton,gb");
         hm.put("Sevilla","Seville");
+        hm.put("Gor Mahia","Nairobi");
+        hm.put("AmaZulu FC","Durban");
+        hm.put("Hearts (R)","Edinburgh");
+        hm.put("Foutoua Club","Deir ez-Zor");
+        hm.put("Karamah","Homs");
+        hm.put("Belenenses","Belem,PT");
         hm.put("Perak FA","iPoh");
         hm.put("Colon Santa Fe","Santa Fe");
         hm.put("Boston United","Boston,gb");
@@ -653,6 +659,7 @@ public class wordProx extends parama {
         hm.put("Melhus Fotball","Melhus");
         hm.put("Kultsu FC","Joutseno");
         hm.put("Sevilla FC","Seville");
+        hm.put("Kaizer Chiefs","Naturena");
         hm.put("Busan I'Park","Busan");
         hm.put("Rayo Vallecano B","Madrid");
         hm.put("Rayo Vallecano","Madrid");
