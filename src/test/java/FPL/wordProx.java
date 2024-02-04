@@ -90,6 +90,7 @@ public class wordProx extends parama {
         hs.add("U21");
         hs.add("U22");
         hs.add("FF");
+        hs.add("Strikers");
         hs.add("(R)");
         hs.add("FA");
         hs.add("Morton");
@@ -380,7 +381,14 @@ public class wordProx extends parama {
         hm.put("Solihull Moors","Solihull,gb");
         hm.put("Boreham Wood","london");
         hm.put("Northampton","Northampton,gb");
+        hm.put("Dubba Al Fujairah","Fujairah");
+        hm.put("Apollon Paralimniou","Paralimni,gr");
+        hm.put("Ankaraspor","Ankara");
+        hm.put("Ashfield","Perth");
         hm.put("Sevilla","Seville");
+        hm.put("CD Feirense","Santa Maria da Feira");
+        hm.put("Düzcespor","Düzce");
+        hm.put("Dundela FC","Belfast");
         hm.put("Gor Mahia","Nairobi");
         hm.put("AmaZulu FC","Durban");
         hm.put("Hearts (R)","Edinburgh");
