@@ -58,6 +58,7 @@ public class wordProx extends parama {
         hs.add("Bld.");
         hs.add("Rovers");
         hs.add("District");
+        hs.add("Albion");
         hs.add("VV");
         hs.add("Market");
         hs.add("Hotspurs");
@@ -422,6 +423,18 @@ public class wordProx extends parama {
         hm.put("Europa Point","Gibraltar");
         hm.put("TS Galaxy FC","Kameelrivier");
         hm.put("Valencia Mestalla","Valencia");
+        hm.put("Iskenderunspor","Iskenderun");
+        hm.put("Russia","Moscow");
+        hm.put("Stade Rennais","Rennes");
+        hm.put("Sirius IK","Uppsala");
+        hm.put("Tarxien Rainbows","Tarxien");
+        hm.put("Albion Rovers","Coatbridge");
+        hm.put("Long Eaton Utd","Long Eaton");
+        hm.put("Forest Green","Nailsworth");
+        hm.put("Dingli Swallows","Dingli");
+        hm.put("Stirling Albion","Stirling");
+        hm.put("Pieta Hotspurs","Msida");
+        hm.put("Sevilla","Seville");
         hm.put("Sevilla","Seville");
         hm.put("Sevilla","Seville");
         hm.put("Sevilla","Seville");
@@ -491,7 +504,7 @@ public class wordProx extends parama {
         hm.put("Bristol Rovers","Bristol,gb");
         hm.put("Burton Albion","Burton,gb");
         hm.put("Plymouth Argyle","Plymouth,uk");
-        hm.put("Al Arabi (UAE)","Seville");
+        hm.put("Al Arabi (UAE)","Dubai");
         hm.put("Forest Rangers","Ndola");
         hm.put("Konkola Blades","Chililabombwe");
         hm.put("Lamphun Warrior","Lamphun");
@@ -519,8 +532,8 @@ public class wordProx extends parama {
         hm.put("Swindon Supermarine","Swindon");
         hm.put("Sampdoria Youth","Genoa");
         hm.put("Grasshoppers (W)","Zurich");
-        hm.put("Grasshoppers","Seville");
-        hm.put("FK Yenisey (W)","Seville");
+        hm.put("Grasshoppers","Zurich");
+        hm.put("FK Yenisey (W)","omsk");
         hm.put("Shirak FC","Yereven");
         hm.put("Al Sarhan SC","mafraq");
         hm.put("Altay SK Izmir","Izmir");
