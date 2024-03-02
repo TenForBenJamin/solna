@@ -434,6 +434,10 @@ public class wordProx extends parama {
         hm.put("Dingli Swallows","Dingli");
         hm.put("Stirling Albion","Stirling");
         hm.put("Pieta Hotspurs","Msida");
+        hm.put("Colwyn Bay","Colwyn Bay");
+        hm.put("Hai Phong FC","HaiPhong");
+        hm.put("FC Bunyodkor","Tashkent");
+        hm.put("Bristol City","Bristol,gb");
         hm.put("Sevilla","Seville");
         hm.put("Sevilla","Seville");
         hm.put("Sevilla","Seville");
