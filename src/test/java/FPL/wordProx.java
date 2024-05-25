@@ -461,6 +461,10 @@ public class wordProx extends parama {
         hm.put("CP San Cristóbal","San Cristóbal,ES");
         hm.put("UD Gran Tarajal ST","Tuineje");
         hm.put("Sevilla","Seville");
+        hm.put("Pirata FC","Chiclayo");
+        hm.put("Jeonbuk Hyundai M.","Jeonju");
+        hm.put("FK Metta","Riga");
+        hm.put("FC Mauerwerk","Wien");
         hm.put("Tindastóll (W)","Sauðárkrókur");
         hm.put("IF Lodde","Kävlinge");
         hm.put("Kjelsas","oslo");
