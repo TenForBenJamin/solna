@@ -141,7 +141,7 @@ public class futbol24Live extends parama{
         int realCount=failureCount+statCount;
         System.out.println("Total Failure/Success is " + failureCount + " / " + realCount +" = " +(double)failureCount/(double)realCount +" total Nations involved  " +nat.size());
         System.out.println("methodUtilzationCount --- " +methodUtilzationCount );
-        coldestCountry=getCountryName(coldestCountryTwoLetter);
+       /* coldestCountry=getCountryName(coldestCountryTwoLetter);
         hottestCountry=getCountryName(hottestCountryTwoLetter);
         Double cp=f24Distance(coldestPlace);
         Double hp=f24Distance(hotPlace);
@@ -149,7 +149,7 @@ public class futbol24Live extends parama{
         System.out.println("coldest place amongst the places is "+coldestPlace +" , "  + coldestCountry +" and is - away  "  +cp);
         System.out.println("hottest place amongst the places is "+hotPlace +" , "  + hottestCountry +" and is - away  "  +hp);
         System.out.println("Bordering coldest country --- " +restCountriesBoundary(coldestCountryTwoLetter) );
-        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );
+        System.out.println("Bordering hottest country --- " +restCountriesBoundary(hottestCountryTwoLetter) );*/
         //setWeatherCorrections(kaltest);
     }
 
